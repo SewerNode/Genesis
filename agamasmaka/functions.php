@@ -3,8 +3,8 @@
 require_once( get_template_directory() . '/lib/init.php' );
 
 // Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Genesis Sample Theme' );
-define( 'CHILD_THEME_URL', 'http://www.studiopress.com/' );
+define( 'CHILD_THEME_NAME', 'Genesis Agamasmaka Theme' );
+define( 'CHILD_THEME_URL', 'http://agamasmaka.pl/' );
 
 // Add Viewport meta tag for mobile browsers
 add_action( 'genesis_meta', 'sample_viewport_meta_tag' );
@@ -23,3 +23,22 @@ add_theme_support( 'genesis-custom-header', array(
 
 // Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
+
+// Add custom homepage post type
+/*add_action( 'init', 'home_post_type' );*/
+/*function home_post_type() {
+
+	$labels = array(
+		'name' => __( 'Tax Liens' ),
+		'singular_name' => __( 'Tax Lien' )
+	);
+
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'taxliens'),
+	);
+
+	register_post_type( 'tax_lien', $args);
+}*/
