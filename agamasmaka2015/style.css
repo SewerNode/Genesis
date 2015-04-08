@@ -1537,9 +1537,7 @@ img.aligncenter {
  */
 
 .secondary {
-	background-color: #fff;
-	display: none;
-	padding: 0 7.6923%;
+	padding:0;
 }
 
 .secondary.toggled-on {
@@ -1563,6 +1561,10 @@ img.aligncenter {
  * 12.1 Posts and pages
  */
 
+#content.site-content-sidebar {}
+#content.site-content-sidebar #primary.content-area {display:inline-block; float:left; width:700px; padding:0 40px 0 0;}
+#content.site-content-sidebar #sidebar {display:inline-block; float:left; width:290px;}
+
 article.homepost {display:inline-block; width:308px; padding:0; margin:10px; }
 article.homepost .post-thumbnail {width:308px; height:308px; margin:0; text-align:center; vertical-align:middle;}
 article.homepost .post-thumbnail img {max-width:308px; max-height:308px; text-align:center; vertical-align:middle;}
@@ -1570,13 +1572,16 @@ article.homepost .entry-header {display:table; width:100%; height:75px; padding:
 article.homepost h2 {display:table-cell; width:100%; height:75px; font-size:17px; margin:auto auto; vertical-align:middle; text-align:center;}
 article.homepost h2 a {display:inline-block; vertical-align:middle; text-align:center;}
 
-
 article.homepost .edit-link {padding:5px; position:absolute; top:0; right:0; line-height:1.2; background:rgba(0,0,0,0.6); color:#FFFFFF;}
 article.homepost .edit-link a {color:inherit;}
 article.homepost .edit-link a:before {line-height:inherit;}
 
 article.page.type-page {text-align:left;}
 article.post.type-post  {text-align:left;}
+
+#secondary {}
+#secondary .widget.widget_categories {text-align:left;}
+#secondary .widget.widget_recent_entries {text-align:left;}
 
 
 .hentry {
@@ -1614,7 +1619,7 @@ a.post-thumbnail:focus {
 }
 
 .entry-header {
-	padding: 0 7.6923%;
+	padding: 0;
 }
 
 .entry-title {
@@ -1626,7 +1631,7 @@ a.post-thumbnail:focus {
 
 .entry-content,
 .entry-summary {
-	padding: 0 7.6923% 7.6923%;
+	padding:2em 0;
 }
 
 .entry-content > :last-child,
@@ -1854,6 +1859,9 @@ a.post-thumbnail:focus {
 	font-size: 1.6rem;
 	line-height: 1.2;
 	padding:1em 2em;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
 }
 
 .entry-footer a {

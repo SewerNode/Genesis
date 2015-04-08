@@ -13,7 +13,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 		// Post thumbnail.
-		agamasmaka_post_thumbnail();
+		//agamasmaka_post_thumbnail();
+		//the_post_thumbnail(array(660,660));
 	?>
 
 	<header class="entry-header">

@@ -9,11 +9,7 @@
  * @since Aga ma smaka 1.0
  */
 ?>
-<?php if ( !is_home() || !is_front_page() ): ?>
-	<div id="sidebar" class="sidebar pasek-boczny"><?php /*ToDo Przeniesc sidebar*/ ?><!-- Sidebaaar -->
-		<?php get_sidebar(); ?>
-	</div><!-- .sidebar -->
-<?php endif; ?>
+<?php get_sidebar(); ?>
 
 	</div><!-- .site-content -->
 

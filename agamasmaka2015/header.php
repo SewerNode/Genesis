@@ -59,4 +59,11 @@
 		<?php endif; ?>
 	</header><!-- .site-header -->
 
-	<div id="content" class="site-content">
+<?php if(is_page()) echo ' >is_page< '; //ToDo Test "IS" ?>
+<?php if(is_home()) echo ' >is_home< '; //ToDo Test "IS" ?>
+<?php if(is_front_page()) echo ' >is_front_page< '; //ToDo Test "IS" ?>
+<?php if(is_single()) echo ' >is_single< '; //ToDo Test "IS" ?>
+<?php if(is_category()) echo ' >is_category< '; //ToDo Test "IS" ?>
+<?php if(is_page_template()) echo ' >is_page_template< '; //ToDo Test "IS" ?>
+
+	<div id="content" class="site-content <?php if((!is_home() * !is_front_page() * !is_page()) && (has_nav_menu('primary') || has_nav_menu('social') || is_active_sidebar('sidebar-1'))) echo 'site-content-sidebar'; ?>" >

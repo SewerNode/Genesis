@@ -6,8 +6,9 @@
  * @subpackage  Aga_ma_smaka_2015
  * @since Aga ma smaka 1.0
  */
-
-if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar( 'sidebar-1' )  ) : ?>
+ if ( !is_home() * !is_front_page() * !is_page()): ?>
+	<div id="sidebar" class="sidebar pasek-boczny"><!-- Sidebaaar -->
+<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar( 'sidebar-1' )  ) : ?>
 	<div id="secondary" class="secondary">
 		<?php if ( has_nav_menu( 'social' ) ) : ?>
 			<nav id="social-navigation" class="social-navigation" role="navigation">
@@ -31,4 +32,6 @@ if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar(
 
 	</div><!-- .secondary -->
 
+<?php endif; ?>
+	</div><!-- .sidebar -->
 <?php endif; ?>

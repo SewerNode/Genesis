@@ -11,7 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 		// Post thumbnail.
-		agamasmaka_post_thumbnail();
+		//agamasmaka_post_thumbnail();
 	?>
 
 	<header class="entry-header">
