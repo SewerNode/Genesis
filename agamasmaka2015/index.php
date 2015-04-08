@@ -18,7 +18,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+			<!-- index.php -->
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
@@ -36,7 +36,8 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				if ( is_home() || is_front_page() ) get_template_part( 'content', 'homepost' ); else get_template_part( 'content', get_post_format() );
+				get_template_part( 'content', 'homepost' );
+				//if ( is_home() || is_front_page() || is_category() ) get_template_part( 'content', 'homepost' ); else get_template_part( 'content', get_post_format() );
 
 			// End the loop.
 			endwhile;

@@ -24,7 +24,7 @@ Description: Used to style the TinyMCE editor.
 
 body {
 	color: #333;
-	font-family: "Noto Serif", serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size: 17px;
 	line-height: 1.6471;
@@ -276,7 +276,7 @@ table th,
 .mce-item-table th,
 table caption {
 	border-width: 0 1px 1px 0;
-	font-family: "Noto Serif", serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	font-weight: 700;
 	padding: 7px;
@@ -287,7 +287,7 @@ table caption {
 table td,
 .mce-item-table td {
 	border-width: 0 1px 1px 0;
-	font-family: "Noto Serif", serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	padding: 7px;
 	vertical-align: baseline;

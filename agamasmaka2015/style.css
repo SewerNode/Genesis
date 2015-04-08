@@ -202,7 +202,7 @@ input,
 select,
 textarea {
 	color: #333;
-	font-family: "Noto Serif", serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	font-size: 1.5rem;
 	line-height: 1.6;
@@ -260,7 +260,7 @@ blockquote small {
 	color: #333;
 	font-size: 15px;
 	font-size: 1.5rem;
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	line-height: 1.6;
 }
 
@@ -444,23 +444,23 @@ del {
 
 ::-webkit-input-placeholder {
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 :-moz-placeholder {
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 ::-moz-placeholder {
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	opacity: 1; /* Since FF19 lowers the opacity of the placeholder by default */
 }
 
 :-ms-input-placeholder {
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 
@@ -527,7 +527,7 @@ input[type="submit"] {
 	border: 0;
 	color: #fff;
 	cursor: pointer;
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-weight: 700;
@@ -597,7 +597,7 @@ body {text-align:center;}
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
 	display: block;
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-weight: 700;
@@ -675,12 +675,16 @@ a:focus {
 	width:auto;
 	display:inline-block;
 	position: relative;
+	font-size:16px;
+	text-transform:uppercase;
+	font-weight:700;
 }
+.main-navigation div > ul > li > a {padding:20px;}
 
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a {
-	font-weight: 700;
+
 }
 
 .main-navigation .nav-menu > ul > li:first-child,
@@ -696,7 +700,7 @@ a:focus {
 .main-navigation .menu-item-description {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-weight: 400;
@@ -938,7 +942,7 @@ a:focus {
 .post-navigation .meta-nav {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	letter-spacing: 0.04em;
@@ -949,7 +953,7 @@ a:focus {
 }
 
 .post-navigation .post-title {
-	font-family: "Noto Serif", serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 	font-size: 1.8rem;
 	line-height: 1.3333;
@@ -992,7 +996,7 @@ a:focus {
 .pagination {
 	background-color: #fff;
 	border-top: 1px solid rgba(51, 51, 51, 0.1);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .pagination .nav-links {
@@ -1075,7 +1079,7 @@ a:focus {
 	color: rgba(51, 51, 51, 0.7);
 	font-size: 12px;
 	font-size: 1.2rem;
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	line-height: 1.5;
 	text-transform: uppercase;
@@ -1290,7 +1294,7 @@ img.aligncenter {
 }
 
 .site-title {
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 22px;
 	font-size: 2.2rem;
 	font-weight: 700;
@@ -1300,7 +1304,7 @@ img.aligncenter {
 
 .site-description {
 	display: none;
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-weight: 400;
@@ -1364,7 +1368,7 @@ img.aligncenter {
 
 .widget-title {
 	color: #333;
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin: 0 0 1.6em;
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
@@ -1386,7 +1390,7 @@ img.aligncenter {
 }
 
 .widget_calendar caption {
-	font-family: "Noto Serif", serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	margin: 0 0 1.6em;
 	letter-spacing: 0.04em;
@@ -1505,7 +1509,7 @@ img.aligncenter {
 
 .widget_rss .rss-date,
 .widget_rss cite {
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-style: normal;
@@ -1562,9 +1566,17 @@ img.aligncenter {
 article.homepost {display:inline-block; width:308px; padding:0; margin:10px; }
 article.homepost .post-thumbnail {width:308px; height:308px; margin:0; text-align:center; vertical-align:middle;}
 article.homepost .post-thumbnail img {max-width:308px; max-height:308px; text-align:center; vertical-align:middle;}
-article.homepost h2 {font-size:17px;}
+article.homepost .entry-header {display:table; width:100%; height:75px; padding:0 3%; vertical-align:middle; text-align:center;}
+article.homepost h2 {display:table-cell; width:100%; height:75px; font-size:17px; margin:auto auto; vertical-align:middle; text-align:center;}
+article.homepost h2 a {display:inline-block; vertical-align:middle; text-align:center;}
 
 
+article.homepost .edit-link {padding:5px; position:absolute; top:0; right:0; line-height:1.2; background:rgba(0,0,0,0.6); color:#FFFFFF;}
+article.homepost .edit-link a {color:inherit;}
+article.homepost .edit-link a:before {line-height:inherit;}
+
+article.page.type-page {text-align:left;}
+article.post.type-post  {text-align:left;}
 
 
 .hentry {
@@ -1782,7 +1794,7 @@ a.post-thumbnail:focus {
 .author-heading {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	letter-spacing: 0.04em;
@@ -1837,11 +1849,11 @@ a.post-thumbnail:focus {
 	background-color: #f7f7f7;
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
-	font-size: 12px;
-	font-size: 1.2rem;
-	line-height: 1.5;
-	padding: 3.8461% 7.6923%;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.2;
+	padding:1em 2em;
 }
 
 .entry-footer a {
@@ -1849,6 +1861,7 @@ a.post-thumbnail:focus {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
 }
+.entry-footer a:before {line-height:inherit;}
 
 .entry-footer a:hover {
 	border-bottom: 1px solid #333;
@@ -1972,11 +1985,10 @@ a.post-thumbnail:focus {
 .page-header {
 	background-color: #fff;
 	border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-	padding: 7.6923%;
 }
 
 .page-title {
-	font-family: "Noto Serif", serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 	font-size: 1.8rem;
 	line-height: 1.3333;
@@ -2012,7 +2024,7 @@ a.post-thumbnail:focus {
 
 .page-links {
 	clear: both;
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin-bottom: 1.3333em;
 }
 
@@ -2070,7 +2082,7 @@ a.post-thumbnail:focus {
 .entry-caption {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	-webkit-hyphens: auto;
@@ -2148,7 +2160,7 @@ a.post-thumbnail:focus {
 
 .comments-title,
 .comment-reply-title {
-	font-family: "Noto Serif", serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 	font-size: 1.8rem;
 	line-height: 1.3333;
@@ -2209,7 +2221,7 @@ a.post-thumbnail:focus {
 .pingback .edit-link {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1.5;
@@ -2274,7 +2286,7 @@ a.post-thumbnail:focus {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
 	display: inline-block;
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	line-height: 1;
 	margin-top: 2em;
@@ -2296,7 +2308,7 @@ a.post-thumbnail:focus {
 .comment-form label {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	font-weight: 700;
@@ -2319,7 +2331,7 @@ a.post-thumbnail:focus {
 .form-allowed-tags {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1.5;
@@ -2335,7 +2347,7 @@ a.post-thumbnail:focus {
 	border-top: 1px solid rgba(51, 51, 51, 0.1);
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
 	padding-top: 1.6em;
 }
@@ -2486,7 +2498,7 @@ p > video {
 .wp-caption-text {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1.5;
@@ -2550,7 +2562,7 @@ p > video {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
 	display: block;
-	font-family: "Noto Sans", sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1.5;
