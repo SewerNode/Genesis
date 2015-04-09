@@ -2,15 +2,18 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Twenty Fifteen 1.0\n"
+"Project-Id-Version: AgaMaSmaka\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/twentyfifteen\n"
-"POT-Creation-Date: 2014-12-14 12:26:59+00:00\n"
+"POT-Creation-Date: 2015-04-07 12:10:25+00:00\n"
+"PO-Revision-Date: 2015-04-09 13:45+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: NODE\n"
+"Language: Polski\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
@@ -18,7 +21,9 @@ msgstr ""
 
 #: 404.php:21
 msgid "It looks like nothing was found at this location. Maybe try a search?"
-msgstr "Wygląda na to, nic nie zostało znalezione w tym miejscu. Może spróbuj wyszukiwania?"
+msgstr ""
+"Wygląda na to, nic nie zostało znalezione w tym miejscu. Może spróbuj "
+"wyszukiwania?"
 
 #: archive.php:49 index.php:46 search.php:38
 msgid "Previous page"
@@ -64,7 +69,7 @@ msgstr ""
 #: content-link.php:56 content-page.php:35 content-search.php:28
 #: content-search.php:33 content.php:57 image.php:71
 msgid "Edit"
-msgstr ""
+msgstr "Edytuj"
 
 #: content-none.php:15
 msgid "Nothing Found"
@@ -208,7 +213,7 @@ msgstr ""
 
 #: inc/customizer.php:119
 msgid "Yellow"
-msgstr ""
+msgstr "Żółty"
 
 #: inc/customizer.php:130
 msgid "Pink"
@@ -326,6 +331,7 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "the WordPress team"
 msgstr ""
+
 #. Footer
 msgid "All rights reserved."
 msgstr "Wszelkie prawa zastrzeżone."

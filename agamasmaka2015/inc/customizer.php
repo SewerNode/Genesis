@@ -91,7 +91,7 @@ function agamasmaka_get_color_schemes() {
 		'default' => array(
 			'label'  => __( 'Default', 'agamasmaka' ),
 			'colors' => array(
-				'#f1f1f1',
+				'#FFFFFF',
 				'#ffffff',
 				'#ffffff',
 				'#333333',

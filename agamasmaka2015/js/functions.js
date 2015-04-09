@@ -63,7 +63,7 @@
 		}
 	}
 
-	/*function scroll() {
+	function scroll() {
 		var windowPos = $window.scrollTop();
 
 		if ( 955 > windowWidth ) {
@@ -96,11 +96,11 @@
 			}
 		} else if ( ! top ) {
 			top = true;
-			$sidebar.attr( 'style', 'position: fixed;' );
+			$sidebar.attr( 'style', 'position: relative;' );
 		}
 
 		lastWindowPos = windowPos;
-	}*/
+	}
 
 	function resizeAndScroll() {
 		resize();

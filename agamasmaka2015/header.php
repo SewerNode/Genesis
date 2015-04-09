@@ -21,16 +21,17 @@
 	<script>(function(){document.documentElement.className='js'})();</script>
 	<?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'agamasmaka' ); ?></a>
-
+	<?php /*<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'agamasmaka' ); ?></a>*/ ?>
 	<header id="masthead" class="site-header" role="banner">
 		<?php $header_image = get_header_image(); if ( ! empty( $header_image ) ) : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
 		<?php endif; ?>
-
+		<?php
+		$description = get_bloginfo( 'description', 'display' );
+		if( ($description || is_customize_preview()) && !empty($header_image)):
+		?>
 		<div class="site-branding">
 			<?php
 			/*if ( is_front_page() && is_home() ) : ?>
@@ -39,13 +40,14 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php endif;*/
 
-			$description = get_bloginfo( 'description', 'display' );
+			//$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
 				<p class="site-description"><?php echo $description; ?></p>
 			<?php endif;
 			?>
 			<button class="secondary-toggle"><?php _e( 'Menu and widgets', 'agamasmaka' ); ?></button>
 		</div><!-- .site-branding -->
+		<?php endif; ?>
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php
@@ -58,12 +60,5 @@
 			</nav><!-- .main-navigation -->
 		<?php endif; ?>
 	</header><!-- .site-header -->
-
-<?php if(is_page()) echo ' >is_page< '; //ToDo Test "IS" ?>
-<?php if(is_home()) echo ' >is_home< '; //ToDo Test "IS" ?>
-<?php if(is_front_page()) echo ' >is_front_page< '; //ToDo Test "IS" ?>
-<?php if(is_single()) echo ' >is_single< '; //ToDo Test "IS" ?>
-<?php if(is_category()) echo ' >is_category< '; //ToDo Test "IS" ?>
-<?php if(is_page_template()) echo ' >is_page_template< '; //ToDo Test "IS" ?>
-
+	<?php //get_template_part( 'test', 'helper' ); ?>
 	<div id="content" class="site-content <?php if((!is_home() * !is_front_page() * !is_page()) && (has_nav_menu('primary') || has_nav_menu('social') || is_active_sidebar('sidebar-1'))) echo 'site-content-sidebar'; ?>" >

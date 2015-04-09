@@ -14,6 +14,11 @@
 	</div><!-- .site-content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+			<div id="widget-area-footer" class="widget-area" role="complementary">
+				<?php dynamic_sidebar( 'sidebar-3' ); ?>
+			</div><!-- .widget-area -->
+		<?php endif; ?>
 		<div class="site-info">
 			<?php
 				/**
@@ -23,6 +28,7 @@
 				 */
 				do_action( 'agamasmaka_credits' );
 			?>
+			&copy; <strong><?php echo get_bloginfo('name'); ?></strong> <?php printf( __( 'All rights reserved.', 'agamasmaka' )); ?>
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'agamasmaka' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'agamasmaka' ), 'WordPress' ); ?></a>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->

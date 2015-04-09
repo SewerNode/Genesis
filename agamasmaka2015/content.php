@@ -25,6 +25,8 @@
 				the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 			endif;
 		?>
+		<?php edit_post_link( __( 'Edit', 'agamasmaka' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php agamasmaka_entry_meta(); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
@@ -52,10 +54,13 @@
 			get_template_part( 'author-bio' );
 		endif;
 	?>
-
 	<footer class="entry-footer">
-		<?php agamasmaka_entry_meta(); ?>
-		<?php edit_post_link( __( 'Edit', 'agamasmaka' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php agamasmaka_entry_meta_tag(); ?>
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
+<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+	<div id="widget-area-underpage" class="widget-area" role="complementary">
+		<?php dynamic_sidebar( 'sidebar-2' ); ?>
+	</div><!-- .widget-area -->
+<?php endif; ?>

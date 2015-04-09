@@ -131,16 +131,36 @@ add_action( 'after_setup_theme', 'agamasmaka_setup' );
  */
 function agamasmaka_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Widget Area', 'agamasmaka' ),
+		'name'          => __( 'Widgety - pasek boczny', 'agamasmaka' ),
 		'id'            => 'sidebar-1',
 		'description'   => __( 'Add widgets here to appear in your sidebar.', 'agamasmaka' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
-	) );
+	));
+	register_sidebar( array(
+		'name'          => __( 'Widgety - pod wpisem', 'agamasmaka' ),
+		'id'            => 'sidebar-2',
+		'description'   => __( 'Add widgets here to appear under page.', 'agamasmaka' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
+	register_sidebar( array(
+		'name'          => __( 'Widgety - footer', 'agamasmaka' ),
+		'id'            => 'sidebar-3',
+		'description'   => __( 'Add widgets here to appear in your footer.', 'agamasmaka' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
 }
 add_action( 'widgets_init', 'agamasmaka_widgets_init' );
+
+
 
 if ( ! function_exists( 'agamasmaka_fonts_url' ) ) :
 /**
