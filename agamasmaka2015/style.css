@@ -1290,6 +1290,8 @@ img.aligncenter {
  */
 
 #masthead {}
+#masthead a {display:inline-block;}
+#masthead a:focus {}
 
 @media screen and (max-width:800px){
 	#masthead > a {display:none;}
