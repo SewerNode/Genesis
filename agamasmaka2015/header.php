@@ -60,5 +60,5 @@
 			</nav><!-- .main-navigation -->
 		<?php endif; ?>
 	</header><!-- .site-header -->
-	<?php get_template_part( 'test', 'helper' ); ?>
+	<?php //get_template_part( 'test', 'helper' ); ?>
 	<div id="content" class="site-content <?php if((!is_home() * !is_front_page() * !is_page()) && (has_nav_menu('primary') || has_nav_menu('social') || is_active_sidebar('sidebar-1'))) echo 'site-content-sidebar'; ?>" >
