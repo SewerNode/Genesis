@@ -133,7 +133,7 @@ q {
 	quotes: none;
 }
 
-a:focus {
+a:focus {/*ToDo Focus on czy off*/
 	outline: 2px solid #c1c1c1;
 	outline: 2px solid rgba(51, 51, 51, 0.3);
 }
@@ -2685,6 +2685,10 @@ p > video {
 	#page.site {padding:0 1em; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
 	#content.site-content-sidebar #primary.content-area {max-width:70%;}
 	#content.site-content-sidebar #sidebar {max-width:30%;}
+
+	article.homepost .post-thumbnail {height:auto;}
+	article.homepost .post-thumbnail,
+	article.homepost .post-thumbnail img {max-width:100%;}
 }
 @media screen and (max-width:900px) {
 	#site-navigation > div {display:inline-block; width:100%;}
@@ -2697,15 +2701,19 @@ p > video {
 	#widget-area-underpage .widget.widget_recent_entries ul li {width:100%;}
 
 	article.homepost {margin:10px 0;}
-	article.homepost .post-thumbnail,
-	article.homepost .post-thumbnail img {max-width:100%;}
-
 
 	#widget-area-sidebar {margin:2em 0 0 0;}
 	#widget-area-sidebar aside {overflow:hidden; height:3em; margin:0 0 1em 0; transition:all 0.5s ease-in-out;}
 	#widget-area-sidebar aside:hover,
 	#widget-area-sidebar aside:focus {height:auto;}
 	#widget-area-sidebar aside .widget-title {padding:5px 10px; background:#CDCDCD;}
+
+	#widget-area-sidebar aside.widget.widget_categories ul li {padding:0.5em 0;}
+
+	#widget-area-sidebar aside.widget.recent-posts-widget-with-thumbnails ul li,
+	#widget-area-sidebar aside.widget.widget_recent_entries ul li {display:inline-block; width:100%;}
+	#widget-area-sidebar aside.widget.recent-posts-widget-with-thumbnails ul li a,
+	#widget-area-sidebar aside.widget.widget_recent_entries ul li a {width:100%;}
 }
 
 @media screen and (max-width:700px) {
@@ -2717,6 +2725,13 @@ p > video {
 	.main-navigation li a {width:100%;}
 	.main-navigation li:focus,
 	.main-navigation li:hover {background:#FFFFFF;}
+}
+
+@media screen and (min-width:900px) and (max-width:1040px) {
+	article.homepost {max-width:46%;}
+}
+@media screen and (min-width:500px) and (max-width:700px) {
+	article.homepost {max-width:46%;}
 }
 
 /**
