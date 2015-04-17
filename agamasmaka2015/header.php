@@ -25,23 +25,22 @@
 <div id="page" class="hfeed site">
 	<?php /*<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'agamasmaka' ); ?></a>*/ ?>
 	<header id="masthead" class="site-header" role="banner">
-		<?php $header_image = get_header_image(); if ( ! empty( $header_image ) ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
+		<?php $header_image = get_header_image(); if(!empty($header_image)) : ?>
+			<a href="<?php echo esc_url(home_url( '/' )); ?>" rel="home"><img src="<?php header_image(); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
 		<?php endif; ?>
 		<?php
 		$description = get_bloginfo( 'description', 'display' );
-		if( ($description || is_customize_preview()) && !empty($header_image)):
+		if(($description || is_customize_preview()) && !empty($header_image)):
 		?>
 		<div class="site-branding">
 			<?php
-			if ( is_front_page() && is_home() ) : ?>
+			if(is_front_page() && is_home()): ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
+			<?php else: ?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php endif;
-
 			//$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
+			if($description || is_customize_preview()): ?>
 				<p class="site-description"><?php echo $description; ?></p>
 			<?php endif;
 			?>
@@ -49,7 +48,7 @@
 		</div><!-- .site-branding -->
 		<?php endif; ?>
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>
-			<nav id="site-navigation" class="main-navigation" role="navigation">
+			<nav id="site-navigation" class="main-navigation<?php if(is_active_sidebar('sidebar-0')) echo ' searchmargin'; ?>" role="navigation">
 				<?php
 				// Primary navigation menu.
 				wp_nav_menu( array(
@@ -57,6 +56,14 @@
 					'theme_location' => 'primary',
 				) );
 				?>
+				<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
+					<label class="hidden" for="s"><?php _e('Szukaj przepisu'); ?></label>
+					<input type="text" value="SZUKAJ PRZEPISU" name="s" id="s" onfocus="if (this.value == 'SZUKAJ PRZEPISU') {this.value = '';}" onblur="if (this.value == '') {this.value = 'SZUKAJ PRZEPISU';}" />
+					<?php /*<input type="text" value="<?php the_search_query(); ?>" name="s" id="s" />*/ ?>
+					<button type="submit" id="searchsubmit" value=" " ><span class="genericon genericon-search"></span></button>
+
+				</form>
+
 			</nav><!-- .main-navigation -->
 		<?php endif; ?>
 	</header><!-- .site-header -->

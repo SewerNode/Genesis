@@ -43,12 +43,13 @@ get_header(); ?>
 			endwhile;
 
 			// Previous/next page navigation.
+			if ( is_home() && ! is_front_page() ):
 			the_posts_pagination( array(
 				'prev_text'          => __( 'Previous page', 'agamasmaka' ),
 				'next_text'          => __( 'Next page', 'agamasmaka' ),
 				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'agamasmaka' ) . ' </span>',
 			) );
-
+			endif;
 		// If no content, include the "No posts found" template.
 		else :
 			get_template_part( 'content', 'none' );

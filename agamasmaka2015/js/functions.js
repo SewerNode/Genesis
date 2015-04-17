@@ -24,7 +24,7 @@
 
 	// Enable menu toggle for small screens.
 	( function() {
-		var secondary = $( '#secondary' ), button, menu, widgets, social;
+		var secondary = $( '#site-navigation' ), button, menu, widgets, social;
 		if ( ! secondary ) {
 			return;
 		}
@@ -43,7 +43,7 @@
 			return;
 		}
 
-		button.on( 'click.twentyfifteen', function() {
+		button.on( 'click.aganasmaka', function() {
 			secondary.toggleClass( 'toggled-on' );
 			secondary.trigger( 'resize' );
 			$( this ).toggleClass( 'toggled-on' );

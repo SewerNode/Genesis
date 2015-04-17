@@ -18,6 +18,7 @@
 	?>
 
 	<header class="entry-header">
+		<?php agamasmaka_entry_meta(); ?>
 		<?php
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
@@ -26,7 +27,7 @@
 			endif;
 		?>
 		<?php edit_post_link( __( 'Edit', 'agamasmaka' ), '<span class="edit-link">', '</span>' ); ?>
-		<?php agamasmaka_entry_meta(); ?>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

@@ -246,7 +246,7 @@ if ( ! function_exists( 'agamasmaka_post_thumbnail' ) ) :
  * @since Aga ma smaka 1.0
  */
 function agamasmaka_post_thumbnail() {
-	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+	if ( post_password_required() || is_attachment()  ) {
 		return;
 	}
 
@@ -258,12 +258,15 @@ function agamasmaka_post_thumbnail() {
 	</div><!-- .post-thumbnail -->
 
 	<?php else : ?>
-
-	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-		<?php
-			the_post_thumbnail( 'post-thumbnail', array( 'alt' => get_the_title() ) );
-		?>
-	</a>
+		<?php if (! has_post_thumbnail() ) { ?>
+			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+				<?php echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/no_image.png" />'; ?>
+			</a>
+		<?php }else{ ?>
+			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+				<?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => get_the_title() ) ); ?>
+			</a>
+		<?php } ?>
 
 	<?php endif; // End is_singular()
 }

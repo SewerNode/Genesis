@@ -29,7 +29,7 @@
 				do_action( 'agamasmaka_credits' );
 			?>
 			&copy; <strong><?php echo get_bloginfo('name'); ?></strong> <?php printf( __( 'All rights reserved.', 'agamasmaka' )); ?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'agamasmaka' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'agamasmaka' ), 'WordPress' ); ?></a>
+			<a class="float-right" href="<?php echo esc_url( __( 'https://rewizja.net/', 'agamasmaka' ) ); ?>"><?php printf( __( 'Designed by %s', 'agamasmaka' ), 'rewizja.net' ); ?></a>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->
 
