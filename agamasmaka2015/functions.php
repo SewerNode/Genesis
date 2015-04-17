@@ -176,6 +176,11 @@ function agamasmaka_fonts_url() {
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
 
+	/* .Roboto */
+	if ( 'off' !== _x( 'on', 'Roboto font: on or off', 'agamasmaka' ) ) {
+		$fonts[] = 'Roboto:400,700,300';
+	}
+
 	/* translators: If there are characters in your language that are not supported by Noto Sans, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Noto Sans font: on or off', 'agamasmaka' ) ) {
 		$fonts[] = 'Noto Sans:400italic,700italic,400,700';

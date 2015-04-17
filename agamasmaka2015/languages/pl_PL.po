@@ -9,14 +9,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
-"Language-Team: NODE\n"
+"Language-Team: NODE <s.kreja@nodesoft.pl>\n"
 "Language: Polski\n"
 "X-Generator: Poedit 1.5.7\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Oho! Nie mam takiej strony."
 
 #: 404.php:21
 msgid "It looks like nothing was found at this location. Maybe try a search?"
@@ -72,7 +72,7 @@ msgstr "Edytuj"
 
 #: content-none.php:15
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nic nie znaleziono"
 
 #: content-none.php:22
 msgid ""
@@ -84,6 +84,8 @@ msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Przepraszam, ale nie znaleziono nic spełniającego warunki wyszukiwania. "
+"Proszę spróbować ponownie z innymi słowami."
 
 #: content-none.php:31
 msgid ""
