@@ -1388,7 +1388,7 @@ img.aligncenter {
 	color: #333;
 	font-family: 'Roboto', sans-serif;
 	margin: 0 0 0.5em;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.02em;
 	font-size:1.2em;
 }
 
@@ -1597,7 +1597,7 @@ article.post.type-post  {text-align:left;}
 
 article .entry-header {position:relative;}
 article .entry-header span.posted-on {font-size:12px;}
-article .entry-footer {margin-bottom:2em; background:none; text-align:center;}
+article .entry-footer {margin-bottom:1em; background:none; text-align:center;}
 
 #site-navigation {border-top:1px solid #C2C2C2; display:table; width:100%;}
 #site-navigation > div {display:table-cell;}
@@ -1855,6 +1855,9 @@ a.post-thumbnail:focus {
 .entry-content table.skladniki {border:0;}
 .entry-content table.skladniki h2 {margin:0.5em 0; font-weight:400;}
 .entry-content table.skladniki tr td {padding:1em 1em 0.1em 6em; border:0; color:#4E4E4E; background:#F0F0F0 url('./img/ico_skladniki.png') 0 0 no-repeat;}
+
+.entry-content .fb_iframe_widget {width:100%; max-width:100%; padding:0 25%; background:url('./img/spodobalosie_podaj_dalej.jpg') 25% 50% no-repeat; box-sizing:border-box; -moz-box-sizing:border-box;}
+.entry-content .fb_iframe_widget > span {float:right;}
 
 .author-info {
 	border-top: 1px solid #eaeaea;
