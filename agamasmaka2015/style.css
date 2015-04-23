@@ -708,6 +708,7 @@ a:focus {
 	font-weight: 400;
 	line-height: 1.5;
 	margin-top: 0.5em;
+	display:none;
 }
 
 .no-js .main-navigation ul ul {
@@ -1625,8 +1626,6 @@ article .entry-footer {margin-bottom:1em; background:none; text-align:center;}
 #searchform button#searchsubmit {display:inline-block; width:38px; height:38px; padding:0px; background:transparent; color:#CDCDCD; border:0; text-align:center; vertical-align:middle; }
 #searchform button#searchsubmit span {font-size:24px; line-height:1;}
 
-
-
 #sidebar {}
 	#sidebar .widget.widget_categories {text-align:left;}
 	#sidebar .widget.widget_categories ul {list-style:circle; padding-left:1.3em; font-size:0.968em; color:#5B5B5B;}
@@ -1634,6 +1633,7 @@ article .entry-footer {margin-bottom:1em; background:none; text-align:center;}
 	#sidebar .widget.widget_categories ul li:hover {opacity:0.8;}
 	#sidebar .widget.widget_categories ul li.current-cat {color:#FF0000;}
 	#sidebar .widget.widget_categories ul li a {color:inherit;}
+	#sidebar .widget.widget_categories ul.children {margin:0; border:0; padding:0 0 0 1.3em;}
 
 #widget-area-sidebar {}
 	#sidebar .widget.recent-posts-widget-with-thumbnails,
@@ -2016,7 +2016,7 @@ a.post-thumbnail:focus {
 .full-size-link {
 	margin-right: 1em;
 }
-
+/*
 .format-aside .entry-format:before {
 	content: "\f101";
 }
@@ -2053,9 +2053,9 @@ a.post-thumbnail:focus {
 	content: "\f109";
 }
 
-/*.posted-on:before {
+.posted-on:before {
 	content: "\f307";
-}*/
+}
 
 .byline:before {
 	content: "\f304";
@@ -2080,7 +2080,7 @@ a.post-thumbnail:focus {
 .edit-link:before {
 	content: "\f411";
 }
-
+*/
 .comments-link,
 .edit-link {
 	white-space: nowrap;
@@ -2100,9 +2100,10 @@ a.post-thumbnail:focus {
 }
 
 .taxonomy-description {
+	text-align:left;
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
-	padding-top: 0.4em;
+	padding:0.4em 0;
 }
 
 .taxonomy-description a {

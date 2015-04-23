@@ -20,6 +20,7 @@
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 	<![endif]-->
 	<script>(function(){document.documentElement.className='js'})();</script>
+	<!-- WP-HEAD START -->
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
