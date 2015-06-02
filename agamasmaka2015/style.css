@@ -1034,7 +1034,7 @@ a:focus {
 	background-color: #333;
 	color: #fff;
 	display: inline-block;
-	height: 48px;
+	height: 45px;
 	overflow: hidden;
 	padding: 0;
 	position: absolute;
@@ -1044,7 +1044,7 @@ a:focus {
 .pagination .prev:before,
 .pagination .next:before {
 	font-size: 32px;
-	height: 48px;
+	height: 45px;
 	line-height: 48px;
 	position: relative;
 	width: 48px;

@@ -51,7 +51,7 @@
 	} )();
 
 	// Sidebar scrolling.
-	function resize() {
+	/*function resize() {
 		windowWidth   = $window.width();
 		windowHeight  = $window.height();
 		bodyHeight    = $body.height();
@@ -61,7 +61,7 @@
 			top = bottom = false;
 			$sidebar.removeAttr( 'style' );
 		}
-	}
+	}*/
 
 	function scroll() {
 		var windowPos = $window.scrollTop();
