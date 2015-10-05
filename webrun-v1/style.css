@@ -1,7 +1,7 @@
 
 /*
-    Theme Name: Sewer1
-    Description: Sewer1 theme for the Genesis Framework
+    Theme Name: Webrun v1
+    Description: Webrun v1 theme for the Genesis Framework
     Author: Seweryn Kreja
     Author URI: nodesoft.pl
  
@@ -1211,3 +1211,10 @@ div.gform_wrapper form li {
   margin: 16px 0 0;
   margin: 1.6rem 0 0;
 }
+
+/* Slider */
+div#genesis-responsive-slider {border:0; padding:0;}
+
+/* Home Banner */
+#home-top {text-align:center;}
+#home-top > section {display:inline-block; text-align:center; vertical-align:top;}

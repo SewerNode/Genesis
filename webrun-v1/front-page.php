@@ -19,7 +19,7 @@ add_action( 'get_header', 'gs_home_helper' );
  */
 function gs_home_helper() {
 
-        if ( is_active_sidebar( 'home-top' ) || is_active_sidebar( 'home-middle-01' ) || is_active_sidebar( 'home-middle-02' ) || is_active_sidebar( 'home-middle-03' ) || is_active_sidebar( 'home-bottom' ) ) {
+        if ( is_active_sidebar( 'home-slider' ) || is_active_sidebar( 'home-top' ) || is_active_sidebar( 'home-middle-01' ) || is_active_sidebar( 'home-middle-02' ) || is_active_sidebar( 'home-middle-03' ) || is_active_sidebar( 'home-bottom' ) ) {
 
                 remove_action( 'genesis_loop', 'genesis_do_loop' );
                 add_action( 'genesis_loop', 'gs_home_widgets' );
@@ -38,6 +38,13 @@ function gs_home_helper() {
  *
  */
 function gs_home_widgets() {
+		genesis_widget_area(
+			'home-slider',
+			array(
+				'before' => '<div class="site-inner"><div class="wrap"><div class="content-sidebar-wrap"><main class="content"><aside id="home-slider" class="home-widget widget-area">',
+				'after' => '</main></div></div></div>'
+			)
+		);
 
         genesis_widget_area(
                 'home-top', 

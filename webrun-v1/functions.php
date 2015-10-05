@@ -23,6 +23,21 @@ function gs_theme_setup() {
 	//Enable HTML5 Support
 	add_theme_support( 'html5' );
 
+	// Remove Genesis Layout Settings
+	remove_theme_support( 'genesis-inpost-layouts' );
+	// Unregister content/sidebar layout setting
+	genesis_unregister_layout( 'content-sidebar' );
+	// Unregister sidebar/content layout setting
+	genesis_unregister_layout( 'sidebar-content' );
+	// Unregister content/sidebar/sidebar layout setting
+	genesis_unregister_layout( 'content-sidebar-sidebar' );
+	// Unregister sidebar/sidebar/content layout setting
+	genesis_unregister_layout( 'sidebar-sidebar-content' );
+	// Unregister sidebar/content/sidebar layout setting
+	genesis_unregister_layout( 'sidebar-content-sidebar' );
+	// Unregister full-width content layout setting
+	//genesis_unregister_layout( 'full-width-content' );
+
 	//Enable Post Navigation
 	add_action( 'genesis_after_entry_content', 'genesis_prev_next_post_nav', 5 );
 
@@ -35,17 +50,16 @@ function gs_theme_setup() {
 	 * @param integer $small Small width
 	 * @param integer $large Large width
 	 */
-	$content_width = apply_filters( 'content_width', 600, 430, 920 );
+	$content_width = apply_filters( 'content_width', 600, 430, 920, 1152 );
 	
 	//Custom Image Sizes
 	add_image_size( 'featured-image', 225, 160, TRUE );
 	
 	// Enable Custom Background
-	//add_theme_support( 'custom-background' );
+	add_theme_support( 'custom-background' );
 
 	// Enable Custom Header
-	//add_theme_support('genesis-custom-header');
-
+	add_theme_support('genesis-custom-header');
 
 	// Add support for structural wraps
 	add_theme_support( 'genesis-structural-wraps', array(
@@ -56,6 +70,18 @@ function gs_theme_setup() {
 		'footer-widgets',
 		'footer'
 	) );
+
+	/** Unregister Genesis widgets */
+	add_action( 'widgets_init', 'unregister_genesis_widgets', 20 );
+	function unregister_genesis_widgets() {
+		unregister_widget( 'Genesis_eNews_Updates' );
+		//unregister_widget( 'Genesis_Featured_Page' );
+		//unregister_widget( 'Genesis_Featured_Post' );
+		unregister_widget( 'Genesis_Latest_Tweets_Widget' );
+		//unregister_widget( 'Genesis_Menu_Pages_Widget' );
+		unregister_widget( 'Genesis_User_Profile_Widget' );
+		//unregister_widget( 'Genesis_Widget_Menu_Categories' );
+	}
 
 	/**
 	 * 07 Footer Widgets
@@ -90,7 +116,7 @@ function gs_theme_setup() {
 	 * Takes a stylesheet string or an array of stylesheets.
 	 * Default: editor-style.css 
 	 */
-	//add_editor_style();
+	add_editor_style();
 	
 	
 	// Register Sidebars
@@ -101,6 +127,11 @@ function gs_theme_setup() {
 // Register Sidebars
 function gs_register_sidebars() {
 	$sidebars = array(
+		array(
+			'id'			=> 'home-slider',
+			'name'			=> __( 'Home Slider', CHILD_DOMAIN ),
+			'description'	=> __( 'This is the most top homepage section.', CHILD_DOMAIN ),
+		),
 		array(
 			'id'			=> 'home-top',
 			'name'			=> __( 'Home Top', CHILD_DOMAIN ),
