@@ -502,6 +502,7 @@ h6,
   line-height: 1.5;
   width: 100%;
 }
+.header-widget-area .genesis-nav-menu {text-align:right;}
 .genesis-nav-menu .menu-item {
   display: inline-block;
   text-align: left;
@@ -968,10 +969,9 @@ Site Footer
 }
 
 .site-footer .wrap {
-  border-top: 2px solid #4c5558;
   overflow: hidden;
-  padding: 48px 0;
-  padding: 4.8rem 0;
+  padding: 24px 0;
+  padding: 2.4rem 0;
 }
 
 .site-footer p {

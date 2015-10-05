@@ -744,8 +744,8 @@ function gs_remove_image_sizes( $sizes ) {
  */
 function gs_genesis_slider_defaults( $defaults ) {
 	$defaults['slideshow_arrows']        = 0;
-	$defaults['slideshow_height']        = 380;
-	$defaults['slideshow_width']         = 960;
+	$defaults['slideshow_height']        = 500;
+	$defaults['slideshow_width']         = 1152;
 	$defaults['slideshow_more_text']     = __( 'Read', CHILD_DOMAIN );
 	$defaults['slideshow_title_show']    = 1;
 	$defaults['slideshow_excerpt_width'] = 360;

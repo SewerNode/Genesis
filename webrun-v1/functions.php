@@ -18,28 +18,87 @@ require_once( get_stylesheet_directory() . '/lib/init.php');
 add_action( 'genesis_setup', 'gs_theme_setup', 15 );
 
 //Theme Set Up Function
-function gs_theme_setup() {
-	
+function gs_theme_setup()
+{
+
 	//Enable HTML5 Support
-	add_theme_support( 'html5' );
+	add_theme_support('html5');
 
 	// Remove Genesis Layout Settings
-	remove_theme_support( 'genesis-inpost-layouts' );
+	remove_theme_support('genesis-inpost-layouts');
 	// Unregister content/sidebar layout setting
-	genesis_unregister_layout( 'content-sidebar' );
+	genesis_unregister_layout('content-sidebar');
 	// Unregister sidebar/content layout setting
-	genesis_unregister_layout( 'sidebar-content' );
+	genesis_unregister_layout('sidebar-content');
 	// Unregister content/sidebar/sidebar layout setting
-	genesis_unregister_layout( 'content-sidebar-sidebar' );
+	genesis_unregister_layout('content-sidebar-sidebar');
 	// Unregister sidebar/sidebar/content layout setting
-	genesis_unregister_layout( 'sidebar-sidebar-content' );
+	genesis_unregister_layout('sidebar-sidebar-content');
 	// Unregister sidebar/content/sidebar layout setting
-	genesis_unregister_layout( 'sidebar-content-sidebar' );
+	genesis_unregister_layout('sidebar-content-sidebar');
 	// Unregister full-width content layout setting
 	//genesis_unregister_layout( 'full-width-content' );
 
+	/** Custom site title
+	 * Add header_image as image
+	 * Remove site description
+	 * Remove header_image in background
+	 */
+	if(get_header_image()){
+		add_filter('genesis_seo_title', 'gs_genesis_header_background_to_img', 10, 2);
+		function gs_genesis_header_background_to_img($title, $inside)
+		{
+			$inline_logo = sprintf('<a href="%s" title="%s"><img src="' . get_header_image() . '" title="%s" alt="%s"/></a>', trailingslashit(home_url()), esc_attr(get_bloginfo('name')), esc_attr(get_bloginfo('name')), esc_attr(get_bloginfo('name')));
+			$title = str_replace($inside, $inline_logo, $title);
+			return $title;
+		}
+		remove_action('genesis_site_description', 'genesis_seo_site_description');
+	};
+	remove_action( 'wp_head', 'genesis_custom_header_style' );
+	add_action( 'wp_head', 'gs_custom_header_style' );
+	function gs_custom_header_style() {
+
+		//* Do nothing if custom header not supported
+		if ( ! current_theme_supports( 'custom-header' ) )
+			return;
+
+		//* Do nothing if user specifies their own callback
+		if ( get_theme_support( 'custom-header', 'wp-head-callback' ) )
+			return;
+
+		$output = '';
+
+		$header_image = get_header_image();
+		$text_color   = get_header_textcolor();
+
+		//* If no options set, don't waste the output. Do nothing.
+		if ( empty( $header_image ) && ! display_header_text() && $text_color === get_theme_support( 'custom-header', 'default-text-color' ) )
+			return;
+
+		$header_selector = get_theme_support( 'custom-header', 'header-selector' );
+		$title_selector  = genesis_html5() ? '.custom-header .site-title'       : '.custom-header #title';
+		$desc_selector   = genesis_html5() ? '.custom-header .site-description' : '.custom-header #description';
+
+		//* Header selector fallback
+		if ( ! $header_selector )
+			$header_selector = genesis_html5() ? '.custom-header .site-header' : '.custom-header #header';
+
+		//* Header image CSS, if exists
+		if ( $header_image )
+			//$output .= sprintf( '%s { background: url(%s) no-repeat !important; }', $header_selector, esc_url( $header_image ) );
+			$output .= '';
+
+		//* Header text color CSS, if showing text
+		if ( display_header_text() && $text_color !== get_theme_support( 'custom-header', 'default-text-color' ) )
+			$output .= sprintf( '%2$s a, %2$s a:hover, %3$s { color: #%1$s !important; }', esc_html( $text_color ), esc_html( $title_selector ), esc_html( $desc_selector ) );
+
+		if ( $output )
+			printf( '<style type="text/css">%s</style>' . "\n", $output );
+
+	}
+
 	//Enable Post Navigation
-	add_action( 'genesis_after_entry_content', 'genesis_prev_next_post_nav', 5 );
+	//add_action( 'genesis_after_entry_content', 'genesis_prev_next_post_nav', 5 );
 
 	/** 
 	 * 01 Set width of oEmbed
@@ -59,7 +118,7 @@ function gs_theme_setup() {
 	add_theme_support( 'custom-background' );
 
 	// Enable Custom Header
-	add_theme_support('genesis-custom-header');
+	add_theme_support('genesis-custom-header', array('width'=> 280, 'height'=> 120));
 
 	// Add support for structural wraps
 	add_theme_support( 'genesis-structural-wraps', array(
@@ -104,10 +163,24 @@ function gs_theme_setup() {
 			'mobile'    => __( 'Mobile Navigation Menu', CHILD_DOMAIN ),
 		)
 	);
+
+	//* Reposition the primary navigation menu
+	//remove_action( 'genesis_after_header', 'genesis_do_nav' );
+	//add_action( 'genesis_header', 'genesis_do_nav', 12 );
 	
 	// Add Mobile Navigation
 	add_action( 'genesis_before', 'gs_mobile_navigation', 5 );
-	
+
+
+	//* Customize the site footer
+	//remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
+	remove_action( 'genesis_footer', 'genesis_do_footer' );
+	//remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
+	function gs_custom_footer() {
+		genesis_widget_area ('footercontent');
+	};
+	add_action( 'genesis_footer', 'gs_custom_footer' );
+
 	//Enqueue Sandbox Scripts
 	add_action( 'wp_enqueue_scripts', 'gs_enqueue_scripts' );
 	
@@ -116,9 +189,8 @@ function gs_theme_setup() {
 	 * Takes a stylesheet string or an array of stylesheets.
 	 * Default: editor-style.css 
 	 */
-	add_editor_style();
-	
-	
+	//add_editor_style();
+
 	// Register Sidebars
 	gs_register_sidebars();
 	
@@ -142,11 +214,11 @@ function gs_register_sidebars() {
 			'name'			=> __( 'Home Left Middle', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage left section.', CHILD_DOMAIN ),
 		),
-		array(
+		/*array(
 			'id'			=> 'home-middle-02',
 			'name'			=> __( 'Home Middle Middle', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage middle section.', CHILD_DOMAIN ),
-		),
+		),*/
 		array(
 			'id'			=> 'home-middle-03',
 			'name'			=> __( 'Home Right Middle', CHILD_DOMAIN ),
@@ -167,6 +239,11 @@ function gs_register_sidebars() {
 			'name'			=> __( 'After Post', CHILD_DOMAIN ),
 			'description'	=> __( 'This will show up after every post.', CHILD_DOMAIN ),
 		),
+		array(
+			'id'          => 'footercontent',
+			'name'        => __( 'Footer', CHILD_DOMAIN ),
+			'description' => __( 'This is the general footer area.', CHILD_DOMAIN ),
+		)
 	);
 	
 	foreach ( $sidebars as $sidebar )
@@ -208,3 +285,4 @@ function gs_do_after_entry() {
         );
  }
  }
+
