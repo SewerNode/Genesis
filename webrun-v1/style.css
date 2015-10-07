@@ -168,7 +168,10 @@ a img {
   overflow: hidden;
   *zoom: 1;
   padding-top: 20px;
-  padding-top: 2rem;
+	padding-top: 2rem;
+}
+.home .site-inner {
+	padding-top: 0;
 }
 
 /* Containers and Columns */
@@ -435,13 +438,11 @@ h6,
 .site-header {
   min-height: 120px;
   overflow: hidden;
-  padding-bottom: 32px;
-  padding-bottom: 3.2rem;
 }
 
 .site-title {
-  margin: 40px 0 8px;
-  margin: 4rem 0 0.8rem;
+  margin: 20px 0 8px;
+  margin: 2rem 0 0.8rem;
   font-size: 48px;
   font-size: 4.8rem;
   font-family: Arimo, Varela, sans-serif;
