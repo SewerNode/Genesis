@@ -174,6 +174,10 @@ a img {
 	padding-top: 0;
 }
 
+.home .site-inner.home-slider {
+	background:#000000;
+}
+
 /* Containers and Columns */
 .content-sidebar-sidebar .sidebar-secondary,
 .sidebar-content .content,
@@ -1214,7 +1218,8 @@ div.gform_wrapper form li {
 }
 
 /* Slider */
-div#genesis-responsive-slider {border:0; padding:0;}
+div#genesis-responsive-slider {border:0; padding:0; background:transparent;}
+div.flexslider {background:transparent;}
 
 /* Home Banner */
 #home-top {text-align:center;}

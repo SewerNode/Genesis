@@ -20,7 +20,6 @@ add_action( 'genesis_setup', 'gs_theme_setup', 15 );
 //Theme Set Up Function
 function gs_theme_setup()
 {
-
 	//Enable HTML5 Support
 	add_theme_support('html5');
 
@@ -38,6 +37,30 @@ function gs_theme_setup()
 	genesis_unregister_layout('sidebar-content-sidebar');
 	// Unregister full-width content layout setting
 	//genesis_unregister_layout( 'full-width-content' );
+
+	/**
+	 * Custom Colors
+	 */
+	/*function gs_customizer ( $wp_customize ) {
+		// add new section
+		$wp_customize->add_section( 'gs_theme_colors', array(
+			'title' => __( 'Theme Colors', 'gs' ),
+			'priority' => 100,
+		) );
+
+		// add color picker setting
+		$wp_customize->add_setting( 'slider_bg', array(
+			'default' => '#3e6b85'
+		) );
+
+		// add color picker control
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'slider_bg', array(
+			'label' => 'Slider Background',
+			'section' => 'gs_theme_colors',
+			'settings' => 'slider_bg',
+		) ) );
+	}
+	add_action( 'customize_register', 'gs_customizer' );*/
 
 	/** Custom site title
 	 * Add header_image as image
@@ -171,7 +194,6 @@ function gs_theme_setup()
 	// Add Mobile Navigation
 	add_action( 'genesis_before', 'gs_mobile_navigation', 5 );
 
-
 	//* Customize the site footer
 	//remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
 	remove_action( 'genesis_footer', 'genesis_do_footer' );
@@ -264,11 +286,9 @@ require_once('lib/scripts.php');
 
 //Add Mobile Menu
 function gs_mobile_navigation() {
-	
 	$mobile_menu_args = array(
 		'echo' => true,
 	);
-	
 	gs_navigation( 'mobile', $mobile_menu_args );
 }
 
@@ -277,12 +297,12 @@ add_action('genesis_after_entry', 'gs_do_after_entry');
 function gs_do_after_entry() {
  	if ( is_single() ) {
  	genesis_widget_area( 
-                'after-post', 
-                array(
-                        'before' => '<aside id="after-post" class="after-post"><div class="home-widget widget-area">', 
-                        'after' => '</div></aside><!-- end #home-left -->',
-                ) 
+            'after-post',
+            array(
+                'before' => '<aside id="after-post" class="after-post"><div class="home-widget widget-area">',
+                'after' => '</div></aside><!-- end #home-left -->',
+            )
         );
- }
- }
-
+    }
+}
+/*EOF*/
