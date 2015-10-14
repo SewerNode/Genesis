@@ -91,6 +91,8 @@
 		margin:auto;
 	}
 
+	header .widget.widget_nav_menu {display:none;}
+
 	.genesis-nav-menu li,
 	.site-footer .creds,
 	.site-footer .gototop,

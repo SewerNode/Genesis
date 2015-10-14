@@ -176,6 +176,8 @@ a img {
 
 .home .site-inner.home-slider {
 	background:#000000;
+	margin-bottom:30px;
+	margin-bottom:3rem;
 }
 
 /* Containers and Columns */
@@ -440,7 +442,7 @@ h6,
 03 Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
-  min-height: 120px;
+  min-height: 80px;
   overflow: hidden;
 }
 
