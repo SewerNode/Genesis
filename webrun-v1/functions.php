@@ -24,11 +24,11 @@ function gs_theme_setup()
 	add_theme_support('html5');
 
 	// Remove Genesis Layout Settings
-	remove_theme_support('genesis-inpost-layouts');
+	//remove_theme_support('genesis-inpost-layouts');
 	// Unregister content/sidebar layout setting
 	genesis_unregister_layout('content-sidebar');
 	// Unregister sidebar/content layout setting
-	genesis_unregister_layout('sidebar-content');
+	//genesis_unregister_layout('sidebar-content');
 	// Unregister content/sidebar/sidebar layout setting
 	genesis_unregister_layout('content-sidebar-sidebar');
 	// Unregister sidebar/sidebar/content layout setting
@@ -135,7 +135,7 @@ function gs_theme_setup()
 	$content_width = apply_filters( 'content_width', 600, 430, 920, 1152 );
 	
 	//Custom Image Sizes
-	add_image_size( 'featured-image', 225, 160, TRUE );
+	add_image_size( 'featured-image', 380, 190, TRUE );
 	
 	// Enable Custom Background
 	add_theme_support( 'custom-background' );
@@ -171,6 +171,8 @@ function gs_theme_setup()
 	 * Change 3 for support of up to 6 footer widgets (automatically styled for layout)
 	 */
 	add_theme_support( 'genesis-footer-widgets', 3 );
+
+	remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
 	/**
 	 * 08 Genesis Menus
@@ -223,17 +225,17 @@ function gs_register_sidebars() {
 	$sidebars = array(
 		array(
 			'id'			=> 'home-slider',
-			'name'			=> __( 'Home Slider', CHILD_DOMAIN ),
+			'name'			=> __( 'Rotator', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the most top homepage section.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-top',
-			'name'			=> __( 'Home Top', CHILD_DOMAIN ),
+			'name'			=> __( 'Strona główna 1', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the top homepage section.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-middle-01',
-			'name'			=> __( 'Home Left Middle', CHILD_DOMAIN ),
+			'name'			=> __( 'Strona główna 2 Lewo', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage left section.', CHILD_DOMAIN ),
 		),
 		/*array(
@@ -243,12 +245,12 @@ function gs_register_sidebars() {
 		),*/
 		array(
 			'id'			=> 'home-middle-03',
-			'name'			=> __( 'Home Right Middle', CHILD_DOMAIN ),
+			'name'			=> __( 'Strona główna 2 Prawo', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-bottom',
-			'name'			=> __( 'Home Bottom', CHILD_DOMAIN ),
+			'name'			=> __( 'Strona główna 3', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
 		),
 		array(
@@ -258,12 +260,17 @@ function gs_register_sidebars() {
 		),
 		array(
 			'id'			=> 'after-post',
-			'name'			=> __( 'After Post', CHILD_DOMAIN ),
+			'name'			=> __( 'Pod wpisem', CHILD_DOMAIN ),
 			'description'	=> __( 'This will show up after every post.', CHILD_DOMAIN ),
 		),
 		array(
+			'id'			=> 'after-contact',
+			'name'			=> __( 'Pod kontaktem', CHILD_DOMAIN ),
+			'description'	=> __( 'This will show up after contact content.', CHILD_DOMAIN ),
+		),
+		array(
 			'id'          => 'footercontent',
-			'name'        => __( 'Footer', CHILD_DOMAIN ),
+			'name'        => __( 'Stopka', CHILD_DOMAIN ),
 			'description' => __( 'This is the general footer area.', CHILD_DOMAIN ),
 		)
 	);
@@ -283,7 +290,6 @@ require_once('lib/scripts.php');
  * 
  * @uses gs_navigation() Sandbox Navigation Helper Function in gs-functions.php.
  */
-
 //Add Mobile Menu
 function gs_mobile_navigation() {
 	$mobile_menu_args = array(
@@ -305,4 +311,7 @@ function gs_do_after_entry() {
         );
     }
 }
+
+add_action( 'genesis_loop', 'gs_add_contact_body_class' );
+
 /*EOF*/
