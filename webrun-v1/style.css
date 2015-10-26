@@ -134,6 +134,11 @@ input[type="submit"] {
   transition: all 0.1s ease-in-out;
 }
 
+a.post-edit-link {padding:1px 3px 3px 3px; border-radius:2px; font-size:1.2rem; color:#FFFFFF; background-color:#FF0000;}
+a.post-edit-link:hover,
+a.post-edit-link:focus {color:#FFFFFF; background-color:#FF5965;}
+
+
 ::-moz-selection {
   background-color: #000d11;
   color: white;
@@ -793,6 +798,7 @@ h6,
 /* Post Info and Meta */
 .entry-meta {
   clear: both;
+	font-size:1.2rem;
   line-height: 1.5;
   color: #4c4c4c;
   /*@include rem(font-size, 14px)*/
@@ -924,8 +930,8 @@ h6,
 
 /* Blockquotes */
 blockquote {
-  padding: 24px 64px;
-  padding: 2.4rem 6.4rem;
+  padding: 8px 34px;
+  padding: 0.8rem 3.4rem;
 }
 
 blockquote::before {
@@ -1280,5 +1286,10 @@ div.flexslider {background:transparent;}
 .home-middle .home-widget .featuredpost article h2.entry-title a {font-size:inherit;}
 .home-middle .featuredpost .entry-image.attachment-post {margin-right:1em;}
 
+#home-top.home-widget .featured-content article h2.entry-title {padding-bottom:0.4em; border-bottom:2px solid #f2f2f2;}
+#home-top.home-widget .featured-content .widget-wrap:hover,
+#home-top.home-widget .featured-content .widget-wrap:focus {background:#f2f2f2;}
+#home-top.home-widget .featured-content .widget-wrap:hover article h2.entry-title,
+#home-top.home-widget .featured-content .widget-wrap:focus article h2.entry-title {border-color:#333333;}
 
 /* EOF */

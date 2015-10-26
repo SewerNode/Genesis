@@ -36,7 +36,7 @@ function gs_theme_setup()
 	// Unregister sidebar/content/sidebar layout setting
 	genesis_unregister_layout('sidebar-content-sidebar');
 	// Unregister full-width content layout setting
-	//genesis_unregister_layout( 'full-width-content' );
+	//genesis_unregister_layout('full-width-content');
 
 	/**
 	 * Custom Colors
@@ -165,6 +165,7 @@ function gs_theme_setup()
 		//unregister_widget( 'Genesis_Widget_Menu_Categories' );
 	}
 
+
 	/**
 	 * 07 Footer Widgets
 	 * Add support for 3-column footer widgets
@@ -205,7 +206,7 @@ function gs_theme_setup()
 	};
 	add_action( 'genesis_footer', 'gs_custom_footer' );
 
-	//Enqueue Sandbox Scripts
+	//Enqueue Scripts
 	add_action( 'wp_enqueue_scripts', 'gs_enqueue_scripts' );
 	
 	/**
@@ -214,6 +215,16 @@ function gs_theme_setup()
 	 * Default: editor-style.css 
 	 */
 	//add_editor_style();
+
+	/** Unregister  templates */
+	function remove_genesis_page_templates( $page_templates ) {
+		unset( $page_templates['page_archive.php'] );
+		unset( $page_templates['page_blog.php'] );
+		unset( $page_templates['page_landing.php'] );
+		unset( $page_templates['page_portfolio.php'] );
+		return $page_templates;
+	}
+	add_filter( 'theme_page_templates', 'remove_genesis_page_templates' );
 
 	// Register Sidebars
 	gs_register_sidebars();
