@@ -745,14 +745,13 @@ h6,
 	position: relative;
 	transition: all 0.5s ease;
 }
-.sidebar.widget-area .widget.widget_nav_menu .menu li li a {padding-left:2.8rem; font-size:0.9em;}
-.sidebar.widget-area .widget.widget_nav_menu .menu li li a:before {content:"> ";}
-.sidebar.widget-area .widget.widget_nav_menu .menu li li li a {padding-left:4rem;}
-
 
 .sidebar.widget-area .widget.widget_nav_menu .menu li {color:#000d11;}
 .sidebar.widget-area .widget.widget_nav_menu .menu li a,
 .sidebar.widget-area .widget.widget_nav_menu .menu li a span {color:inherit; background-color:inherit;}
+.sidebar.widget-area .widget.widget_nav_menu .menu li li a {padding-left:2.8rem; font-size:0.9em;}
+.sidebar.widget-area .widget.widget_nav_menu .menu li li a:before {content:"> ";}
+.sidebar.widget-area .widget.widget_nav_menu .menu li li li a {padding-left:4rem;}
 .sidebar.widget-area .widget.widget_nav_menu .menu li.current-menu-item,
 .sidebar.widget-area .widget.widget_nav_menu .menu li.current-menu-ancestor,
 .sidebar.widget-area .widget.widget_nav_menu .menu li.current-menu-parent,
@@ -766,10 +765,7 @@ h6,
 
 /* Pagination
 ---------------------------------------------------------*/
-.archive-pagination li {
-  display: inline;
-}
-
+.archive-pagination li {display:inline;}
 .archive-pagination li a,
 .archive-pagination li a:hover,
 .archive-pagination li.active a,
