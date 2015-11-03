@@ -1282,12 +1282,12 @@ ul.flex-direction-nav li a.prev:before {/*content:"\f104";*/ content:"\f053"; fo
 ul.flex-direction-nav li a.next:before {/*content:"\f105";*/ content:"\f054"; font-size:30px; color:#FFFFFF;}
 ul.flex-direction-nav li:hover a:before,
 ul.flex-direction-nav li:focus a:before {opacity:1;}
+
 /* Home Banner */
 #home-top {text-align:center;}
 #home-top > section {display:inline-block; text-align:center; vertical-align:top;}
 
 /* Home News */
-
 .home-middle > .one-half {margin-top:2em;}
 .home-middle .home-widget .featuredpost article {display:inline-block; width:100%;}
 .home-middle .home-widget .featuredpost article h2.entry-title {font-size:22px; font-size:2.2rem;}
@@ -1299,5 +1299,4 @@ ul.flex-direction-nav li:focus a:before {opacity:1;}
 #home-top.home-widget .featured-content .widget-wrap:focus {background:#f2f2f2;}
 #home-top.home-widget .featured-content .widget-wrap:hover article h2.entry-title,
 #home-top.home-widget .featured-content .widget-wrap:focus article h2.entry-title {border-color:#333333;}
-
 /* EOF */
