@@ -361,6 +361,12 @@ a img {
   overflow: hidden;
 }
 
+.sidebar-content-sidebar .content-sidebar-wrap .sidebar.sidebar-primary,
+.sidebar-sidebar-content .content-sidebar-wrap .sidebar.sidebar-primary {
+	/*margin-top:-20px;
+	margin-top:-2rem;*/
+}
+
 /* Headings */
 h1,
 h2,
@@ -373,7 +379,7 @@ h6,
   line-height: 1.2;
   margin-bottom: 16px;
   margin-bottom: 1.6rem;
-  font-family:  "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
 }
 
@@ -462,7 +468,7 @@ h6,
   margin: 2rem 0 0.8rem;
   font-size: 48px;
   font-size: 4.8rem;
-	font-family:  "Roboto Condensed", sans-serif;
+	font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
 }
 .site-title a {
@@ -514,7 +520,7 @@ h6,
 .genesis-nav-menu {
   clear: both;
   color: white;
-	font-family:  "Roboto Condensed", sans-serif;
+	font-family: "Roboto Condensed", sans-serif;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
   line-height: 1.5;
