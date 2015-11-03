@@ -1275,7 +1275,13 @@ div.gform_wrapper form li {
 /* Slider */
 div#genesis-responsive-slider {border:0; padding:0; background:transparent;}
 div.flexslider {background:transparent;}
-
+ul.flex-direction-nav li a:before {opacity:0.5;}
+ul.flex-direction-nav li a.prev,
+ul.flex-direction-nav li a.next {background:none; text-indent:0; font:normal normal normal 0px FontAwesome; color:transparent; text-align:center;}
+ul.flex-direction-nav li a.prev:before {/*content:"\f104";*/ content:"\f053"; font-size:30px; color:#FFFFFF;}
+ul.flex-direction-nav li a.next:before {/*content:"\f105";*/ content:"\f054"; font-size:30px; color:#FFFFFF;}
+ul.flex-direction-nav li:hover a:before,
+ul.flex-direction-nav li:focus a:before {opacity:1;}
 /* Home Banner */
 #home-top {text-align:center;}
 #home-top > section {display:inline-block; text-align:center; vertical-align:top;}
