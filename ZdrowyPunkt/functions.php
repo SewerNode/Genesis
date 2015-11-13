@@ -135,13 +135,13 @@ function gs_theme_setup()
 	$content_width = apply_filters( 'content_width', 600, 430, 920, 1152 );
 	
 	//Custom Image Sizes
-	add_image_size( 'featured-image', 380, 190, TRUE );
+	add_image_size( 'featured-image', 250, 180, TRUE );
 	
 	// Enable Custom Background
 	add_theme_support( 'custom-background' );
 
 	// Enable Custom Header
-	add_theme_support('genesis-custom-header', array('width'=> 280, 'height'=> 120));
+	add_theme_support('genesis-custom-header', array('width'=> 220, 'height'=> 100));
 
 	// Add support for structural wraps
 	add_theme_support( 'genesis-structural-wraps', array(
@@ -206,6 +206,7 @@ function gs_theme_setup()
 	};
 	add_action( 'genesis_footer', 'gs_custom_footer' );
 
+
 	//Enqueue Scripts
 	add_action( 'wp_enqueue_scripts', 'gs_enqueue_scripts' );
 	
@@ -227,8 +228,11 @@ function gs_theme_setup()
 	add_filter( 'theme_page_templates', 'remove_genesis_page_templates' );
 
 	// Register Sidebars
+
 	gs_register_sidebars();
-	
+	//unregister_sidebar( 'sidebar' );
+	unregister_sidebar( 'sidebar-alt' );
+
 } // End of Set Up Function
 
 // Register Sidebars
@@ -241,30 +245,35 @@ function gs_register_sidebars() {
 		),
 		array(
 			'id'			=> 'home-top',
-			'name'			=> __( 'Strona główna 1', CHILD_DOMAIN ),
+			'name'			=> __( 'Strona główna', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the top homepage section.', CHILD_DOMAIN ),
 		),
-		array(
+		/*array(
 			'id'			=> 'home-middle-01',
 			'name'			=> __( 'Strona główna 2 Lewo', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage left section.', CHILD_DOMAIN ),
-		),
+		),*/
 		/*array(
 			'id'			=> 'home-middle-02',
 			'name'			=> __( 'Home Middle Middle', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage middle section.', CHILD_DOMAIN ),
 		),*/
-		array(
+		/*array(
 			'id'			=> 'home-middle-03',
 			'name'			=> __( 'Strona główna 2 Prawo', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
-		),
-		array(
+		),*/
+		/*array(
 			'id'			=> 'home-bottom',
-			'name'			=> __( 'Strona główna 3', CHILD_DOMAIN ),
+			'name'			=> __( 'Strona główna 2', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
-		),
+		),*/
 		array(
+			'id'			=> 'home-seo',
+			'name'			=> __( 'Strona główna SEO', CHILD_DOMAIN ),
+			'description'	=> __( 'This is the homepage bottom text.', CHILD_DOMAIN ),
+		),
+		/*array(
 			'id'			=> 'portfolio',
 			'name'			=> __( 'Portfolio', CHILD_DOMAIN ),
 			'description'	=> __( 'Use featured posts to showcase your portfolio.', CHILD_DOMAIN ),
@@ -273,7 +282,7 @@ function gs_register_sidebars() {
 			'id'			=> 'after-post',
 			'name'			=> __( 'Pod wpisem', CHILD_DOMAIN ),
 			'description'	=> __( 'This will show up after every post.', CHILD_DOMAIN ),
-		),
+		),*/
 		array(
 			'id'			=> 'after-contact',
 			'name'			=> __( 'Pod kontaktem', CHILD_DOMAIN ),
@@ -281,13 +290,14 @@ function gs_register_sidebars() {
 		),
 		array(
 			'id'          => 'footercontent',
-			'name'        => __( 'Stopka', CHILD_DOMAIN ),
+			'name'        => __( 'Stopka witryny', CHILD_DOMAIN ),
 			'description' => __( 'This is the general footer area.', CHILD_DOMAIN ),
 		)
 	);
 	
 	foreach ( $sidebars as $sidebar )
 		genesis_register_sidebar( $sidebar );
+
 }
 
 /**

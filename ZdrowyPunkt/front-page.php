@@ -20,6 +20,7 @@ function gs_home_helper() {
         add_action( 'genesis_after_header', 'gs_home_slider_widget' );
         remove_action( 'genesis_loop', 'genesis_do_loop' );
         add_action( 'genesis_loop', 'gs_home_widgets' );
+		add_action( 'genesis_before_footer', 'gs_home_seo_widget' );
         /** Force Full Width */
         add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
         add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
@@ -40,7 +41,11 @@ function gs_home_slider_widget() {
 function gs_home_widgets() {
     genesis_widget_area(
         'home-top',
-        array( 'before' => '<aside id="home-top" class="home-widget widget-area">', )
+        array(
+	        /*'before' => '<div class="site-inner home-slider"><div class="wrap"><div class="content-sidebar-wrap">',
+	        'after' => '</div></div></div>'*/
+
+	        'before' => '<aside id="home-top" class="home-widget widget-area">', )
     );
     echo '<div id="home-middle" class="home-middle">';
     genesis_widget_area(
@@ -72,6 +77,15 @@ function gs_home_widgets() {
             'after' => '</div></aside><!-- end #home-bottom -->',
         )
     );
+}
+function gs_home_seo_widget() {
+	genesis_widget_area(
+		'home-seo',
+		array(
+			'before' => '<div class="site-inner home-seo"><div class="wrap"><div class="content-sidebar-wrap">',
+			'after' => '</div></div></div>'
+		)
+	);
 }
 genesis();
 /** EndOfFront-Page */
