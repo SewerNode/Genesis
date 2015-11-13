@@ -1,11 +1,9 @@
 
 /*
-    Theme Name: Webrun v1
-    Description: Webrun v1 theme for the Genesis Framework
-    Author: Seweryn Kreja
-    Author URI: nodesoft.pl
- 
-    Version: 2.0
+    Theme Name: Zdrowy Punkt
+    Description: Zdrowy Punkt
+
+    Version: 1.0
  
     Template: genesis
     Template Version: 2.0
@@ -50,8 +48,8 @@
 01 Import Fonts
 ---------------------------------------------------------------------------------------------------- */
 /*@import url(//fonts.googleapis.com/css?family=Arimo|Varela);*/
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&subset=latin,latin-ext);
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&subset=latin,latin-ext');
 
 /*
 02 Base Styles
