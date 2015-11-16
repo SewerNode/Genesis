@@ -637,7 +637,9 @@ h6,
 /* Primary Navigation
 --------------------------------------------- */
 .nav-primary {
-  background-color: #3b3d42;
+	display:inline-block;
+	float:right;
+	text-align:right;
 }
 
 .nav-primary a:hover,
@@ -658,10 +660,12 @@ h6,
 
 /* Secondary Navigation
 --------------------------------------------- */
+.nav-secondary {background:#379812;}
 .nav-secondary a {
-  color: #000d11;
+  color: #FFFFFF;
+	padding:1rem 1.8rem;
 }
-
+.genesis-nav-menu.menu-secondary {text-align:center;}
 .nav-secondary .sub-menu {
   border-top: 1px solid #eee;
 }
@@ -782,6 +786,41 @@ h6,
 .sidebar.widget-area .widget.widget_nav_menu .menu li li.current-menu-parent,
 .sidebar.widget-area .widget.widget_nav_menu .menu li li:hover,
 .sidebar.widget-area .widget.widget_nav_menu .menu li li:focus {color:#FFFFFF; background-color:#323232;}
+
+.widget.widget_subpages {}
+.widget.widget_subpages .widget-wrap {background-color: #f2f2f2;}
+.widget.widget_subpages .widget-wrap h4 {color:#39AC12; margin:0 0 0.2em 0;}
+.widget.widget_subpages .widget-wrap ul {}
+.widget.widget_subpages .widget-wrap ul li {}
+.widget.widget_subpages .widget-wrap h4,
+.widget.widget_subpages .widget-wrap ul li a {
+	float:left;
+	width:100%;
+	display:inline-block;
+	padding: 10px 10px 10px 20px;
+	padding: 1rem 1rem 1rem 2rem;
+	position: relative;
+	transition: all 0.5s ease;
+}
+.widget.widget_subpages .widget-wrap ul li {color:#39AC12;}
+.widget.widget_subpages .widget-wrap ul li a,
+.widget.widget_subpages .widget-wrap ul li a span {color:inherit; background-color:inherit;}
+.widget.widget_subpages .widget-wrap ul li li a {padding-left:2.8rem; font-size:0.9em;}
+.widget.widget_subpages .widget-wrap ul li li a:before {content:"> ";}
+.widget.widget_subpages .widget-wrap ul li li li a {padding-left:4rem;}
+.widget.widget_subpages .widget-wrap ul li.current-menu-item,
+.widget.widget_subpages .widget-wrap ul li.current-menu-ancestor,
+.widget.widget_subpages .widget-wrap ul li.current-menu-parent,
+.widget.widget_subpages .widget-wrap ul li:hover,
+.widget.widget_subpages .widget-wrap ul li:focus {color:#FFFFFF; background-color:#39AC12;}
+.widget.widget_subpages .widget-wrap ul li li.current-menu-item,
+.widget.widget_subpages .widget-wrap ul li li.current-menu-ancestor,
+.widget.widget_subpages .widget-wrap ul li li.current-menu-parent,
+.widget.widget_subpages .widget-wrap ul li li:hover,
+.widget.widget_subpages .widget-wrap ul i li:focus {color:#FFFFFF; background-color:#323232;}
+
+
+
 
 /* Pagination
 ---------------------------------------------------------*/
@@ -1310,7 +1349,6 @@ ul.flex-direction-nav li:focus a:before {opacity:1;}
 .home-middle .featuredpost .entry-image.attachment-post {margin-right:1em;}
 
 @media (min-width:1200px) {
-
 	#home-top.home-widget .widget.featuredpage {margin:0 16px; max-width:250px;}
 }
 

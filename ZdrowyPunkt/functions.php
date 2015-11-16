@@ -119,6 +119,12 @@ function gs_theme_setup()
 			printf( '<style type="text/css">%s</style>' . "\n", $output );
 
 	}
+/*
+	add_action( 'genesis_before_header', 'beforeheader' );
+	function beforeheader(){
+		echo '<div class="site-inner before_header"><div class="wrap">xxxxxxxxxxxxxxxxxx</div></div>';
+	}*/
+
 
 	//Enable Post Navigation
 	//add_action( 'genesis_after_entry_content', 'genesis_prev_next_post_nav', 5 );
@@ -191,6 +197,11 @@ function gs_theme_setup()
 	);
 
 	//* Reposition the primary navigation menu
+	unregister_sidebar( 'header-right' );
+	remove_action( 'genesis_after_header', 'genesis_do_nav' );
+	add_action( 'genesis_header', 'genesis_do_nav', 12 );
+
+	//* Reposition the primary navigation menu
 	//remove_action( 'genesis_after_header', 'genesis_do_nav' );
 	//add_action( 'genesis_header', 'genesis_do_nav', 12 );
 	
@@ -248,41 +259,11 @@ function gs_register_sidebars() {
 			'name'			=> __( 'Strona główna', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the top homepage section.', CHILD_DOMAIN ),
 		),
-		/*array(
-			'id'			=> 'home-middle-01',
-			'name'			=> __( 'Strona główna 2 Lewo', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the homepage left section.', CHILD_DOMAIN ),
-		),*/
-		/*array(
-			'id'			=> 'home-middle-02',
-			'name'			=> __( 'Home Middle Middle', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the homepage middle section.', CHILD_DOMAIN ),
-		),*/
-		/*array(
-			'id'			=> 'home-middle-03',
-			'name'			=> __( 'Strona główna 2 Prawo', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
-		),*/
-		/*array(
-			'id'			=> 'home-bottom',
-			'name'			=> __( 'Strona główna 2', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
-		),*/
 		array(
 			'id'			=> 'home-seo',
 			'name'			=> __( 'Strona główna SEO', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage bottom text.', CHILD_DOMAIN ),
 		),
-		/*array(
-			'id'			=> 'portfolio',
-			'name'			=> __( 'Portfolio', CHILD_DOMAIN ),
-			'description'	=> __( 'Use featured posts to showcase your portfolio.', CHILD_DOMAIN ),
-		),
-		array(
-			'id'			=> 'after-post',
-			'name'			=> __( 'Pod wpisem', CHILD_DOMAIN ),
-			'description'	=> __( 'This will show up after every post.', CHILD_DOMAIN ),
-		),*/
 		array(
 			'id'			=> 'after-contact',
 			'name'			=> __( 'Pod kontaktem', CHILD_DOMAIN ),
