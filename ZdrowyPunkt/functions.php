@@ -125,7 +125,6 @@ function gs_theme_setup()
 		echo '<div class="site-inner before_header"><div class="wrap">xxxxxxxxxxxxxxxxxx</div></div>';
 	}*/
 
-
 	//Enable Post Navigation
 	//add_action( 'genesis_after_entry_content', 'genesis_prev_next_post_nav', 5 );
 
