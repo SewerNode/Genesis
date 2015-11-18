@@ -119,11 +119,16 @@ function gs_theme_setup()
 			printf( '<style type="text/css">%s</style>' . "\n", $output );
 
 	}
-/*
+
 	add_action( 'genesis_before_header', 'beforeheader' );
 	function beforeheader(){
-		echo '<div class="site-inner before_header"><div class="wrap">xxxxxxxxxxxxxxxxxx</div></div>';
-	}*/
+		echo '<div class="site-inner before_header"><div class="wrap">
+			<a href="#" class="linkedin">'.__('Odwiedź nasz profil na LinkedIn').'</a>
+			<a href="#" class="lang pl">'.__('POLSKI').'</a>
+			<a href="#" class="lang en">'.__('ANGIELSKI').'</a>
+			<a href="#" class="lang de">'.__('NIEMIECKI').'</a>
+			</div></div>';
+	}
 
 	//Enable Post Navigation
 	//add_action( 'genesis_after_entry_content', 'genesis_prev_next_post_nav', 5 );
@@ -146,7 +151,7 @@ function gs_theme_setup()
 	add_theme_support( 'custom-background' );
 
 	// Enable Custom Header
-	add_theme_support('genesis-custom-header', array('width'=> 220, 'height'=> 100));
+	add_theme_support('genesis-custom-header', array('width'=> 290, 'height'=> 100));
 
 	// Add support for structural wraps
 	add_theme_support( 'genesis-structural-wraps', array(
@@ -254,14 +259,19 @@ function gs_register_sidebars() {
 			'description'	=> __( 'This is the most top homepage section.', CHILD_DOMAIN ),
 		),
 		array(
-			'id'			=> 'home-top',
-			'name'			=> __( 'Strona główna', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the top homepage section.', CHILD_DOMAIN ),
-		),
-		array(
 			'id'			=> 'home-seo',
 			'name'			=> __( 'Strona główna SEO', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage bottom text.', CHILD_DOMAIN ),
+		),
+		array(
+			'id'			=> 'home-top',
+			'name'			=> __( 'Strona główna - góra', CHILD_DOMAIN ),
+			'description'	=> __( 'This is the top homepage section.', CHILD_DOMAIN ),
+		),
+		array(
+			'id'			=> 'home-bottom',
+			'name'			=> __( 'Strona główna - dół', CHILD_DOMAIN ),
+			'description'	=> __( 'This is the top homepage section.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'after-contact',
