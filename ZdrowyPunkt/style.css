@@ -1077,8 +1077,8 @@ Site Footer
 ---------------------------------------------------------------------------------------------------- */
 .site-footer {
   clear: both;
-  margin: 8px 0;
-  margin: 0.8rem 0;
+  margin: 0;
+  margin: 0;
 	background:#39AC12;
 	color:#FFFFFF;
 }
@@ -1090,8 +1090,8 @@ Site Footer
 }
 
 .site-footer p {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 12px;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -1112,6 +1112,10 @@ Site Footer
 .footer-widgets .widget {
   margin-bottom: 24px;
   margin-bottom: 2.4rem;
+}
+.site-footer .textwidget {
+	font-size: 13px;
+	font-size: 1.3rem;
 }
 .footer-widgets .widget-area ul li {
   list-style-type: none;
@@ -1336,6 +1340,12 @@ ul.flex-direction-nav li a.prev:before {/*content:"\f104";*/ content:"\f053"; fo
 ul.flex-direction-nav li a.next:before {/*content:"\f105";*/ content:"\f054"; font-size:30px; color:#FFFFFF;}
 ul.flex-direction-nav li:hover a:before,
 ul.flex-direction-nav li:focus a:before {opacity:1;}
+
+/* Cyclon Slider */
+.cycloneslider-width-responsive.cycloneslider-template-standard {margin:0 auto;}
+.cycloneslider-width-responsive.cycloneslider-template-standard + .site-inner {border-top:18px solid #E6E6E6;}
+
+.widget.widget_cyclone-slider-widget {border-bottom:18px solid #E6E6E6;}
 
 /* Home Banner */
 #home-top {text-align:center;}

@@ -30,11 +30,12 @@ function gs_home_helper() {
  * Add widget support for homepage. If no widgets active, display the default loop.
  */
 function gs_home_slider_widget() {
+	//if( function_exists('cyclone_slider') ) cyclone_slider('testowy-rotator');
 	genesis_widget_area(
 		'home-slider',
 		array(
-			'before' => '<div class="site-inner home-slider"><div class="wrap"><div class="content-sidebar-wrap">',
-			'after' => '</div></div></div>'
+			//'before' => '<div class="site-inner home-slider"><div class="wrap"><div class="content-sidebar-wrap">',
+			//'after' => '</div></div></div>'
 		)
 	);
 }
