@@ -176,7 +176,7 @@ function gs_theme_setup()
 	 * Add support for 3-column footer widgets
 	 * Change 3 for support of up to 6 footer widgets (automatically styled for layout)
 	 */
-	add_theme_support( 'genesis-footer-widgets', 3 );
+	add_theme_support( 'genesis-footer-widgets', 0 );
 
 	remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
