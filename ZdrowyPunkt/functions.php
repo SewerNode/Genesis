@@ -140,13 +140,13 @@ function gs_theme_setup()
 	$content_width = apply_filters( 'content_width', 600, 430, 920, 1152 );
 	
 	//Custom Image Sizes
-	add_image_size( 'featured-image', 250, 180, TRUE );
+	add_image_size( 'featured-image', 250, 110, TRUE );
 	
 	// Enable Custom Background
 	add_theme_support( 'custom-background' );
 
 	// Enable Custom Header
-	add_theme_support('genesis-custom-header', array('width'=> 220, 'height'=> 100));
+	add_theme_support('genesis-custom-header', array('width'=> 240, 'height'=> 100));
 
 	// Add support for structural wraps
 	add_theme_support( 'genesis-structural-wraps', array(
