@@ -146,7 +146,8 @@ function gs_theme_setup()
 	
 	//Custom Image Sizes
 	add_image_size( 'featured-image', 250, 180, TRUE );
-	
+	add_image_size( 'featured-image2', 320, 240, TRUE );
+
 	// Enable Custom Background
 	add_theme_support( 'custom-background' );
 
@@ -321,6 +322,48 @@ function gs_do_after_entry() {
             )
         );
     }
+}
+
+/**
+ * Use grid on category 'projekty'
+ *
+ * @param bool $display
+ * @param object $query
+ * @return bool $display
+ */
+function gs_limit_grid_loop( $display, $query ) {
+	if( $query->is_main_query() && $query->is_category() && genesis_get_option( 'grid_on_category', 'genesis-grid' ) ) {
+		if( $query->is_category( 'projekty' ) )
+			$display = true;
+		else
+			$display = false;
+	}
+	return $display;
+}
+add_filter( 'genesis_grid_loop_section', 'gs_limit_grid_loop', 10, 2 );
+
+add_action( 'pre_get_posts', 'gs_show_projects' );
+function gs_show_projects( $query ) {
+	if( $query->is_main_query() && $query->is_category('3') ) {
+		$query->set( 'orderby', 'title' );
+		$query->set( 'order', 'ASC' );
+
+		remove_action( 'genesis_loop', 'genesis_do_loop' );
+		add_action( 'genesis_loop', 'gs_custom_loop' );
+	}
+}
+
+function gs_custom_loop() {
+	while (have_posts()) : the_post(); ?>
+		<article <?php post_class(); ?> itemscope="" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+				<?php if ( has_post_thumbnail() ) { ?>
+					<a href="<?php the_permalink() ?>" class="entry-image"><?php the_post_thumbnail('featured-image2'); ?></a>
+				<?php } ?>
+				<h2 class="entry-title" itemprop="headline">
+					<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?><span class="btn btn-see"><?php echo __('ZOBACZ'); ?></span></a>
+				</h2>
+		</article>
+	<?php endwhile;
 }
 
 add_action( 'genesis_loop', 'gs_add_contact_body_class' );

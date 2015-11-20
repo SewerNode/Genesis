@@ -1051,6 +1051,12 @@ blockquote::before {
   margin-bottom: 0;
 }
 
+.category-grid .entry.category-projekty {display:inline-block; width:320px; max-width:100%;}
+.category-grid .entry.category-projekty .entry-image {display:inline-block; width:100%; }
+.category-grid .entry.category-projekty .entry-title {position:relative; display:inline-block; width:100%; padding:0.4em; font-size:14px; background:#EEEEEE;}
+.category-grid .entry.category-projekty .entry-title .btn {}
+
+
 /*
 07 Sidebar
 ---------------------------------------------------------------------------------------------------- */
