@@ -341,6 +341,14 @@ function gs_limit_grid_loop( $display, $query ) {
 	return $display;
 }
 add_filter( 'genesis_grid_loop_section', 'gs_limit_grid_loop', 10, 2 );
+add_action( 'genesis_before_loop' , 'gs_show_category_header' );
+function gs_show_category_header() {
+	if ( is_category() )  {
+		echo '<header class="category-header"><h1 class="entry-title" itemprop="headline">';
+		echo single_cat_title();
+		echo '</h1></header>';
+	}
+}
 
 add_action( 'pre_get_posts', 'gs_show_projects' );
 function gs_show_projects( $query ) {
@@ -353,7 +361,14 @@ function gs_show_projects( $query ) {
 	}
 }
 
+function gs_show_category_description () {
+	if (is_category() && category_description($category-id)) {
+		echo '<div class="entry-list-description">'.category_description($category-id).'</div>';
+	}}
+add_action( 'genesis_before_loop', 'gs_show_category_description');
+
 function gs_custom_loop() {
+	echo '<div class="entry-list">';
 	while (have_posts()) : the_post(); ?>
 		<article <?php post_class(); ?> itemscope="" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 				<?php if ( has_post_thumbnail() ) { ?>
@@ -364,6 +379,7 @@ function gs_custom_loop() {
 				</h2>
 		</article>
 	<?php endwhile;
+	echo '</div>';
 }
 
 add_action( 'genesis_loop', 'gs_add_contact_body_class' );

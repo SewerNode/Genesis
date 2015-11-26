@@ -34,7 +34,7 @@ function gs_add_landing_body_class( $classes ) {
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
 
-remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+//remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
 /** Remove Breadcrumbs */
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs');
