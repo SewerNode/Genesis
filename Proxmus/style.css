@@ -536,9 +536,8 @@ h6,
   clear: both;
   color:#0996D4;
 	font-family: "Roboto Condensed", sans-serif;
-	font-size:1.4rem;
-  letter-spacing: 1px;
-  letter-spacing: 0.1rem;
+	font-size:1.8rem;
+  letter-spacing: -0.03em;
   line-height: 1.5;
   width: 100%;
 	font-weight:700;
@@ -1361,10 +1360,16 @@ body.custom-background.home {background:#FFFFFF;}
 .home .cycloneslider-width-responsive.cycloneslider-template-standard + .site-inner {border-top:18px solid #E6E6E6;}
 .home .widget.widget_cyclone-slider-widget {border-bottom:12px solid #E6E6E6;}
 .home .cycloneslider-template-standard {}
-.home .cycloneslider-template-standard .cycloneslider-caption {bottom:5px; left:50%; margin-left:-44%; width:400px; background:none; opacity:1; color:#FFFFFF;}
-.home .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-title {padding:10px; background:rgba(0,0,0,0.7); margin-bottom:5px;}
-.home .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-description {padding:10px 10px 35px 10px; background:rgba(0,0,0,0.7);}
-.home .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-description .btn { position:relative; bottom:-40px; height:35px; background:#0996D4; border-bottom:5px solid #007DBB; border-radius:0;}
+.home .cycloneslider-template-standard .cycloneslider-caption {bottom:5px; left:50%; margin-left:-37%; width:600px; background:none; opacity:1; color:#FFFFFF;}
+.home .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-title {padding:20px 35px; font-family:"Roboto Condensed",sans-serif; font-size:40px; background:rgba(0,0,0,0.7); margin-bottom:5px;}
+.home .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-description {font-size:16px; font-weight:300; padding:10px 30px 40px 30px; background:rgba(0,0,0,0.7);}
+.home .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-description .btn {position:absolute; float:left; left:32px; bottom:-4px; height:35px; font-family:"Roboto Condensed",sans-serif; font-size:14px; font-weight:700; background:#0996D4; border-bottom:5px solid #007DBB; border-radius:0;}
+@media (max-width:768px){
+	.home .cycloneslider-template-standard {position:relative; height:auto;}
+	.home .cycloneslider-template-standard img {position:absolute;}
+	.home .cycloneslider-template-standard .cycloneslider-caption {float:left; position:relative; bottom:0; left:0; margin:0 0; width:100%;}
+}
+
 
 /* Home Banner */
 #home-top {text-align:center;}
