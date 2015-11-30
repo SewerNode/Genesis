@@ -178,8 +178,8 @@ a img {
 .site-inner.home-links {text-align:center;}
 .site-inner.home-links .home_box {display:inline-block; width:250px; max-width:100%; margin:1rem; text-align:center; vertical-align:top;}
 .site-inner.home-links .home_box img {display:inline-block;}
-.site-inner.home-links .home_box h2 {display:inline-block; float:left; width:100%; text-align:left; font-weight:400; border-bottom:3px solid #E31E24;}
-.site-inner.home-links .home_box a {display:inline-block; float:left; width:100%; text-align:left;}
+.site-inner.home-links .home_box h2 {display:inline-block; float:left; width:100%; padding:0.1rem 0 0.5rem 0; text-align:left; font-weight:400; border-bottom:3px solid #E31E24;}
+.site-inner.home-links .home_box a {display:inline-block; float:left; width:100%; padding:0.5rem 0.5rem 0.5rem 1.5rem; text-align:left;}
 .site-inner.home-links .home_box a:focus,
 .site-inner.home-links .home_box a:hover {background-color:#0996D4; color:#FFFFFF;}
 
@@ -653,14 +653,15 @@ h6,
 }
 
 .nav-primary .sub-menu a {
-  border: 1px solid #333;
+  border: 0 solid #0996D4;
 }
 
 .nav-primary .sub-menu a {
-  background-color: #3b3d42;
+  background-color:#0996D4;
 }
 .nav-primary .sub-menu a:hover {
-  color: white;
+  color:#FFFFFF;
+	background-color:#0063A1;
 }
 
 /* Secondary Navigation
