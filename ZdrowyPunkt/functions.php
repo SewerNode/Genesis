@@ -170,6 +170,12 @@ function gs_theme_setup()
 		//unregister_widget( 'Genesis_Widget_Menu_Categories' );
 	}
 
+	//* Customize the entry meta in the entry header (requires HTML5 theme support)
+	add_filter( 'genesis_post_info', 'gs_post_info_filter' );
+	function gs_post_info_filter($post_info) {
+		$post_info = '[post_edit]';
+		return $post_info;
+	}
 
 	/**
 	 * 07 Footer Widgets
@@ -313,6 +319,6 @@ function gs_do_after_entry() {
     }
 }
 
-add_action( 'genesis_loop', 'gs_add_contact_body_class' );
+//add_action( 'genesis_loop', 'gs_add_contact_body_class' );
 
 /*EOF*/
