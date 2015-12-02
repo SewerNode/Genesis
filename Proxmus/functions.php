@@ -20,47 +20,11 @@ add_action( 'genesis_setup', 'gs_theme_setup', 15 );
 //Theme Set Up Function
 function gs_theme_setup()
 {
-	//Enable HTML5 Support
 	add_theme_support('html5');
-
-	// Remove Genesis Layout Settings
-	//remove_theme_support('genesis-inpost-layouts');
-	// Unregister content/sidebar layout setting
 	genesis_unregister_layout('content-sidebar');
-	// Unregister sidebar/content layout setting
-	//genesis_unregister_layout('sidebar-content');
-	// Unregister content/sidebar/sidebar layout setting
 	genesis_unregister_layout('content-sidebar-sidebar');
-	// Unregister sidebar/sidebar/content layout setting
 	genesis_unregister_layout('sidebar-sidebar-content');
-	// Unregister sidebar/content/sidebar layout setting
 	genesis_unregister_layout('sidebar-content-sidebar');
-	// Unregister full-width content layout setting
-	//genesis_unregister_layout('full-width-content');
-
-	/**
-	 * Custom Colors
-	 */
-	/*function gs_customizer ( $wp_customize ) {
-		// add new section
-		$wp_customize->add_section( 'gs_theme_colors', array(
-			'title' => __( 'Theme Colors', 'gs' ),
-			'priority' => 100,
-		) );
-
-		// add color picker setting
-		$wp_customize->add_setting( 'slider_bg', array(
-			'default' => '#3e6b85'
-		) );
-
-		// add color picker control
-		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'slider_bg', array(
-			'label' => 'Slider Background',
-			'section' => 'gs_theme_colors',
-			'settings' => 'slider_bg',
-		) ) );
-	}
-	add_action( 'customize_register', 'gs_customizer' );*/
 
 	/** Custom site title
 	 * Add header_image as image
@@ -117,7 +81,6 @@ function gs_theme_setup()
 
 		if ( $output )
 			printf( '<style type="text/css">%s</style>' . "\n", $output );
-
 	}
 
 	add_action( 'genesis_before_header', 'beforeheader' );
@@ -129,9 +92,6 @@ function gs_theme_setup()
 			<a href="#" class="lang de">'.__('NIEMIECKI').'</a>
 			</div></div>';
 	}
-
-	//Enable Post Navigation
-	//add_action( 'genesis_after_entry_content', 'genesis_prev_next_post_nav', 5 );
 
 	/** 
 	 * 01 Set width of oEmbed
@@ -168,14 +128,9 @@ function gs_theme_setup()
 	add_action( 'widgets_init', 'unregister_genesis_widgets', 20 );
 	function unregister_genesis_widgets() {
 		unregister_widget( 'Genesis_eNews_Updates' );
-		//unregister_widget( 'Genesis_Featured_Page' );
-		//unregister_widget( 'Genesis_Featured_Post' );
 		unregister_widget( 'Genesis_Latest_Tweets_Widget' );
-		//unregister_widget( 'Genesis_Menu_Pages_Widget' );
 		unregister_widget( 'Genesis_User_Profile_Widget' );
-		//unregister_widget( 'Genesis_Widget_Menu_Categories' );
 	}
-
 
 	/**
 	 * 07 Footer Widgets
@@ -196,7 +151,6 @@ function gs_theme_setup()
 		array(
 			'primary'   => __( 'Primary Navigation Menu', CHILD_DOMAIN ), 
 			'secondary' => __( 'Secondary Navigation Menu', CHILD_DOMAIN ),
-			//'footer'    => __( 'Footer Navigation Menu', CHILD_DOMAIN ),
 			'mobile'    => __( 'Mobile Navigation Menu', CHILD_DOMAIN ),
 		)
 	);
@@ -206,22 +160,15 @@ function gs_theme_setup()
 	remove_action( 'genesis_after_header', 'genesis_do_nav' );
 	add_action( 'genesis_header', 'genesis_do_nav', 12 );
 
-	//* Reposition the primary navigation menu
-	//remove_action( 'genesis_after_header', 'genesis_do_nav' );
-	//add_action( 'genesis_header', 'genesis_do_nav', 12 );
-	
 	// Add Mobile Navigation
 	add_action( 'genesis_before', 'gs_mobile_navigation', 5 );
 
 	//* Customize the site footer
-	//remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
 	remove_action( 'genesis_footer', 'genesis_do_footer' );
-	//remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
 	function gs_custom_footer() {
 		genesis_widget_area ('footercontent');
 	};
 	add_action( 'genesis_footer', 'gs_custom_footer' );
-
 
 	//Enqueue Scripts
 	add_action( 'wp_enqueue_scripts', 'gs_enqueue_scripts' );
@@ -231,7 +178,6 @@ function gs_theme_setup()
 	 * Takes a stylesheet string or an array of stylesheets.
 	 * Default: editor-style.css 
 	 */
-	//add_editor_style();
 
 	/** Unregister  templates */
 	function remove_genesis_page_templates( $page_templates ) {
@@ -244,9 +190,7 @@ function gs_theme_setup()
 	add_filter( 'theme_page_templates', 'remove_genesis_page_templates' );
 
 	// Register Sidebars
-
 	gs_register_sidebars();
-	//unregister_sidebar( 'sidebar' );
 	unregister_sidebar( 'sidebar-alt' );
 
 } // End of Set Up Function
@@ -280,6 +224,11 @@ function gs_register_sidebars() {
 			'description'	=> __( 'This will show up after contact content.', CHILD_DOMAIN ),
 		),
 		array(
+			'id'			=> 'prefooter',
+			'name'			=> __( 'Przed stopką', CHILD_DOMAIN ),
+			'description'	=> __( 'This will show up before contact.', CHILD_DOMAIN ),
+		),
+		array(
 			'id'          => 'footercontent',
 			'name'        => __( 'Stopka witryny', CHILD_DOMAIN ),
 			'description' => __( 'This is the general footer area.', CHILD_DOMAIN ),
@@ -288,7 +237,6 @@ function gs_register_sidebars() {
 	
 	foreach ( $sidebars as $sidebar )
 		genesis_register_sidebar( $sidebar );
-
 }
 
 /**
@@ -310,18 +258,24 @@ function gs_mobile_navigation() {
 	gs_navigation( 'mobile', $mobile_menu_args );
 }
 
-// Add Widget Area After Post
-add_action('genesis_after_entry', 'gs_do_after_entry');
-function gs_do_after_entry() {
- 	if ( is_single() ) {
- 	genesis_widget_area( 
-            'after-post',
+// Add Widget Area Prefooter
+add_action('genesis_before_footer', 'gs_do_prefooter');
+function gs_do_prefooter() {
+ 	if ( !is_home() ) {
+	    genesis_widget_area(
+            'prefooter',
             array(
-                'before' => '<aside id="after-post" class="after-post"><div class="home-widget widget-area">',
-                'after' => '</div></aside><!-- end #home-left -->',
-            )
-        );
+                'before' => '<aside id="prefooter" class="prefooter"><div class="wrap"><div class="prefooter-widget widget-area">',
+                'after' => '</div></div></aside>',
+	            ));
     }
+}
+
+//* Customize the entry meta in the entry header (requires HTML5 theme support)
+add_filter( 'genesis_post_info', 'sp_post_info_filter' );
+function sp_post_info_filter($post_info) {
+	$post_info = '[post_edit]';
+	return $post_info;
 }
 
 /**

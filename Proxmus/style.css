@@ -632,7 +632,7 @@ h6,
 --------------------------------------------- */
 
 .site-header .sub-menu {
-  border-top: 1px solid #eee;
+  border-top:0;
 }
 .site-header .sub-menu .sub-menu {
   margin-top: -55px;
@@ -662,7 +662,7 @@ h6,
  color:#FFFFFF;
 }
 .nav-primary .sub-menu a:hover {
-  color:#FFFFFF;
+	color:#FFFFFF;
 	background-color:#0063A1;
 }
 
@@ -1090,6 +1090,27 @@ blockquote::before {
 /*
 Site Footer
 ---------------------------------------------------------------------------------------------------- */
+
+.prefooter {
+	background:#008AC8;
+	border:0;
+	padding:20px 10px;
+	padding:2rem 1rem;
+	margin-bottom:0;
+}
+
+.prefooter .prefooter-widget {
+	text-align:center;
+	color:#FFFFFF;
+}
+
+.prefooter .prefooter-widget .widgettitle {font-family:"Roboto Condensed", Arial, Helvetica, Garuda, sans-serif; font-size:40px; font-weight:400; letter-spacing:-0.03em; margin-bottom:5px;}
+.prefooter .prefooter-widget .textwidget {font-family:"Roboto", sans-serif; font-size:24px; font-weight:300; letter-spacing:-0.045em;}
+.prefooter .prefooter-widget .textwidget a {color:inherit;}
+.prefooter .prefooter-widget .textwidget a.more {padding-right:0.8em; background:url('images/prefooter_arow.png') right 50% no-repeat;}
+
+.prefooter .widget_text .widget-wrap {padding:12px 0;}
+
 .site-footer {
   clear: both;
   margin: 0;
@@ -1450,11 +1471,11 @@ body.category-grid .entry-list {padding:0 10px; text-align:center;}
 body.category-grid .entry-list article.entry {padding:0; margin:10px 25px;}
 body.category-grid .entry-list article.entry img {float:left;}
 body.category-grid .entry-list article.entry .entry-image {display:inline-block; float:left;}
-body.category-grid .entry-list article.entry .entry-title {display:inline-block; float:left; position:relative; padding:10px 10px 30px 10px; font-size:16px; font-weight:300;}
+body.category-grid .entry-list article.entry .entry-title {display:inline-block; float:left; position:relative; min-height:4.3em; padding:10px 10px 20px 10px; font-size:16px; font-weight:300;}
 body.category-grid .entry-list article.entry .entry-title a {font-size:inherit; font-weight:inherit;}
-body.category-grid .entry-list article.entry .entry-title .btn.btn-see {position:absolute; bottom:-10px; left:0; right:0; width:80px; text-align:center; margin:0 auto; border-radius:0; background:#0996D4;}
+body.category-grid .entry-list article.entry .entry-title .btn.btn-see {position:absolute; bottom:-25px; left:0; right:0; width:80px; text-align:center; margin:0 auto; border-radius:0; background:#0996D4;}
 body.category-grid .entry-list article.entry .entry-title .btn.btn-see:hover,
-body.category-grid .entry-list article.entry .entry-title .btn.btn-see:focus {color:#FFFFFF;}
+body.category-grid .entry-list article.entry .entry-title .btn.btn-see:focus {color:#FFFFFF; background:#E31E24;}
 
 
 body.contact .entry-content h2 {padding:2.5em 0 0.5em 0; border-bottom:2px solid #E31E24; margin-bottom:1em;}

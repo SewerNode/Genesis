@@ -57,30 +57,30 @@ add_action( 'genesis_loop', 'homelinks' );
 function homelinks(){
 	echo '<div class="site-inner home-links"><div class="wrap"><div class="home-widget widget-area">';
 	echo '<div class="home_box">
-<img src="'.get_stylesheet_directory_uri().'/images/skrawanie.jpg" alt="OBRÓBKA SKRAWANIEM" />
-<h2>OBRÓBKA SKRAWANIEM</h2>
-<a href="#">Obróbka wielkogabarytowa</a>
-<a href="#">Cięcie i kształtowanie profili</a>
-</div>
+		<img src="'.get_stylesheet_directory_uri().'/images/skrawanie.jpg" alt="OBRÓBKA SKRAWANIEM" />
+		<h2>OBRÓBKA SKRAWANIEM</h2>
+		<a href="#">Obróbka wielkogabarytowa</a>
+		<a href="#">Cięcie i kształtowanie profili</a>
+		</div>
 		<div class="home_box">
 		<img src="'.get_stylesheet_directory_uri().'/images/instalacje.jpg" alt="INSTALACJE I TECHNOLOGIA" />
-<h2>INSTALACJE I TECHNOLOGIA</h2>
-<a href="#">Konstrukcje stalowe</a>
-<a href="#">Linie technologiczne</a>
-<a href="#">Wykonawstwo maszyn</a>
-</div>
+		<h2>INSTALACJE I TECHNOLOGIA</h2>
+		<a href="#">Konstrukcje stalowe</a>
+		<a href="#">Linie technologiczne</a>
+		<a href="#">Wykonawstwo maszyn</a>
+		</div>
 		<div class="home_box">
 		<img src="'.get_stylesheet_directory_uri().'/images/czesci.jpg" alt="CZĘŚCI ZAMIENNE I MODERNIZACJE" />
-<h2>CZĘŚCI ZAMIENNE I MODERNIZACJE</h2>
-<a href="#">Projektowanie i wyrabianie części zamiennych</a>
-<a href="#">Modernizowanie maszyn i urządzeń przemysłowych</a>
-</div>
+		<h2>CZĘŚCI ZAMIENNE I MODERNIZACJE</h2>
+		<a href="#">Projektowanie i wyrabianie części zamiennych</a>
+		<a href="#">Modernizowanie maszyn i urządzeń przemysłowych</a>
+		</div>
 		<div class="home_box">
 		<img src="'.get_stylesheet_directory_uri().'/images/urzadzenia.jpg" alt="URZĄDZENIA PROCESOWE" />
-<h2>URZĄDZENIA PROCESOWE</h2>
-<a href="#">Wykonawstwo urządzeń procesowych</a>
-<a href="#">Wykonawstwo na zamówienie</a>
-</div>';
+		<h2>URZĄDZENIA PROCESOWE</h2>
+		<a href="#">Wykonawstwo urządzeń procesowych</a>
+		<a href="#">Wykonawstwo na zamówienie</a>
+		</div>';
 	echo '</div></div></div>';
 }
 function gs_map_widgets() {
