@@ -550,8 +550,8 @@ h6,
 .genesis-nav-menu a {
   border: none;
   display: block;
-  padding:9px 28px;
-  padding:0.9rem 2.8rem;
+  padding:9px 24px;
+  padding:0.9rem 2.4rem;
   position: relative;
 	transition:all 0.5s ease;
 	text-transform:uppercase;
@@ -574,10 +574,10 @@ h6,
   font-size: 14px;
   font-size: 1.4rem;
   letter-spacing: 0;
-  padding: 16px 20px;
-  padding: 1.6rem 2rem;
+  padding: 14px 20px;
+  padding: 1.4rem 2rem;
   position: relative;
-  width: 200px;
+  width: 220px;
 }
 .genesis-nav-menu .sub-menu .sub-menu {
   margin: -54px 0 0 199px;
@@ -585,6 +585,8 @@ h6,
 .genesis-nav-menu .menu-item:hover {
   position: static;
 }
+.genesis-nav-menu > .menu-item-has-children {background:url('images/menu_drop.png') 50% 95% no-repeat;}
+
 .genesis-nav-menu .menu-item:hover > .sub-menu {
   left: auto;
   opacity: 1;
@@ -1255,8 +1257,8 @@ img {
 img.centered,
 .aligncenter {
   display: block;
-  margin: 0 auto 24px;
-  margin: 0 auto 2.4rem;
+  margin:10px auto 24px;
+  margin:1rem auto 2.4rem;
 }
 
 img.alignnone {
@@ -1269,15 +1271,15 @@ img.alignleft,
 .post-image,
 .wp-caption.alignleft {
   display: inline;
-  margin: 0 24px 24px 0;
-  margin: 0 2.4rem 2.4rem 0;
+  margin:10px 24px 24px 0;
+  margin:1rem 2.4rem 2.4rem 0;
 }
 
 img.alignright,
 .wp-caption.alignright {
   display: inline;
-  margin: 0 0 24px 24px;
-  margin: 0 0 2.4rem 2.4rem;
+  margin:10px 0 24px 24px;
+  margin:1rem 0 2.4rem 2.4rem;
 }
 
 p.wp-caption-text {
@@ -1388,6 +1390,16 @@ body.custom-background.home {background:#FFFFFF;}
 .home .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-title {padding:20px 35px; font-family:"Roboto Condensed",sans-serif; font-size:40px; background:rgba(0,0,0,0.7); margin-bottom:5px;}
 .home .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-description {font-size:16px; font-weight:300; padding:10px 30px 40px 30px; background:rgba(0,0,0,0.7);}
 .home .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-description .btn {position:absolute; float:left; left:32px; bottom:-4px; height:35px; font-family:"Roboto Condensed",sans-serif; font-size:14px; font-weight:700; background:#0996D4; border-bottom:5px solid #007DBB; border-radius:0;}
+
+.home .cycloneslider-template-standard .cycloneslider-prev,
+.home .cycloneslider-template-standard .cycloneslider-next {width:34px; height:60px; border-radius:0; box-shadow:none;}
+.home .cycloneslider-template-standard .cycloneslider-prev .arrow,
+.home .cycloneslider-template-standard .cycloneslider-next .arrow {box-shadow:none; border:0;}
+.home .cycloneslider-template-standard .cycloneslider-prev {background:url('images/left_off.png') 50% 50% no-repeat;}
+.home .cycloneslider-template-standard .cycloneslider-next {background:url('images/right_off.png') 50% 50% no-repeat;}
+.home .cycloneslider-template-standard .cycloneslider-prev:hover {background:url('images/left_on.png') 50% 50% no-repeat;}
+.home .cycloneslider-template-standard .cycloneslider-next:hover {background:url('images/right_on.png') 50% 50% no-repeat;}
+
 @media (max-width:768px){
 	.home .cycloneslider-template-standard {position:relative; height:auto;}
 	.home .cycloneslider-template-standard img {position:absolute;}
@@ -1453,8 +1465,10 @@ body.custom-background.home {background:#FFFFFF;}
 .site-container > .site-inner.home-seo > .wrap,
 .site-container > .site-inner.before_header > .wrap {border:0; background:none;}
 .home .site-container > .site-inner > .wrap {border:0; background:none;}
-.entry .entry-header {padding-right:40px;}
-.entry .entry-content {padding-right:40px;}
+@media(min-width:768px){
+	.entry .entry-header {padding-right:40px;}
+	.entry .entry-content {padding-right:40px;}
+}
 body.nolayoutpage .entry .entry-header,
 body.nolayoutpage .entry .entry-content,
 body.page-template-contact-page .entry .entry-header,
