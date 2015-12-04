@@ -16,7 +16,7 @@ add_action( 'get_header', 'gs_home_helper' );
  * Add widget support for homepage. If no widgets active, display the default loop.
  */
 function gs_home_helper() {
-	if ( is_active_sidebar( 'home-slider' ) || is_active_sidebar( 'home-top' ) || is_active_sidebar( 'home-bottom' ) ) {
+	if ( is_active_sidebar( 'home-top' ) || is_active_sidebar( 'home-bottom' ) ) {
         add_action( 'genesis_after_header', 'gs_home_slider_widget' );
         remove_action( 'genesis_loop', 'genesis_do_loop' );
 		add_action( 'genesis_after_header', 'gs_home_widgets' );
@@ -29,68 +29,24 @@ function gs_home_helper() {
 /**
  * Add widget support for homepage. If no widgets active, display the default loop.
  */
-function gs_home_slider_widget() {
-	//if( function_exists('cyclone_slider') ) cyclone_slider('testowy-rotator');
-	genesis_widget_area(
-		'home-slider',
-		array()
-	);
-}
+
 function gs_home_widgets() {
 	genesis_widget_area(
-		'home-seo',
+		'home-top',
 		array(
-			'before' => '<div class="site-inner home-seo"><div class="wrap"><div class="home-widget widget-area">',
+			'before' => '<div class="site-inner home-top"><div class="wrap"><div class="content-sidebar-wrap">',
 			'after' => '</div></div></div>'
 		)
 	);
-    genesis_widget_area(
-        'home-top',
-        array(
-	        'before' => '<div class="site-inner home-top"><div class="wrap"><div class="home-widget widget-area">',
-	        'after' => '</div></div></div>'
-        )
-    );
-
-}
-add_action( 'genesis_loop', 'homelinks' );
-function homelinks(){
-	echo '<div class="site-inner home-links"><div class="wrap"><div class="home-widget widget-area">';
-	echo '<div class="home_box">
-		<img src="'.get_stylesheet_directory_uri().'/images/skrawanie.jpg" alt="OBRÓBKA SKRAWANIEM" />
-		<h2>OBRÓBKA SKRAWANIEM</h2>
-		<a href="#">Obróbka wielkogabarytowa</a>
-		<a href="#">Cięcie i kształtowanie profili</a>
-		</div>
-		<div class="home_box">
-		<img src="'.get_stylesheet_directory_uri().'/images/instalacje.jpg" alt="INSTALACJE I TECHNOLOGIA" />
-		<h2>INSTALACJE I TECHNOLOGIA</h2>
-		<a href="#">Konstrukcje stalowe</a>
-		<a href="#">Linie technologiczne</a>
-		<a href="#">Wykonawstwo maszyn</a>
-		</div>
-		<div class="home_box">
-		<img src="'.get_stylesheet_directory_uri().'/images/czesci.jpg" alt="CZĘŚCI ZAMIENNE I MODERNIZACJE" />
-		<h2>CZĘŚCI ZAMIENNE I MODERNIZACJE</h2>
-		<a href="#">Projektowanie i wyrabianie części zamiennych</a>
-		<a href="#">Modernizowanie maszyn i urządzeń przemysłowych</a>
-		</div>
-		<div class="home_box">
-		<img src="'.get_stylesheet_directory_uri().'/images/urzadzenia.jpg" alt="URZĄDZENIA PROCESOWE" />
-		<h2>URZĄDZENIA PROCESOWE</h2>
-		<a href="#">Wykonawstwo urządzeń procesowych</a>
-		<a href="#">Wykonawstwo na zamówienie</a>
-		</div>';
-	echo '</div></div></div>';
-}
-function gs_map_widgets() {
 	genesis_widget_area(
 		'home-bottom',
 		array(
-			'before' => '<div class="site-inner home-bottom"><div class="wrap"><div class="home-widget widget-area">',
+			'before' => '<div class="site-inner home-bottom"><div class="wrap"><div class="content-sidebar-wrap">',
 			'after' => '</div></div></div>'
 		)
 	);
+
+
 }
 
 genesis();

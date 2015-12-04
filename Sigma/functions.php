@@ -22,9 +22,12 @@ function gs_theme_setup()
 {
 	add_theme_support('html5');
 	genesis_unregister_layout('content-sidebar');
+	genesis_unregister_layout('sidebar-content');
 	genesis_unregister_layout('content-sidebar-sidebar');
 	genesis_unregister_layout('sidebar-sidebar-content');
 	genesis_unregister_layout('sidebar-content-sidebar');
+	//* Force full-width-content layout setting
+	add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
 	/** Custom site title
 	 * Add header_image as image
@@ -86,7 +89,6 @@ function gs_theme_setup()
 	add_action( 'genesis_before_header', 'beforeheader' );
 	function beforeheader(){
 		echo '<div class="site-inner before_header"><div class="wrap">
-			<a href="#" class="linkedin">'.__('Odwiedź nasz profil na LinkedIn').'</a>
 			<a href="#" class="lang pl">'.__('POLSKI').'</a>
 			<a href="#" class="lang en">'.__('ANGIELSKI').'</a>
 			<a href="#" class="lang de">'.__('NIEMIECKI').'</a>
@@ -198,16 +200,6 @@ function gs_theme_setup()
 // Register Sidebars
 function gs_register_sidebars() {
 	$sidebars = array(
-		array(
-			'id'			=> 'home-slider',
-			'name'			=> __( 'Rotator', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the most top homepage section.', CHILD_DOMAIN ),
-		),
-		array(
-			'id'			=> 'home-seo',
-			'name'			=> __( 'Strona główna SEO', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the homepage bottom text.', CHILD_DOMAIN ),
-		),
 		array(
 			'id'			=> 'home-top',
 			'name'			=> __( 'Strona główna - góra', CHILD_DOMAIN ),
