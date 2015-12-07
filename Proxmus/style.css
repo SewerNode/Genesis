@@ -1493,6 +1493,7 @@ body.category-grid .entry-list article.entry .entry-title .btn.btn-see:focus {co
 
 
 body.contact .entry-content h2 {padding:2.5em 0 0.5em 0; border-bottom:2px solid #E31E24; margin-bottom:1em;}
+body.contact #map_canvas {width:1072px; height:400px; max-width:100%;}
 main.content iframe {max-width:100%;}
 
 /* EOF */
