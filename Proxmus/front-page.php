@@ -59,27 +59,29 @@ function homelinks(){
 	echo '<div class="home_box">
 		<img src="'.get_stylesheet_directory_uri().'/images/skrawanie.jpg" alt="OBRÓBKA SKRAWANIEM" />
 		<h2>OBRÓBKA SKRAWANIEM</h2>
-		<a href="#">Obróbka wielkogabarytowa</a>
-		<a href="#">Cięcie i kształtowanie profili</a>
+		<a href="'.home_url('/oferta/elementy-wielkogabarytowe').'">'.__('Elementy wielkogabarytowe').'</a>
+		<a href="'.home_url('/oferta/ciecie-i-ksztaltowanie-profili').'">'.__('Cięcie i kształtowanie profili').'</a>
 		</div>
 		<div class="home_box">
 		<img src="'.get_stylesheet_directory_uri().'/images/instalacje.jpg" alt="INSTALACJE I TECHNOLOGIA" />
 		<h2>INSTALACJE I TECHNOLOGIA</h2>
-		<a href="#">Konstrukcje stalowe</a>
-		<a href="#">Linie technologiczne</a>
-		<a href="#">Wykonawstwo maszyn</a>
+		<a href="'.home_url('/oferta/linie-technologiczne').'">'.__('Linie technologiczne').'</a>
+		<a href="'.home_url('/oferta/konstrukcje-stalowe').'">'.__('Konstrukcje stalowe').'</a>
+		<a href="'.home_url('/oferta/wykonawstwo-maszyn').'">'.__('Wykonawstwo maszyn').'</a>
 		</div>
 		<div class="home_box">
 		<img src="'.get_stylesheet_directory_uri().'/images/czesci.jpg" alt="CZĘŚCI ZAMIENNE I MODERNIZACJE" />
-		<h2>CZĘŚCI ZAMIENNE I MODERNIZACJE</h2>
-		<a href="#">Projektowanie i wyrabianie części zamiennych</a>
-		<a href="#">Modernizowanie maszyn i urządzeń przemysłowych</a>
+		<h2>REMONTY, MODERNIZACJE I CZĘŚCI ZAMIENNE</h2>
+		<a href="'.home_url('/oferta/remonty-maszyn-i-urzadzen').'">'.__('Remonty maszyn i urządzeń').'</a>
+		<a href="'.home_url('/oferta/wykonawstwo-czesci-zamiennych').'">'.__('Wykonawstwo części zamiennych').'</a>
+		<a href="'.home_url('/oferta/modernizacja-maszyn').'">'.__('Modernizacja maszyn').'</a>
 		</div>
 		<div class="home_box">
 		<img src="'.get_stylesheet_directory_uri().'/images/urzadzenia.jpg" alt="URZĄDZENIA PROCESOWE" />
 		<h2>URZĄDZENIA PROCESOWE</h2>
-		<a href="#">Wykonawstwo urządzeń procesowych</a>
-		<a href="#">Wykonawstwo na zamówienie</a>
+		<a href="'.home_url('/oferta/wykonawstwo-urzadzen-procesowych').'">'.__('Wykonawstwo urządzeń procesowych').'</a>
+		<a href="'.home_url('/oferta/zbiorniki').'">'.__('Zbiorniki').'</a>
+		<a href="'.home_url('/oferta/wykonawstwo-na-zamowienie').'">'.__('Wykonawstwo na zamówienie').'</a>
 		</div>';
 	echo '</div></div></div>';
 }
