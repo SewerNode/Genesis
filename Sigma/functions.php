@@ -89,9 +89,9 @@ function gs_theme_setup()
 	add_action( 'genesis_before_header', 'beforeheader' );
 	function beforeheader(){
 		echo '<div class="site-inner before_header"><div class="wrap">
-			<a href="#" class="lang pl">'.__('POLSKI').'</a>
-			<a href="#" class="lang en">'.__('ANGIELSKI').'</a>
-			<a href="#" class="lang de">'.__('NIEMIECKI').'</a>
+			<a href="#" class="lang pl">'.__('PL').'</a>
+			<a href="#" class="lang en">'.__('EN').'</a>
+			<a href="#" class="lang de">'.__('DE').'</a>
 			</div></div>';
 	}
 
@@ -203,27 +203,27 @@ function gs_register_sidebars() {
 		array(
 			'id'			=> 'home-top',
 			'name'			=> __( 'Strona główna - góra', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the top homepage section.', CHILD_DOMAIN ),
+			'description'	=> __( 'Treść górnej części strony głównej.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-bottom',
 			'name'			=> __( 'Strona główna - dół', CHILD_DOMAIN ),
-			'description'	=> __( 'This is the top homepage section.', CHILD_DOMAIN ),
+			'description'	=> __( 'Treści dwóch kolumn na stronie głównej.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'after-contact',
 			'name'			=> __( 'Pod kontaktem', CHILD_DOMAIN ),
-			'description'	=> __( 'This will show up after contact content.', CHILD_DOMAIN ),
+			'description'	=> __( 'Treść i skrypty wyświetlane na podstronie kontakt.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'prefooter',
-			'name'			=> __( 'Przed stopką', CHILD_DOMAIN ),
-			'description'	=> __( 'This will show up before contact.', CHILD_DOMAIN ),
+			'name'			=> __( 'Partnerzy', CHILD_DOMAIN ),
+			'description'	=> __( 'Lista partnerów.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'          => 'footercontent',
-			'name'        => __( 'Stopka witryny', CHILD_DOMAIN ),
-			'description' => __( 'This is the general footer area.', CHILD_DOMAIN ),
+			'name'        => __( 'Stopka', CHILD_DOMAIN ),
+			'description' => __( 'Tekst w stopce witryny.', CHILD_DOMAIN ),
 		)
 	);
 	
