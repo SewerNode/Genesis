@@ -89,9 +89,9 @@ function gs_theme_setup()
 	add_action( 'genesis_before_header', 'beforeheader' );
 	function beforeheader(){
 		echo '<div class="site-inner before_header"><div class="wrap">
-			<a href="#" class="lang pl">'.__('PL').'</a>
-			<a href="#" class="lang en">'.__('EN').'</a>
-			<a href="#" class="lang de">'.__('DE').'</a>
+			<a href="'.home_url('/').'#" class="lang pl">'.__('PL').'</a>
+			<a href="'.home_url('/').'#" class="lang en">'.__('EN').'</a>
+			<a href="'.home_url('/').'#" class="lang de">'.__('DE').'</a>
 			</div></div>';
 	}
 
