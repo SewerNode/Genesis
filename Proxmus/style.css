@@ -565,7 +565,7 @@ h6,
   -moz-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
-  width: 220px;
+  width: 240px;
   z-index:999;
 }
 .genesis-nav-menu .sub-menu a {
@@ -575,10 +575,10 @@ h6,
   font-size: 14px;
   font-size: 1.4rem;
   letter-spacing: 0;
-  padding: 14px 20px;
-  padding: 1.4rem 2rem;
+  padding: 10px 20px;
+  padding: 1rem 2rem;
   position: relative;
-  width: 220px;
+  width: 240px;
 }
 .genesis-nav-menu .sub-menu .sub-menu {
   margin: -54px 0 0 199px;
@@ -586,7 +586,6 @@ h6,
 .genesis-nav-menu .menu-item:hover {
   position: static;
 }
-.genesis-nav-menu > .menu-item-has-children {background:url('images/menu_drop.png') 50% 95% no-repeat;}
 
 .genesis-nav-menu .menu-item:hover > .sub-menu {
   left: auto;
@@ -629,7 +628,7 @@ h6,
 	color: #FFFFFF;
 	background-color:#0996D4;
 }
-
+.genesis-nav-menu .sub-menu .current-menu-item > a {background-color:#7f838e}
 
 /* Site Header Navigation
 --------------------------------------------- */
@@ -649,7 +648,6 @@ h6,
 	text-align:right;
 	margin-top:3rem;
 }
-
 .nav-primary a:hover,
 .nav-primary .current-menu-item > a {
   color:#FFFFFF;
@@ -1467,21 +1465,9 @@ body.custom-background.home {background:#FFFFFF;}
 .site-container > .site-inner.before_header > .wrap {border:0; background:none;}
 .home .site-container > .site-inner > .wrap {border:0; background:none;}
 
-@media(min-width:768px){
-	.entry .entry-header {padding-right:40px;}
-	.entry .entry-content {padding-right:40px;}
-
-	body.nolayoutpage .entry .entry-header,
-	body.nolayoutpage .entry .entry-content,
-	body.page-template-contact-page .entry .entry-header,
-	body.page-template-contact-page .entry .entry-content {padding-left:40px;}
-}
-
 body.archive.category .category-header {padding:0 40px;}
 body.archive.category .entry-list-description {padding:0 40px 10px 40px;}
 body.archive.category article.entry {padding:10px 40px;}
-
-
 
 body.category-grid {}
 body.category-grid .category-header {padding:0 40px;}
@@ -1496,9 +1482,25 @@ body.category-grid .entry-list article.entry .entry-title .btn.btn-see {position
 body.category-grid .entry-list article.entry .entry-title .btn.btn-see:hover,
 body.category-grid .entry-list article.entry .entry-title .btn.btn-see:focus {color:#FFFFFF; background:#E31E24;}
 
-
 body.contact .entry-content h2 {padding:2.5em 0 0.5em 0; border-bottom:2px solid #E31E24; margin-bottom:1em;}
 body.contact #map_canvas {width:1072px; height:400px; max-width:100%;}
 main.content iframe {max-width:100%;}
+
+@media(max-width:888px){
+	.header-full-width .site-title,
+	.header-full-width .site-title a,
+	.header-full-width .title-area {width:100%; text-align:center;}
+	.nav-primary {width:100%; text-align:center; margin-bottom:2rem;}
+}
+@media(min-width:768px){
+	.genesis-nav-menu > .menu-item-has-children {background:url('images/menu_drop.png') 50% 95% no-repeat;}
+	.entry .entry-header {padding-right:40px;}
+	.entry .entry-content {padding-right:40px;}
+
+	body.nolayoutpage .entry .entry-header,
+	body.nolayoutpage .entry .entry-content,
+	body.page-template-contact-page .entry .entry-header,
+	body.page-template-contact-page .entry .entry-content {padding-left:40px;}
+}
 
 /* EOF */
