@@ -741,22 +741,23 @@ h6,
 .widget.widget_subpages .widget-wrap ul i li:focus { color:#E73E44; background-color:#FFFFFF; }
 /* Pagination
 ---------------------------------------------------------*/
+.archive-pagination {text-align:center;}
 .archive-pagination li { display:inline; }
 .archive-pagination li a,
 .archive-pagination li a:hover,
 .archive-pagination li.active a,
 .archive-pagination li.disabled {
-	background-color:#4C5558;
+	background-color:#FFFFFF;
 	border-radius:3px;
 	cursor:pointer;
-	padding:12px;
-	padding:1.2rem;
-	color:white;
+	padding:10px;
+	padding:1rem;
+	color:#0996D4;
 }
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-	background-color:white;
-	color:#000D11;
+	background-color:#0996D4;
+	color:#FFFFFF;
 }
 .portfolio-widgetized .archive-pagination {
 	clear:both;

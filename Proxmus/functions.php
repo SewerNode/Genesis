@@ -314,7 +314,6 @@ function gs_show_projects( $query ) {
 		add_action( 'genesis_loop', 'gs_custom_loop' );
 	}
 }
-
 function gs_show_category_description () {
 	if (is_category() && category_description($category-id)) {
 		echo '<div class="entry-list-description">'.category_description($category-id).'</div>';
@@ -334,6 +333,8 @@ function gs_custom_loop() {
 		</article>
 	<?php endwhile;
 	echo '</div>';
+	echo '<div class="clear">&nbsp;</div>';
+	genesis_posts_nav();
 }
 
 add_action( 'genesis_loop', 'gs_add_contact_body_class' );
