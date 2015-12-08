@@ -983,6 +983,9 @@ Site Footer
 	background:#333333;
 	color:#FFFFFF;
 }
+.site-footer a {color:inherit;}
+.site-footer .one-half {text-align:right;}
+.site-footer .one-half.first {text-align:left;}
 .site-footer .wrap {
 	overflow:hidden;
 	padding:24px 0;
@@ -1293,6 +1296,7 @@ main.content iframe { max-width:100%; }
 	.home .cycloneslider-template-standard { position:relative; height:auto; }
 	.home .cycloneslider-template-standard img { position:absolute; }
 	.home .cycloneslider-template-standard .cycloneslider-caption { float:left; position:relative; bottom:0; left:0; margin:0 0; width:100%; }
+	.site-footer .textwidget .one-half {width:100%; text-align:center; padding:0.5em 1em;}
 }
 @media (min-width:768px) {
 	.genesis-nav-menu > .menu-item-has-children { background:url('images/menu_drop.png') 50% 95% no-repeat; }
