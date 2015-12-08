@@ -253,14 +253,12 @@ function gs_mobile_navigation() {
 // Add Widget Area Prefooter
 add_action('genesis_before_footer', 'gs_do_prefooter');
 function gs_do_prefooter() {
- 	if ( !is_home() ) {
-	    genesis_widget_area(
-            'prefooter',
-            array(
-                'before' => '<aside id="prefooter" class="prefooter"><div class="wrap"><div class="prefooter-widget widget-area">',
-                'after' => '</div></div></aside>',
-	            ));
-    }
+    genesis_widget_area(
+        'prefooter',
+        array(
+            'before' => '<aside id="prefooter" class="prefooter partners"><div class="wrap"><div class="prefooter-widget widget-area">',
+            'after' => '</div></div></aside>',
+            ));
 }
 
 //* Customize the entry meta in the entry header (requires HTML5 theme support)
