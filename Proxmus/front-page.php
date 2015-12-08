@@ -64,14 +64,14 @@ function homelinks(){
 		</div>
 		<div class="home_box">
 		<img src="'.get_stylesheet_directory_uri().'/images/instalacje.jpg" alt="INSTALACJE I TECHNOLOGIA" />
-		<h2>INSTALACJE I TECHNOLOGIA</h2>
+		<h2>INSTALACJE I&nbsp;TECHNOLOGIA</h2>
 		<a href="'.home_url('/oferta/linie-technologiczne').'">'.__('Linie technologiczne').'</a>
 		<a href="'.home_url('/oferta/konstrukcje-stalowe').'">'.__('Konstrukcje stalowe').'</a>
 		<a href="'.home_url('/oferta/wykonawstwo-maszyn').'">'.__('Wykonawstwo maszyn').'</a>
 		</div>
 		<div class="home_box">
 		<img src="'.get_stylesheet_directory_uri().'/images/czesci.jpg" alt="CZĘŚCI ZAMIENNE I MODERNIZACJE" />
-		<h2>REMONTY, MODERNIZACJE I CZĘŚCI ZAMIENNE</h2>
+		<h2>REMONTY, MODERNIZACJE I&nbsp;CZĘŚCI ZAMIENNE</h2>
 		<a href="'.home_url('/oferta/remonty-maszyn-i-urzadzen').'">'.__('Remonty maszyn i urządzeń').'</a>
 		<a href="'.home_url('/oferta/wykonawstwo-czesci-zamiennych').'">'.__('Wykonawstwo części zamiennych').'</a>
 		<a href="'.home_url('/oferta/modernizacja-maszyn').'">'.__('Modernizacja maszyn').'</a>
