@@ -1265,7 +1265,7 @@ body.archive.category .category-header { padding:0 40px; }
 body.archive.category .entry-list-description { padding:0 40px 10px 40px; }
 body.archive.category article.entry { padding:10px 40px; }
 body.archive.category article.entry .post-image,
-body.archive.category article.entry .entry-image{ border-bottom:4px solid ; }
+body.archive.category article.entry .entry-image{ border-bottom:5px solid #E6E6E6; }
 body.category-grid { }
 body.category-grid .category-header { padding:0 40px; }
 body.category-grid .entry-list-description { padding:0 40px 10px 40px; }
