@@ -57,28 +57,28 @@ add_action( 'genesis_loop', 'homelinks' );
 function homelinks(){
 	echo '<div class="site-inner home-links"><div class="wrap"><div class="home-widget widget-area">';
 	echo '<div class="home_box">
-		<img src="'.get_stylesheet_directory_uri().'/images/offer_1.jpg" alt="OBRÓBKA SKRAWANIEM" />
-		<h2>OBRÓBKA SKRAWANIEM</h2>
+		<img src="'.get_stylesheet_directory_uri().'/images/offer_1.jpg" alt="'.__('OBRÓBKA SKRAWANIEM').'" />
+		<h2>'.__('OBRÓBKA SKRAWANIEM').'</h2>
 		<a href="'.home_url('/oferta/elementy-wielkogabarytowe').'">'.__('Elementy wielkogabarytowe').'</a>
 		<a href="'.home_url('/oferta/ciecie-i-ksztaltowanie-profili').'">'.__('Cięcie i kształtowanie profili').'</a>
 		</div>
 		<div class="home_box">
-		<img src="'.get_stylesheet_directory_uri().'/images/offer_2.jpg" alt="INSTALACJE I TECHNOLOGIA" />
-		<h2>INSTALACJE I&nbsp;TECHNOLOGIA</h2>
+		<img src="'.get_stylesheet_directory_uri().'/images/offer_2.jpg" alt="'.__('INSTALACJE I&nbsp;TECHNOLOGIA').'" />
+		<h2>'.__('INSTALACJE I&nbsp;TECHNOLOGIA').'</h2>
 		<a href="'.home_url('/oferta/linie-technologiczne').'">'.__('Linie technologiczne').'</a>
 		<a href="'.home_url('/oferta/konstrukcje-stalowe').'">'.__('Konstrukcje stalowe').'</a>
 		<a href="'.home_url('/oferta/wykonawstwo-maszyn').'">'.__('Wykonawstwo maszyn').'</a>
 		</div>
 		<div class="home_box">
-		<img src="'.get_stylesheet_directory_uri().'/images/offer_3.jpg" alt="CZĘŚCI ZAMIENNE I MODERNIZACJE" />
-		<h2>REMONTY, MODERNIZACJE I&nbsp;CZĘŚCI ZAMIENNE</h2>
+		<img src="'.get_stylesheet_directory_uri().'/images/offer_3.jpg" alt="'.__('REMONTY, MODERNIZACJE I&nbsp;CZĘŚCI ZAMIENNE').'" />
+		<h2>'.__('REMONTY, MODERNIZACJE I&nbsp;CZĘŚCI ZAMIENNE').'</h2>
 		<a href="'.home_url('/oferta/remonty-maszyn-i-urzadzen').'">'.__('Remonty maszyn i urządzeń').'</a>
 		<a href="'.home_url('/oferta/wykonawstwo-czesci-zamiennych').'">'.__('Wykonawstwo części zamiennych').'</a>
 		<a href="'.home_url('/oferta/modernizacja-maszyn').'">'.__('Modernizacja maszyn').'</a>
 		</div>
 		<div class="home_box">
-		<img src="'.get_stylesheet_directory_uri().'/images/offer_4.jpg" alt="URZĄDZENIA PROCESOWE" />
-		<h2>URZĄDZENIA PROCESOWE</h2>
+		<img src="'.get_stylesheet_directory_uri().'/images/offer_4.jpg" alt="'.__('URZĄDZENIA PROCESOWE').'" />
+		<h2>'.__('URZĄDZENIA PROCESOWE').'</h2>
 		<a href="'.home_url('/oferta/wykonawstwo-urzadzen-procesowych').'">'.__('Wykonawstwo urządzeń procesowych').'</a>
 		<a href="'.home_url('/oferta/zbiorniki').'">'.__('Zbiorniki').'</a>
 		<a href="'.home_url('/oferta/wykonawstwo-na-zamowienie').'">'.__('Wykonawstwo na zamówienie').'</a>
