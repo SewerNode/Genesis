@@ -90,11 +90,11 @@ a.post-edit-link:hover,
 a.post-edit-link:focus { color:#FFFFFF; background-color:#FF5965; }
 ::-moz-selection {
 	background-color:#000D11;
-	color:white;
+	background-color:rgba(254,204,0,0.3);
 }
 ::selection {
 	background-color:#000D11;
-	color:white;
+	background-color:rgba(254,204,0,0.3);
 }
 a {
 	color:#ECF8FF;
