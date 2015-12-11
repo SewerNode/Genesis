@@ -22,6 +22,40 @@ function gs_theme_setup() {
 	
 	//Enable HTML5 Support
 	add_theme_support( 'html5' );
+	genesis_unregister_layout('content-sidebar');
+	genesis_unregister_layout('content-sidebar-sidebar');
+	genesis_unregister_layout('sidebar-sidebar-content');
+	genesis_unregister_layout('sidebar-content-sidebar');
+
+	/** Unregister  templates */
+	function remove_genesis_page_templates( $page_templates ) {
+		unset( $page_templates['page_archive.php'] );
+		unset( $page_templates['page_blog.php'] );
+		unset( $page_templates['page_landing.php'] );
+		unset( $page_templates['page_portfolio.php'] );
+		return $page_templates;
+	}
+	add_filter( 'theme_page_templates', 'remove_genesis_page_templates' );
+
+	// Register Sidebars
+	gs_register_sidebars();
+	unregister_sidebar( 'sidebar-alt' );
+
+	/** Custom site title
+	 * Add header_image as image
+	 * Remove site description
+	 * Remove header_image in background
+	 */
+	if(get_header_image()){
+		add_filter('genesis_seo_title', 'gs_genesis_header_background_to_img', 10, 2);
+		function gs_genesis_header_background_to_img($title, $inside)
+		{
+			$inline_logo = sprintf('<a href="%s" title="%s"><img src="' . get_header_image() . '" title="%s" alt="%s"/></a>', trailingslashit(home_url()), esc_attr(get_bloginfo('name')), esc_attr(get_bloginfo('name')), esc_attr(get_bloginfo('name')));
+			$title = str_replace($inside, $inline_logo, $title);
+			return $title;
+		}
+		remove_action('genesis_site_description', 'genesis_seo_site_description');
+	};
 
 	//Enable Post Navigation
 	add_action( 'genesis_after_entry_content', 'genesis_prev_next_post_nav', 5 );
@@ -35,7 +69,7 @@ function gs_theme_setup() {
 	 * @param integer $small Small width
 	 * @param integer $large Large width
 	 */
-	$content_width = apply_filters( 'content_width', 600, 430, 920 );
+	$content_width = apply_filters( 'content_width', 600, 430, 920, 1152 );
 	
 	//Custom Image Sizes
 	add_image_size( 'featured-image', 225, 160, TRUE );
@@ -44,7 +78,7 @@ function gs_theme_setup() {
 	//add_theme_support( 'custom-background' );
 
 	// Enable Custom Header
-	//add_theme_support('genesis-custom-header');
+	add_theme_support('genesis-custom-header', array('width'=> 290, 'height'=> 100));
 
 
 	// Add support for structural wraps
