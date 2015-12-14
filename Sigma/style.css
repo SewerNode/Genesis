@@ -1249,7 +1249,10 @@ ul.flex-direction-nav li:focus a:before { opacity:1; }
 	.home .cycloneslider-template-standard .cycloneslider-caption { float:left; position:relative; bottom:0; left:0; margin:0 0; width:100%; }
 }
 /* Home */
-.home .site-container { background:url('images/site_bg.jpg') 50% 0 no-repeat; }
+body.home { background:url('images/site_bg.jpg') 50% 0 no-repeat; }
+body.custom-background .site-container{background:#25436a;}
+body.home.custom-background .site-container{background-image:inherit; background-position:50% 0;}
+
 /* Home Top */
 .site-inner.home-top { min-height:520px; }
 .site-inner.home-top .widget.widget_text { color:#FFFFFF; padding:8.5em 1.5em 2em 1.5em; }
