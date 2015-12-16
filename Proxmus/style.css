@@ -1323,14 +1323,14 @@ main.content iframe { max-width:100%; }
 .ninja-forms-error-msg { color:#E31E24; }
 #videoplayer { float:left; display:inline-block; width:100%; }
 #videoplayer .playlist_collumn { float:left; display:inline-block; width:25%; vertical-align:top; }
-#videoplayer .playlist_collumn #playlist { float:left; display:inline-block; }
+#videoplayer .playlist_collumn #playlist { float:left; display:inline-block; width:100%;}
 #videoplayer .playlist_collumn #playlist li { float:left; display:inline-block; width:100%; padding:0; margin:0; text-align:right; border-bottom:1px solid #FFFFFF; }
 #videoplayer .playlist_collumn #playlist a { display:inline-block; float:left; width:100%; padding:0.5rem 0.5rem 0.5rem 1.5rem; text-align:left; background:url('images/homebox_item.png') 0 0.9em no-repeat; }
 #videoplayer .playlist_collumn #playlist .active a,
 #videoplayer .playlist_collumn #playlist a:focus,
 #videoplayer .playlist_collumn #playlist a:hover { background-color:#0996D4; color:#FFFFFF; }
-#videoplayer .video_collumn { float:left; display:inline-block; width:75%; vertical-align:top; }
-#videoplayer .video_collumn #video { height:auto; vertical-align:top; background:#FFFFFF url('images/loader.gif') 50% 50% no-repeat; }
+#videoplayer .video_collumn { float:left; display:inline-block; width:75%; vertical-align:top; /* background:url('images/video_bg.jpg') 0 0 repeat-x;*/}
+#videoplayer .video_collumn #video { height:auto; vertical-align:top; background:transparent url('images/loader.gif') 50% 50% no-repeat; }
 @media (max-width:888px) {
 	.header-full-width .site-title,
 	.header-full-width .site-title a,
@@ -1344,6 +1344,7 @@ main.content iframe { max-width:100%; }
 	.home .cycloneslider-template-standard img { position:absolute; }
 	.home .cycloneslider-template-standard .cycloneslider-caption { float:left; position:relative; bottom:0; left:0; margin:0 0; width:100%; }
 	.site-footer .textwidget .one-half { width:100%; text-align:center; padding:0.5em 1em; }
+	body.category-grid .entry-list article.entry {margin:10px 0;}
 }
 @media (min-width:768px) {
 	.genesis-nav-menu > .menu-item-has-children { background:url('images/menu_drop.png') 50% 95% no-repeat; }
