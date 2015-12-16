@@ -38,5 +38,4 @@ function gs_contact_widget() {
 		)
 	);
 }
-
 genesis();
