@@ -3,13 +3,12 @@
 <div id="videoplayer">
 <div class="playlist_collumn">
 <ul id="playlist">
-	<li class="active"><a href="http://sew.retest.pl/proxmus/wp-content/uploads/2015/12/zbiornik_gotowe.mp4">Zbiornik 1</a></li>
-	<li><a href="http://sew.retest.pl/proxmus/wp-content/uploads/2015/12/zbiornik_gotowe.mp4">Zbiornik 2</a></li>
-	<li><a href="http://sew.retest.pl/proxmus/wp-content/uploads/2015/12/zbiornik_gotowe.mp4">Zbiornik 3</a></li>
+	<li class="active"><a href="http://sew.retest.pl/proxmus/wp-content/uploads/2015/12/Zbiornik_gotowe_converted.mp4">Zbiornik 1</a></li>
+	<li><a href="http://sew.retest.pl/proxmus/wp-content/uploads/2015/12/przemyslaw_byzdra_wideo.mp4">Zbiornik 2</a></li>
 </ul>
 </div>
-<div class="video_collumn"><video id="video" tabindex="0" preload="auto" autoplay="autoplay" loop="loop" muted="muted" controls="controls" width="850" height="600">
-<source src="http://sew.retest.pl/proxmus/wp-content/uploads/2015/12/zbiornik_gotowe.mp4" />
+<div class="video_collumn"><video id="video" tabindex="0" preload="auto" autoplay="autoplay" loop="loop" muted="muted" controls="controls" width="800" height="600">
+<source src="http://sew.retest.pl/proxmus/wp-content/uploads/2015/12/Zbiornik_gotowe_converted.mp4" />
 Your Fallback goes here
 </video></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script type="text/javascript">// <![CDATA[
