@@ -1296,7 +1296,7 @@ body.custom-background.home { background:#FFFFFF; }
 #home-top.home-widget .featured-content .widget-wrap:focus { background:rgba(255, 255, 255, 0.8); }
 #home-top.home-widget .featured-content .widget-wrap:hover article h2.entry-title,
 #home-top.home-widget .featured-content .widget-wrap:focus article h2.entry-title { border-color:#333333; }
-/*Site*/
+/* Site */
 .site-container > .site-inner > .wrap { background:#FFFFFF; border-bottom:18px solid #D0D0D0; }
 .site-container > .site-inner.home-seo > .wrap,
 .site-container > .site-inner.before_header > .wrap { border:0; background:none; }
