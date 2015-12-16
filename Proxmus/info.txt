@@ -1,0 +1,63 @@
+============== VIDEOPLAYER ===================
+
+<div id="videoplayer">
+<div class="playlist_collumn">
+<ul id="playlist">
+	<li class="active"><a href="http://sew.retest.pl/proxmus/wp-content/uploads/2015/12/zbiornik_gotowe.mp4">Zbiornik 1</a></li>
+	<li><a href="http://sew.retest.pl/proxmus/wp-content/uploads/2015/12/zbiornik_gotowe.mp4">Zbiornik 2</a></li>
+	<li><a href="http://sew.retest.pl/proxmus/wp-content/uploads/2015/12/zbiornik_gotowe.mp4">Zbiornik 3</a></li>
+</ul>
+</div>
+<div class="video_collumn"><video id="video" tabindex="0" preload="auto" autoplay="autoplay" loop="loop" muted="muted" controls="controls" width="850" height="600">
+<source src="http://sew.retest.pl/proxmus/wp-content/uploads/2015/12/zbiornik_gotowe.mp4" />
+Your Fallback goes here
+</video></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script type="text/javascript">// <![CDATA[
+var video; var playlist; var tracks; var current; init(); function init(){ current = 0; video = $('#video'); playlist = $('#playlist'); tracks = playlist.find('li a'); len = tracks.length - 1; video[0].volume = 0; video[0].play(); playlist.find('a').click(function(e){ e.preventDefault(); link = $(this); current = link.parent().index(); run(link, video[0]); }); video[0].addEventListener('ended',function(e){ current++; if(current == len){ current = 0; link = playlist.find('a')[0]; }else{ link = playlist.find('a')[current]; } run($(link),video[0]); }); } function run(link, player){ player.src = link.attr('href'); par = link.parent(); par.addClass('active').siblings().removeClass('active'); video[0].load(); video[0].play(); }
+// ]]></script>
+
+</div>
+
+============== END VIDEOPLAYER ===================
+
+============== ZAPLECZE ===================
+
+<h3>Firma Proxmus dysponuje między innymi następującymi maszynami i urządzeniami:</h3>
+<div class="one-third first" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Water Jet Kimla 3100x3100" href="http://www.promus.biz.pl/pliki/130.jpg"><img src="http://www.promus.biz.pl/pliki/129.jpg" alt="Water Jet Kimla 3100x3100" /></a>
+<span style="font-size: 10pt;">Water Jet Kimla 3100x3100</span></div>
+<div class="one-third" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Suwnica ABUS 50 Ton" href="http://www.promus.biz.pl/pliki/42.jpg"><img src="http://www.promus.biz.pl/pliki/41.jpg" alt="Suwnica ABUS 50 Ton" /></a>
+<span style="font-size: 10pt;">Suwnica ABUS 50 Ton</span></div>
+<div class="one-third" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Suwnica ABUS 16 Ton" href="http://www.promus.biz.pl/pliki/44.jpg"><img src="http://www.promus.biz.pl/pliki/43.jpg" alt="Suwnica ABUS 16 Ton" /></a>
+<span style="font-size: 10pt;">Suwnica ABUS 16 Ton</span></div>
+<div class="one-third first" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Tokarka SC53" href="http://www.promus.biz.pl/maszyny/m01.jpg"><img src="http://www.promus.biz.pl/maszyny/m01m.jpg" alt="Tokarka SC53" /></a>
+<span style="font-size: 10pt;">Tokarka SC53 (CNC) H=2320, Ø5300, Ø stołu 4000, nośność 50 ton</span></div>
+<div class="one-third" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Tokarka SC33" href="http://www.promus.biz.pl/maszyny/m02.jpg"><img src="http://www.promus.biz.pl/maszyny/m02m.jpg" alt="Tokarka SC33" /></a>
+<span style="font-size: 10pt;">Tokarka SC33 (CNC) H=2400, Ø3300,   Ø stołu 3000, nośność 18 ton</span></div>
+<div class="one-third" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Wytaczarka PEGARD" href="http://www.promus.biz.pl/maszyny/m03.jpg"><img src="http://www.promus.biz.pl/maszyny/m03m.jpg" alt="Wytaczarka PEGARD" /></a>
+<span style="font-size: 10pt;">Wytaczarka PEGARD H=1750, L=2750, wrzeciono Ø130, nośność 11 ton</span></div>
+<div class="one-third first" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Wytaczarka WD200A" href="http://www.promus.biz.pl/maszyny/m04.jpg"><img src="http://www.promus.biz.pl/maszyny/m04m.jpg" alt="Wytaczarka WD200A" /></a>
+<span style="font-size: 10pt;">Wytaczarka WD200A H=3000, L=4250, wrzeciono Ø200, nośność 50 ton</span></div>
+<div class="one-third" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Prasa hydrauliczna ERMAKSAN, 4100mm" href="http://www.promus.biz.pl/pliki/71.jpg"><img src="http://www.promus.biz.pl/pliki/70.jpg" alt="Prasa hydrauliczna ERMAKSAN, 4100mm" width="150" height="113" /></a>
+<span style="font-size: 10pt;">Prasa hydrauliczna ERMAKSAN, 4100mm</span></div>
+<div class="one-third" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Walcarka blach SERGI ROLL POWER 4R, dł. 3m, grubosc 18mm" href="http://www.promus.biz.pl/pliki/73.jpg"><img src="http://www.promus.biz.pl/pliki/72.jpg" alt="Walcarka blach SERGI ROLL POWER 4R, dł. 3m, grubosc 18mm" width="85" height="120" /></a>
+<span style="font-size: 10pt;">Walcarka blach SERGI ROLL POWER 4R, dł. 3m, grubosc 18mm</span></div>
+<div class="one-third first" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Gietarka hydrauliczna AMOB, wał Ø80 mm" href="http://www.promus.biz.pl/pliki/75.jpg"><img src="http://www.promus.biz.pl/pliki/74.jpg" alt="Gietarka hydrauliczna AMOB, wał Ø80 mm" width="150" height="113" /></a>
+<span style="font-size: 10pt;">Gietarka hydrauliczna AMOB, wał Ø80mm</span></div>
+<div class="one-third" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Urzadzenie do spawania wzdłuznego MECOME BR2000" href="http://www.promus.biz.pl/pliki/80.jpg"><img src="http://www.promus.biz.pl/pliki/76.jpg" alt="Urzadzenie do spawania wzdłuznego MECOME BR2000" width="85" height="120" /></a>
+<span style="font-size: 10pt;">Urzadzenie do spawania wzdłuznego MECOME BR2000</span></div>
+<div class="one-third" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Urzadzenie do spawania orbitalnego MECOME MAB 3x3 TRFO SPAZZ" href="http://www.promus.biz.pl/pliki/79.jpg"><img src="http://www.promus.biz.pl/pliki/78.jpg" alt="Urzadzenie do spawania orbitalnego MECOME MAB 3x3 TRFO SPAZZ" width="85" height="120" /></a>
+<span style="font-size: 10pt;">Urzadzenie do spawania orbitalnego MECOME MAB 3x3 TRFO SPAZZ</span></div>
+<div class="one-third first" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Tokarka TUJ-560MEF" href="http://www.promus.biz.pl/maszyny/m05.jpg"><img src="http://www.promus.biz.pl/maszyny/m05m.jpg" alt="Tokarka TUJ-560MEF" /></a>
+<span style="font-size: 10pt;">Tokarka TUJ-560MEF (Manualna CNC) L=2000 Ø300/ Ø560 - 2szt.</span></div>
+<div class="one-third" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Frezarka CNC" href="http://www.promus.biz.pl/maszyny/m06.jpg"><img src="http://www.promus.biz.pl/maszyny/m06m.jpg" alt="Frezarka CNC" /></a>
+<span style="font-size: 10pt;">Frezarka CNC R 550 "Harnaś" 700x300 H=500</span></div>
+<div class="one-third" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Piaskarka Normfinish" href="http://www.promus.biz.pl/maszyny/m07.jpg"><img src="http://www.promus.biz.pl/maszyny/m07m.jpg" alt="Piaskarka Normfinish" /></a>
+<span style="font-size: 10pt;">Piaskarka Normfinish 600x600 L=700</span></div>
+<div class="one-third first" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Prasa hydrauliczna" href="http://www.promus.biz.pl/maszyny/m08.jpg"><img src="http://www.promus.biz.pl/maszyny/m08m.jpg" alt="Prasa hydrauliczna" /></a>
+<span style="font-size: 10pt;">Prasa hydrauliczna 50t</span></div>
+<div class="one-third" style="text-align: center;">&nbsp;<br/><a class="thickbox" title="Piec do ulepszania cieplnego" href="http://www.promus.biz.pl/maszyny/m09.jpg"><img src="http://www.promus.biz.pl/maszyny/m09m.jpg" alt="Piec do ulepszania cieplnego" /></a>
+<span style="font-size: 10pt;">Piec do ulepszania cieplnego 150x200 L=550</span></div>
+<div class="clear"></div>
+a także inne: dłutownice, szlifierki, walcarki, giętarki, gilotyny, spawarki TIG, MIG/MAG, MMA.
+
+============== END ZAPLECZE ===================
