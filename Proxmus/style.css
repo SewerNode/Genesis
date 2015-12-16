@@ -1329,7 +1329,7 @@ main.content iframe { max-width:100%; }
 #videoplayer .playlist_collumn #playlist .active a,
 #videoplayer .playlist_collumn #playlist a:focus,
 #videoplayer .playlist_collumn #playlist a:hover { background-color:#0996D4; color:#FFFFFF; }
-#videoplayer .video_collumn { float:left; display:inline-block; width:75%; vertical-align:top; /* background:url('images/video_bg.jpg') 0 0 repeat-x;*/}
+#videoplayer .video_collumn { float:left; display:inline-block; width:75%; vertical-align:top; }
 #videoplayer .video_collumn #video { height:auto; vertical-align:top; background:transparent url('images/loader.gif') 50% 50% no-repeat; }
 @media (max-width:888px) {
 	.header-full-width .site-title,
