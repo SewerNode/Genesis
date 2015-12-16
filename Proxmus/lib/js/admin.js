@@ -5,7 +5,7 @@ $('#one_footer').click(function () {
     }else{
         $('#footer-right-box').fadeIn();   
     }
-})
+});
 
 if($('#one_footer').is(":checked")){
         $('#footer-right-box').hide();

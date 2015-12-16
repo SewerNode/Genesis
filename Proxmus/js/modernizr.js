@@ -558,8 +558,8 @@ window.Modernizr = (function( window, document, undefined ) {
 
     /*>>shiv*/
     /*! HTML5 Shiv v3.6.1 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed */
-    ;(function(window, document) {
-    /*jshint evil:true */
+    (function (window, document) {
+        /*jshint evil:true */
       /** Preset options */
       var options = window.html5 || {};
 

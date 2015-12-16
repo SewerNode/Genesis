@@ -18,4 +18,4 @@ jQuery(document).ready(function ($) {
             scrollTop: jQuery(this.hash).offset().top
         }, 500)
     })
-})
+});
