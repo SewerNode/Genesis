@@ -86,11 +86,11 @@ function gs_theme_setup()
 	add_action( 'genesis_before_header', 'beforeheader' );
 	function beforeheader(){
 		echo '<div class="site-inner before_header"><div class="wrap">
-			<a href="#" class="linkedin">'.__('Odwiedź nasz profil na LinkedIn').'</a>
-			<a href="'.home_url('/').'" class="lang pl">'.__('POLSKI').'</a>
+			<a href="https://www.linkedin.com/company/proxmus" class="linkedin" target="_blank">'.__('Odwiedź nasz profil na LinkedIn').'</a>'
+			/*.'<a href="'.home_url('/').'" class="lang pl">'.__('POLSKI').'</a>
 			<a href="'.home_url('/en').'" class="lang en">'.__('ANGIELSKI').'</a>
-			<a href="'.home_url('/de').'" class="lang de">'.__('NIEMIECKI').'</a>
-			</div></div>';
+			<a href="'.home_url('/de').'" class="lang de">'.__('NIEMIECKI').'</a>'*/
+			.'</div></div>';
 	}
 
 	/** 
