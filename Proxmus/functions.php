@@ -261,7 +261,7 @@ function gs_mobile_navigation() {
 // Add Widget Area Prefooter
 add_action('genesis_before_footer', 'gs_do_prefooter');
 function gs_do_prefooter() {
- 	if ( !is_home() ) {
+ 	if ( !is_front_page() ) {
 	    genesis_widget_area(
             'prefooter',
             array(

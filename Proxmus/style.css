@@ -157,9 +157,14 @@ a img {
 .site-inner.home-links .home_box a:focus,
 .site-inner.home-links .home_box a:hover { background-color:#0996D4; color:#FFFFFF; }
 .site-inner.home-bottom { min-height:884px; text-align:center; background:#DDDDDD url('images/worldmap.jpg') 50% 0 no-repeat; }
-.site-inner.home-bottom .home-widget.widget-area { display:inline-block; text-align:center; padding:1rem; margin:4rem auto; background:rgba(255, 255, 255, 0.8); }
-.home .site-inner.home-seo .widgettitle { font-size:3rem; font-weight:400; padding:3.4rem 0 0 0; letter-spacing:-0.05em; }
+.site-inner.home-bottom .home-widget.widget-area { display:inline-block; text-align:center; padding:1rem; margin:5rem auto; background:rgba(255, 255, 255, 0.8); }
+.home .site-inner.home-seo .widgettitle { font-size:4.2rem; font-weight:400; padding:3.4rem 0 0 0; letter-spacing:-0.05em; }
 .home .site-inner.home-seo .textwidget { font-size:2rem; font-weight:300; padding:0 2rem 0 2rem; letter-spacing:-0.07em; }
+.home .site-inner.home-bottom .home-widget.widget-area { padding:2em; }
+.home .site-inner.home-bottom .widgettitle { font-size:4.2rem; font-weight:400; padding:0 0 0 0; letter-spacing:-0.05em; }
+.home .site-inner.home-bottom .textwidget { font-size:2rem; font-weight:300; letter-spacing:-0.05em; }
+
+
 /* Containers and Columns */
 .content-sidebar-sidebar .sidebar-secondary,
 .sidebar-content .content,
@@ -479,10 +484,6 @@ h6,
 	position:relative;
 	transition:all 0.5s ease;
 	text-transform:uppercase;
-}
-.genesis-nav-menu .current_page_item.menu-item-309 a {
-	color:#0996D4;
-	background-color:#FFFFFF;
 }
 .genesis-nav-menu .sub-menu {
 	left:-9999px;
@@ -1358,5 +1359,6 @@ main.content iframe { max-width:100%; }
 	body.nolayoutpage .entry .entry-content,
 	body.page-template-contact-page .entry .entry-header,
 	body.page-template-contact-page .entry .entry-content { padding-left:40px; }
+	.genesis-nav-menu .current_page_item.menu-item-309 a { color:#0996D4; background-color:#FFFFFF; }
 }
 /* EOF */
