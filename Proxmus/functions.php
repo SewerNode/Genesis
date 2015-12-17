@@ -41,6 +41,7 @@ function gs_theme_setup()
 		}
 		remove_action('genesis_site_description', 'genesis_seo_site_description');
 	};
+
 	remove_action( 'wp_head', 'genesis_custom_header_style' );
 	add_action( 'wp_head', 'gs_custom_header_style' );
 	function gs_custom_header_style() {
@@ -87,9 +88,9 @@ function gs_theme_setup()
 	function beforeheader(){
 		echo '<div class="site-inner before_header"><div class="wrap">
 			<a href="https://www.linkedin.com/company/proxmus" class="linkedin" target="_blank">'.__('Odwiedź nasz profil na LinkedIn').'</a>'
-			/*.'<a href="'.home_url('/').'" class="lang pl">'.__('POLSKI').'</a>
-			<a href="'.home_url('/en').'" class="lang en">'.__('ANGIELSKI').'</a>
-			<a href="'.home_url('/de').'" class="lang de">'.__('NIEMIECKI').'</a>'*/
+			/*.'<a href="'.home_url('/').'" class="lang pl">'.__('POLSKI').'</a>'
+			.'<a href="'.home_url('/en').'" class="lang en">'.__('ANGIELSKI').'</a>'
+			.'<a href="'.home_url('/de').'" class="lang de">'.__('NIEMIECKI').'</a>'*/
 			.'</div></div>';
 	}
 
@@ -235,8 +236,7 @@ function gs_register_sidebars() {
 		)
 	);
 	
-	foreach ( $sidebars as $sidebar )
-		genesis_register_sidebar( $sidebar );
+	foreach ( $sidebars as $sidebar ) genesis_register_sidebar( $sidebar );
 }
 
 /**
@@ -250,7 +250,7 @@ require_once('lib/scripts.php');
  * 
  * @uses gs_navigation() Sandbox Navigation Helper Function in gs-functions.php.
  */
-//Add Mobile Menu
+// Add Mobile Menu
 function gs_mobile_navigation() {
 	$mobile_menu_args = array(
 		'echo' => true,
@@ -267,11 +267,12 @@ function gs_do_prefooter() {
             array(
                 'before' => '<aside id="prefooter" class="prefooter"><div class="wrap"><div class="prefooter-widget widget-area">',
                 'after' => '</div></div></aside>',
-	            ));
+	            )
+	    );
     }
 }
 
-//* Customize the entry meta in the entry header (requires HTML5 theme support)
+// Customize the entry meta in the entry header (requires HTML5 theme support)
 add_filter( 'genesis_post_info', 'sp_post_info_filter' );
 function sp_post_info_filter($post_info) {
 	$post_info = '[post_edit]';
@@ -294,6 +295,7 @@ function gs_limit_grid_loop( $display, $query ) {
 	}
 	return $display;
 }
+
 add_filter( 'genesis_grid_loop_section', 'gs_limit_grid_loop', 10, 2 );
 add_action( 'genesis_before_loop' , 'gs_show_category_header' );
 function gs_show_category_header() {
@@ -314,6 +316,7 @@ function gs_show_projects( $query ) {
 		add_action( 'genesis_loop', 'gs_custom_loop' );
 	}
 }
+
 function gs_show_category_description () {
 	if (is_category() && category_description($category-id)) {
 		echo '<div class="entry-list-description">'.category_description($category-id).'</div>';
