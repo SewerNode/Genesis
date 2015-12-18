@@ -981,7 +981,8 @@ Site Footer
 .prefooter .widget_text .widget-wrap { padding:12px 0 0 0; }
 .prefooter .prefooter-widget .widgettitle { font-size:23px; font-weight:700; letter-spacing:-0.045em; padding:0.6em 0; margin-bottom:0; }
 .prefooter .prefooter-widget .textwidget { font-size:20px; font-weight:300; letter-spacing:-0.045em; }
-.prefooter .prefooter-widget .textwidget a { display:inline-block; color:inherit; }
+.prefooter .prefooter-widget .textwidget a { display:inline-block; color:inherit; padding:10px; }
+.prefooter .prefooter-widget .textwidget a:hover { opacity:0.8; }
 .prefooter .prefooter-widget .textwidget a.more { padding-right:0.8em; background:url('images/prefooter_arow.png') right 50% no-repeat; }
 
 .site-footer {
@@ -1255,7 +1256,7 @@ body.home.custom-background .site-container{background-image:inherit; background
 
 /* Home Top */
 .site-inner.home-top { min-height:520px; }
-.site-inner.home-top .widget.widget_text { color:#FFFFFF; padding:8.5em 1.5em 2em 1.5em; }
+.site-inner.home-top .widget.widget_text { color:#FFFFFF; padding:8.5em 1.5em 2em 1.5em; text-align:right;}
 .site-inner.home-top .widget.widget_text .widgettitle { font-size:52px; font-weight:700; color:#FECC00; }
 .site-inner.home-top .widget.widget_text h5 { font-size:36px; font-weight:300; letter-spacing:-0.045em; color:#FFFFFF; margin:0; }
 .site-inner.home-top .widget.widget_text .textwidget { display:inline-block; font-size:20px; font-weight:300; }
