@@ -3,16 +3,14 @@
 include_once( get_template_directory() . '/lib/init.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'Genesis Sample Theme' );
-define( 'CHILD_THEME_URL', 'http://www.studiopress.com/' );
-define( 'CHILD_THEME_VERSION', '2.2.2' );
+define( 'CHILD_THEME_NAME', 'Nodes' );
+define( 'CHILD_THEME_URL', 'NODE Seweryn Kreja' );
+define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Enqueue Google Fonts
 add_action( 'wp_enqueue_scripts', 'genesis_sample_google_fonts' );
 function genesis_sample_google_fonts() {
-
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
-
 }
 
 //* Add HTML5 markup structure
