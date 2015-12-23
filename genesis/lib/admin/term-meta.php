@@ -149,8 +149,13 @@ add_action( 'admin_init', 'genesis_add_taxonomy_layout_options' );
  */
 function genesis_add_taxonomy_layout_options() {
 
-	foreach ( get_taxonomies( array( 'public' => true ) ) as $tax_name )
+	if ( ! current_theme_supports( 'genesis-archive-layouts' ) ) {
+		return;
+	}
+
+	foreach ( get_taxonomies( array( 'public' => true ) ) as $tax_name ) {
 		add_action( $tax_name . '_edit_form', 'genesis_taxonomy_layout_options', 10, 2 );
+	}
 
 }
 

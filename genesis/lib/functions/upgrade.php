@@ -134,19 +134,41 @@ function genesis_update_check() {
 }
 
 /**
- * Upgrade the database to version 2206.
+ * Upgrade the database to version 2208.
  *
- * @since 2.2.3
+ * @since 2.2.5
  *
  * @uses genesis_update_settings()  Merges new settings with old settings and pushes them into the database.
  * @uses genesis_get_option()       Get theme setting value.
  */
-function genesis_upgrade_2206() {
+function genesis_upgrade_2208() {
 
 	//* Update Settings
 	genesis_update_settings( array(
-		'theme_version'   => '2.2.3',
-		'db_version'      => '2206',
+		'theme_version'        => '2.2.5',
+		'db_version'           => '2208',
+	) );
+
+}
+
+/**
+ * Upgrade the database to version 2207.
+ *
+ * @since 2.2.4
+ *
+ * @uses genesis_update_settings()  Merges new settings with old settings and pushes them into the database.
+ * @uses genesis_get_option()       Get theme setting value.
+ */
+function genesis_upgrade_2207() {
+
+	$update_email_address = genesis_get_option( 'update_email' ) ? genesis_get_option( 'update_email_address' ) : '';
+
+	//* Update Settings
+	genesis_update_settings( array(
+		'theme_version'        => '2.2.4',
+		'db_version'           => '2207',
+		'update_email'         => 'unset',
+		'update_email_address' => $update_email_address,
 	) );
 
 }
@@ -522,11 +544,18 @@ function genesis_upgrade() {
 		genesis_upgrade_2201();
 
 	###########################
-	# UPDATE DB TO VERSION 2206
+	# UPDATE DB TO VERSION 2207
 	###########################
 
-	if ( genesis_get_option( 'db_version', null, false ) < '2206' )
-		genesis_upgrade_2206();
+	if ( genesis_get_option( 'db_version', null, false ) < '2207' )
+		genesis_upgrade_2207();
+
+	###########################
+	# UPDATE DB TO VERSION 2208
+	###########################
+
+	if ( genesis_get_option( 'db_version', null, false ) < '2208' )
+		genesis_upgrade_2208();
 
 	do_action( 'genesis_upgrade' );
 
