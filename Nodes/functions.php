@@ -27,3 +27,24 @@ add_theme_support( 'custom-background' );
 
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
+
+//* Unregister content/sidebar layout setting
+genesis_unregister_layout( 'content-sidebar' );
+//* Unregister content/sidebar/sidebar layout setting
+genesis_unregister_layout( 'content-sidebar-sidebar' );
+//* Unregister sidebar/sidebar/content layout setting
+genesis_unregister_layout( 'sidebar-sidebar-content' );
+//* Unregister sidebar/content/sidebar layout setting
+genesis_unregister_layout( 'sidebar-content-sidebar' );
+
+//* Unregister Genesis widgets
+add_action( 'widgets_init', 'unregister_genesis_widgets', 20 );
+function unregister_genesis_widgets() {
+	unregister_widget( 'Genesis_eNews_Updates' );
+	unregister_widget( 'Genesis_Featured_Page' );
+	unregister_widget( 'Genesis_Featured_Post' );
+	unregister_widget( 'Genesis_Latest_Tweets_Widget' );
+	unregister_widget( 'Genesis_Menu_Pages_Widget' );
+	unregister_widget( 'Genesis_User_Profile_Widget' );
+	unregister_widget( 'Genesis_Widget_Menu_Categories' );
+}
