@@ -1194,7 +1194,7 @@ img.alignright,
 
 /* ## Secondary Navigation
 --------------------------------------------- */
-#submenu {display:none;}
+/*#submenu {display:none;}*/
 .nav-primary.submenu {background-color:#0060AC;}
 .nav-primary.submenu .genesis-nav-menu a:hover,
 .nav-primary.submenu .genesis-nav-menu a:focus,

@@ -48,6 +48,26 @@ function unregister_genesis_widgets() {
 	unregister_widget( 'Genesis_User_Profile_Widget' );
 	unregister_widget( 'Genesis_Widget_Menu_Categories' );
 }
+genesis_register_sidebar(array(
+	'id'            => 'home-slider',
+	'name'          => __( 'Slider', CHILD_DOMAIN ),
+	'description'   => __( 'This is a widget area that can be placed after the post', CHILD_DOMAIN ),
+) );
+genesis_register_sidebar(array(
+	'id'            => 'home-top',
+	'name'          => __( 'Strona główna - góra', CHILD_DOMAIN ),
+	'description'   => __( 'This is a widget area that can be placed after the post', CHILD_DOMAIN ),
+) );
+genesis_register_sidebar(array(
+	'id'            => 'home-middle',
+	'name'          => __( 'Strona główna', CHILD_DOMAIN ),
+	'description'   => __( 'This is a widget area that can be placed after the post', CHILD_DOMAIN ),
+) );
+genesis_register_sidebar(array(
+	'id'            => 'home-bottom',
+	'name'          => __( 'Strona główna - dół', CHILD_DOMAIN ),
+	'description'   => __( 'This is a widget area that can be placed after the post', CHILD_DOMAIN ),
+) );
 
 /* ============================== */
 // add hook
@@ -111,7 +131,7 @@ function my_wp_nav_menu_args( $args = '' ) {
 	return $args;
 }
 function dc_add_tricky_two () {
-	echo '<script type="text/javascript">$(document).ready(function(){$("#submenu").css("display","block");});</script>';
+	//echo '<script type="text/javascript">$(document).ready(function(){$("#submenu").css("display","block");});</script>';
 	echo '<nav id="submenu" class="nav-primary submenu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"><div class="wrap">';
 	wp_nav_menu( array(
 		'theme_location' => 'primary',
