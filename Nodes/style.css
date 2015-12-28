@@ -11,9 +11,6 @@ License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-/* TEST */
-.nav-primary.submenu > .wrap {height:0;}
-.nav-primary.submenu > .wrap {transition:all 1s ease;}
 
 /* # Table of Contents
 - HTML5 Reset
@@ -177,7 +174,7 @@ textarea:focus,
 }
 
 a {
-	color: #c3251d;
+	color: #3979B0;
 	text-decoration: underline;
 }
 
@@ -427,7 +424,7 @@ input:focus[type="button"],
 input:focus[type="reset"],
 input:focus[type="submit"],
 .button:focus  {
-	background-color: #c3251d;
+	background-color: #3979B0;
 	color: #fff;
 }
 
@@ -441,7 +438,7 @@ input:focus[type="submit"],
 .footer-widgets input[type="reset"],
 .footer-widgets input[type="submit"],
 .footer-widgets .button {
-	background-color: #c3251d;
+	background-color: #3979B0;
 	color: #fff;
 }
 
@@ -1068,7 +1065,7 @@ img.alignright,
 	color: #333;
 	text-decoration: none;
 	display: block;
-	padding: 30px 24px;
+	padding: 14px 24px;
 }
 
 .genesis-nav-menu a:hover,
@@ -1178,35 +1175,33 @@ img.alignright,
 --------------------------------------------- */
 
 .nav-primary {
-	background-color: #333;
+	background-color:#3979B0;
 }
 
 .nav-primary .genesis-nav-menu a {
-	color: #ccc;
+	color: #FFFFFF;
 	text-decoration: none;
 }
 
 .nav-primary .genesis-nav-menu a:hover,
 .nav-primary .genesis-nav-menu a:focus,
-.nav-primary .genesis-nav-menu .current-menu-item > a {
-	color: #fff;
-	text-decoration: underline;
-}
-
-.nav-primary .genesis-nav-menu .sub-menu a {
-	color: #333;
-}
-
-.nav-primary .genesis-nav-menu .sub-menu a:hover,
-.nav-primary .genesis-nav-menu .sub-menu a:focus,
-.nav-primary .genesis-nav-menu .sub-menu .current-menu-item > a {
-	color: #c3251d;
-	text-decoration: underline;
+.nav-primary .genesis-nav-menu .current-page-parent > a,
+.nav-primary .genesis-nav-menu .current-menu-item > a,
+.nav-primary .genesis-nav-menu .current-page-ancestor > a {
+	background-color: #0060AC;
+	color: #FFFFFF;
 }
 
 /* ## Secondary Navigation
 --------------------------------------------- */
-
+#submenu {display:none;}
+.nav-primary.submenu {background-color:#0060AC;}
+.nav-primary.submenu .genesis-nav-menu a:hover,
+.nav-primary.submenu .genesis-nav-menu a:focus,
+.nav-primary.submenu .genesis-nav-menu .current-menu-item > a {
+	background-color:#004E98;
+	color: #FFFFFF;
+}
 .nav-secondary {
 	background-color: #fff;
 }
