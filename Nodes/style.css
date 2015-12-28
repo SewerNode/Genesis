@@ -514,7 +514,7 @@ th {
 .screen-reader-text:focus,
 .screen-reader-shortcut:focus,
 .genesis-nav-menu .search input[type="submit"]:focus,
-.widget_search input[type="submit"]:focus  {
+.widget_search input[type="submit"]:focus {
 	clip: auto !important;
 	height: auto;
 	width: auto;
@@ -524,7 +524,7 @@ th {
 	padding: 15px 23px 14px;
 	color: #333;
 	background: #fff;
-	z-index: 100000; /* Above WP toolbar. */
+	z-index: 8000; /* 100000 Above WP toolbar. */
 	text-decoration: none;
 	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
 }
@@ -672,7 +672,6 @@ th {
 	clear: both;
 	margin-left: 0;
 }
-
 
 /* # Common Classes
 ---------------------------------------------------------------------------------------------------- */
@@ -856,7 +855,6 @@ img.alignright,
 	margin: 0 0 28px;
 }
 
-
 /* # Widgets
 ---------------------------------------------------------------------------------------------------- */
 
@@ -903,7 +901,6 @@ img.alignright,
 	font-size: 20px;
 	font-size: 2rem;
 }
-
 
 /* # Plugins
 ---------------------------------------------------------------------------------------------------- */
