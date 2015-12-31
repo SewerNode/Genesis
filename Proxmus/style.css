@@ -1322,7 +1322,9 @@ body.category-grid .entry-list article.entry .entry-title a { font-size:inherit;
 body.category-grid .entry-list article.entry .entry-title .btn.btn-see { position:absolute; bottom:-25px; left:0; right:0; width:80px; text-align:center; margin:0 auto; border-radius:0; background:#0996D4; }
 body.category-grid .entry-list article.entry .entry-title .btn.btn-see:hover,
 body.category-grid .entry-list article.entry .entry-title .btn.btn-see:focus { color:#FFFFFF; background:#E31E24; }
+body.page-template-contact-page .entry-content h2,
 body.contact .entry-content h2 { padding:1em 0 0.5em 0; border-top:2px solid #E31E24; margin-bottom:1em; }
+body.page-template-contact-page #map_canvas,
 body.contact #map_canvas { width:1072px; height:400px; max-width:100%; }
 main.content iframe { max-width:100%; }
 .ninja-forms-error-msg { color:#E31E24; }

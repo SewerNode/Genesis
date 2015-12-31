@@ -340,6 +340,5 @@ function gs_custom_loop() {
 	genesis_posts_nav();
 }
 
-add_action( 'genesis_loop', 'gs_add_contact_body_class' );
 
 /*EOF*/

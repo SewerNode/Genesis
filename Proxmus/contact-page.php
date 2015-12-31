@@ -7,17 +7,17 @@
 /** Exit if accessed directly */
 if ( ! defined( 'ABSPATH' ) ) exit( 'Cheatin&#8217; uh?' );
 
-add_filter( 'body_class', 'gs_add_contact_body_class' );
+/*add_filter( 'body_class', 'add_contact_body_class' );*/
 /**
  * Add page specific body class
  *
  * @param $classes array Body Classes
  * @return $classes array Modified Body Classes
  */
-function gs_add_contact_body_class( $classes ) {
+/*function add_contact_body_class( $classes ) {
 	$classes[] = 'contact';
 	return $classes;
-}
+}*/
 
 /** Force Layout */
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
