@@ -69,7 +69,7 @@ function gs_theme_setup() {
 	$content_width = apply_filters( 'content_width', 600, 430, 920, 1152 );
 	
 	//Custom Image Sizes
-	add_image_size( 'featured-image', 225, 160, TRUE );
+	add_image_size( 'featured-image', 348, 448, TRUE );
 	
 	// Enable Custom Background
 	//add_theme_support( 'custom-background' );
@@ -155,10 +155,10 @@ function gs_theme_setup() {
 // Register Sidebars
 function unregister_genesis_widgets() {
 	unregister_widget( 'Genesis_eNews_Updates' );
-	unregister_widget( 'Genesis_Featured_Page' );
-	unregister_widget( 'Genesis_Featured_Post' );
+	//unregister_widget( 'Genesis_Featured_Page' );
+	//unregister_widget( 'Genesis_Featured_Post' );
 	unregister_widget( 'Genesis_Latest_Tweets_Widget' );
-	unregister_widget( 'Genesis_Menu_Pages_Widget' );
+	//unregister_widget( 'Genesis_Menu_Pages_Widget' );
 	unregister_widget( 'Genesis_User_Profile_Widget' );
 	unregister_widget( 'Genesis_Widget_Menu_Categories' );
 }

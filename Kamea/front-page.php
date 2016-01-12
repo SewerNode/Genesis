@@ -54,7 +54,7 @@ function gs_home_widgets() {
     genesis_widget_area(
         'home-middle-01',
         array(
-                'before' => '<aside id="home-middle-01" class="first one-third"><div class="home-widget widget-area">',
+                'before' => '<aside id="home-left" class="first one-third"><div class="home-widget widget-area">',
                 'after' => '</div></aside><!-- end #home-left -->',
         )
     );
@@ -62,7 +62,7 @@ function gs_home_widgets() {
     genesis_widget_area(
         'home-middle-02',
         array(
-                'before' => '<aside id="home-middle-01" class="one-third"><div class="home-widget widget-area">',
+                'before' => '<aside id="home-center" class="one-third"><div class="home-widget widget-area">',
                 'after' => '</div></aside><!-- end #home-middle -->',
         )
     );
