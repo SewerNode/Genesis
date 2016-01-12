@@ -23,6 +23,7 @@ function gs_theme_setup() {
 	//Enable HTML5 Support
 	add_theme_support( 'html5' );
 	genesis_unregister_layout('content-sidebar');
+	genesis_unregister_layout('sidebar-content');
 	genesis_unregister_layout('content-sidebar-sidebar');
 	genesis_unregister_layout('sidebar-sidebar-content');
 	genesis_unregister_layout('sidebar-content-sidebar');
@@ -37,10 +38,6 @@ function gs_theme_setup() {
 	}
 	add_filter( 'theme_page_templates', 'remove_genesis_page_templates' );
 
-	// Register Sidebars
-	gs_register_sidebars();
-	unregister_sidebar( 'sidebar-alt' );
-
 	/** Custom site title
 	 * Add header_image as image
 	 * Remove site description
@@ -50,7 +47,7 @@ function gs_theme_setup() {
 		add_filter('genesis_seo_title', 'gs_genesis_header_background_to_img', 10, 2);
 		function gs_genesis_header_background_to_img($title, $inside)
 		{
-			$inline_logo = sprintf('<a href="%s" title="%s"><img src="' . get_header_image() . '" title="%s" alt="%s"/></a>', trailingslashit(home_url()), esc_attr(get_bloginfo('name')), esc_attr(get_bloginfo('name')), esc_attr(get_bloginfo('name')));
+			$inline_logo = sprintf('<a href="%s" title="%s"><img src="'.get_header_image().'" title="%s" alt="%s"/></a>', trailingslashit(home_url()), esc_attr(get_bloginfo('name')), esc_attr(get_bloginfo('name')), esc_attr(get_bloginfo('name')));
 			$title = str_replace($inside, $inline_logo, $title);
 			return $title;
 		}
@@ -78,8 +75,7 @@ function gs_theme_setup() {
 	//add_theme_support( 'custom-background' );
 
 	// Enable Custom Header
-	add_theme_support('genesis-custom-header', array('width'=> 290, 'height'=> 100));
-
+	//add_theme_support('genesis-custom-header', array('width'=> 300, 'height'=> 100));
 
 	// Add support for structural wraps
 	add_theme_support( 'genesis-structural-wraps', array(
@@ -91,12 +87,35 @@ function gs_theme_setup() {
 		'footer'
 	) );
 
+	add_filter( 'genesis_breadcrumb_args', 'sp_breadcrumb_args' );
+	function sp_breadcrumb_args( $args ) {
+		$args['home'] = 'STRONA GŁÓWNA';
+		$args['sep'] = ' <span class="separator"><i class="fa fa-chevron-right"></i></span> ';
+		$args['list_sep'] = ', '; // Genesis 1.5 and later
+		$args['prefix'] = '<div class="breadcrumb">';
+		$args['suffix'] = '</div>';
+		$args['heirarchial_attachments'] = true; // Genesis 1.5 and later
+		$args['heirarchial_categories'] = true; // Genesis 1.5 and later
+		$args['display'] = true;
+		$args['labels']['prefix'] = '<span class="separator"><i class="fa fa-square"></i></span> ';
+		$args['labels']['author'] = 'Archiwum ';
+		$args['labels']['category'] = 'Kategoria '; // Genesis 1.6 and later
+		$args['labels']['tag'] = 'Tag ';
+		$args['labels']['date'] = 'Data ';
+		$args['labels']['search'] = 'Wynik wyszukiwania dla ';
+		$args['labels']['tax'] = 'Archives for ';
+		$args['labels']['post_type'] = 'Archives for ';
+		$args['labels']['404'] = 'Nie znaleziono: '; // Genesis 1.5 and later
+		return $args;
+	}
+
+
 	/**
 	 * 07 Footer Widgets
 	 * Add support for 3-column footer widgets
 	 * Change 3 for support of up to 6 footer widgets (automatically styled for layout)
 	 */
-	add_theme_support( 'genesis-footer-widgets', 3 );
+	add_theme_support( 'genesis-footer-widgets', 1 );
 
 	/**
 	 * 08 Genesis Menus
@@ -107,7 +126,7 @@ function gs_theme_setup() {
 		'genesis-menus', 
 		array(
 			'primary'   => __( 'Primary Navigation Menu', CHILD_DOMAIN ), 
-			'secondary' => __( 'Secondary Navigation Menu', CHILD_DOMAIN ),
+			//'secondary' => __( 'Secondary Navigation Menu', CHILD_DOMAIN ),
 			'mobile'    => __( 'Mobile Navigation Menu', CHILD_DOMAIN ),
 		)
 	);
@@ -124,34 +143,50 @@ function gs_theme_setup() {
 	 * Default: editor-style.css 
 	 */
 	//add_editor_style();
-	
-	
+
 	// Register Sidebars
+	add_action( 'widgets_init', 'unregister_genesis_widgets', 20 );
+	unregister_sidebar( 'sidebar' );
+	unregister_sidebar( 'sidebar-alt' );
+	unregister_sidebar( 'header-right' );
 	gs_register_sidebars();
-	
 } // End of Set Up Function
 
 // Register Sidebars
+function unregister_genesis_widgets() {
+	unregister_widget( 'Genesis_eNews_Updates' );
+	unregister_widget( 'Genesis_Featured_Page' );
+	unregister_widget( 'Genesis_Featured_Post' );
+	unregister_widget( 'Genesis_Latest_Tweets_Widget' );
+	unregister_widget( 'Genesis_Menu_Pages_Widget' );
+	unregister_widget( 'Genesis_User_Profile_Widget' );
+	unregister_widget( 'Genesis_Widget_Menu_Categories' );
+}
 function gs_register_sidebars() {
 	$sidebars = array(
 		array(
-			'id'			=> 'home-top',
-			'name'			=> __( 'Home Top', CHILD_DOMAIN ),
+			'id'			=> 'search',
+			'name'			=> __( 'Wyszukiwarka', CHILD_DOMAIN ),
+			'description'	=> __( 'This is the top section.', CHILD_DOMAIN ),
+		),
+		array(
+			'id'			=> 'rotator',
+			'name'			=> __( 'Rotator', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the top homepage section.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-middle-01',
-			'name'			=> __( 'Home Left Middle', CHILD_DOMAIN ),
+			'name'			=> __( 'Baner Lewy', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage left section.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-middle-02',
-			'name'			=> __( 'Home Middle Middle', CHILD_DOMAIN ),
+			'name'			=> __( 'Baner Środkowy', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage middle section.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-middle-03',
-			'name'			=> __( 'Home Right Middle', CHILD_DOMAIN ),
+			'name'			=> __( 'Baner Prawy', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
 		),
 		array(
@@ -195,6 +230,18 @@ function gs_mobile_navigation() {
 	);
 	
 	gs_navigation( 'mobile', $mobile_menu_args );
+}
+
+// Add Widget Area For Search
+add_action('genesis_before_header', 'gs_search');
+function gs_search() {
+	genesis_widget_area(
+		'search',
+		array(
+			'before' => '<div id="search-area" class="search-area"><div class="wrap"><div class="widget-area">',
+			'after' => '</div></div></div>',
+		)
+	);
 }
 
 // Add Widget Area After Post

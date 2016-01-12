@@ -2,6 +2,8 @@
 /*
     Theme Name: Kamea
     Description: Kamea themes for the Genesis Framework
+	Author: rewizja.net
+	Author URI: http://www.rewizja.net/
 
     Version: 1.0
  
@@ -12,7 +14,9 @@
 /*
 01 Import Fonts
 ---------------------------------------------------------------------------------------------------- */
-@import url('//fonts.googleapis.com/css?family=Arimo|Varela');
+
+@import url('//fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('//fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,latin-ext');
 
 /*
 02 Base Styles
@@ -56,11 +60,11 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color:#F2F4FB;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.8;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   color: #333333;
 }
 
@@ -130,8 +134,8 @@ a img {
 .site-inner {
   overflow: hidden;
   *zoom: 1;
-  padding-top: 20px;
-  padding-top: 2rem;
+  padding-top: 10px;
+  padding-top: 1rem;
 }
 
 /* Containers and Columns */
@@ -315,7 +319,7 @@ h6,
   line-height: 1.2;
   margin-bottom: 16px;
   margin-bottom: 1.6rem;
-  font-family: Arimo, Varela, sans-serif;
+	font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -323,8 +327,9 @@ h1,
 .entry-title,
 .entry-title a,
 .site-title {
-  font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 36px;
+  font-size: 3.6rem;
+	font-weight:300;
 }
 
 /* Title Class for SEO / No Overuse of H Tags */
@@ -395,11 +400,31 @@ h6,
 /*
 03 Header
 ---------------------------------------------------------------------------------------------------- */
+#search-area {
+	display:inline-block;
+	width:100%;
+	background:#FFFFFF;
+}
+#search-area .widget-area {
+	display:inline-block;
+	width:100%;
+	background:#FFFFFF url('images/search_bg.jpg') 0 50% repeat-x;
+}
+#search-area .widget_search {
+	float:right;
+	background:#FFFFFF;
+	padding:5px;
+}
+#search-area .widget-title.widgettitle {float:left; display:inline-block; padding:10px; margin:0; font-family:"Open Sans", sans-serif; font-size:14px; font-weight:300; color:#0D85B3;}
+#search-area .search-form {float:left; display:inline-block;}
+#search-area .search-form input[type="search"]{
+	float:right; display:inline-block; width:175px; height:30px; color:#0D85B3; background:#DDF3FB url('images/ico_search.png') 95% 50% no-repeat; border:0; border-radius:0; box-shadow:none;
+}
+
 .site-header {
   min-height: 120px;
   overflow: hidden;
-  padding-bottom: 32px;
-  padding-bottom: 3.2rem;
+	background:#FFFFFF;
 }
 
 .site-title {
@@ -427,19 +452,17 @@ h6,
 }
 
 .header-full-width .site-title,
-.header-full-width .site-title a,
+/*.header-full-width .site-title a,*/
 .header-full-width .title-area {
   width: 100%;
 }
 
 .header-image .site-title,
-.header-image .site-title a,
+/*.header-image .site-title a,*/
 .header-image .title-area {
-  display: block;
-  float: left;
-  min-height: 120px;
-  overflow: hidden;
-  width: 50%;
+  display: inline-block;
+  min-height: 100px;
+	text-align:center;
 }
 
 .header-image .site-description {
@@ -471,14 +494,15 @@ h6,
 }
 .genesis-nav-menu a {
   border: none;
-  color: white;
+  color:#333333;
   display: block;
-  padding: 28px 24px;
-  padding: 2.8rem 2.4rem;
+  padding: 15px 24px;
+  padding: 1.5rem 2.4rem;
   position: relative;
 }
 .genesis-nav-menu a:hover {
-  color: #000d11;
+  color: #FFFFFF;
+	background:#52C1E9;
 }
 .genesis-nav-menu .sub-menu {
   left: -9999px;
@@ -556,23 +580,24 @@ h6,
 /* Primary Navigation
 --------------------------------------------- */
 .nav-primary {
-  background-color: #3b3d42;
+  background-color: #FFFFFF;
 }
 
 .nav-primary a:hover,
 .nav-primary .current-menu-item > a {
-  color: #fff;
+	color: #FFFFFF;
+	background:#52C1E9;
 }
 
 .nav-primary .sub-menu a {
-  border: 1px solid #333;
+  border: 1px solid #333333;
 }
 
 .nav-primary .sub-menu a {
   background-color: #3b3d42;
 }
 .nav-primary .sub-menu a:hover {
-  color: white;
+  color: #FFFFFF;
 }
 
 /* Secondary Navigation
@@ -988,6 +1013,23 @@ Site Footer
   padding: 0rem .75rem;
 }
 
+/* Rotator */
+#rotator {border-bottom:10px solid #FFFFFF;}
+
+/* Home Site */
+body.home {}
+.home.page {}
+.home.page .entry-header .entry-title {text-align:center; font-weight:300; letter-spacing:-0.04em; color:#0D85B3;}
+.home.page .entry-content {text-align:center;}
+.home.page .entry-content > p {display:inline-block; max-width:900px;}
+.home.page .content .entry-content {background:none;}
+
+/* Page */
+body.page {}
+body.page .content .entry-header {text-align:center; font-weight:300; text-transform:uppercase; color:#0D85B3;}
+body.page .content .entry-content {background:#FFFFFF; padding:1em;}
+
+
 /*********************************************************************************************
 
             MODULES
@@ -1030,6 +1072,9 @@ input:hover[type="submit"],
 .btn:hover {
   background-color: #2b4a5d;
 }
+
+.post-edit-link {padding:3px 5px; font-size:12px; color:#FFFFFF; background:#FF6C00; border-radius:2px;}
+.post-edit-link:hover {color:#FFFFFF; background:#CC4C25;}
 
 /*
 11 Images and Captions
@@ -1125,12 +1170,36 @@ p.wp-caption-text {
 }
 
 .breadcrumb {
-  background-color: #f5f5f5;
-  margin-bottom: 10px;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  padding: 10px;
-  padding: 1rem;
+	font-size:12px;
+	text-transform:uppercase;
+	text-align:center;
+	margin-bottom: 10px;
+	margin-bottom: 1rem;
+	overflow: hidden;
+	padding: 10px;
+	padding: 1rem;
+	color:#0D85B3;
+	border-bottom:1px solid #C9D2DC;
+}
+.breadcrumb .fa-square {
+	display:inline-block;
+	font-size:10px;
+	color:#8396A6;
+	margin-top:-2px;
+}
+
+.breadcrumb span.separator {
+	display:inline-block;
+	margin:7px 1em 0 1em;
+	font-size:7px;
+	color:#8396A6;
+	line-height:1;
+	vertical-align:top;
+}
+
+.breadcrumb span,
+.breadcrumb a {
+	color:#8396A6;
 }
 
 /*
@@ -1174,3 +1243,5 @@ div.gform_wrapper form li {
   margin: 16px 0 0;
   margin: 1.6rem 0 0;
 }
+
+/* RWD */
