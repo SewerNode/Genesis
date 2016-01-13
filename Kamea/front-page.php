@@ -24,6 +24,7 @@ function gs_home_helper() {
             remove_action( 'genesis_loop', 'genesis_do_loop' );
             add_action( 'genesis_loop', 'gs_home_loop' );
             add_action( 'genesis_loop', 'gs_home_widgets' );
+            add_action( 'genesis_before_footer', 'gs_do_prefooter' );
             /** Force Full Width */
             add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
             add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
@@ -85,5 +86,14 @@ function gs_home_widgets() {
             )
     );
 }
-
+// Add Widget Prefooter
+function gs_do_prefooter() {
+	genesis_widget_area(
+		'prefooter',
+		array(
+			'before' => '<div id="footer-widgets" class="footer-widgets gs-footer-widgets-1"><div class="wrap"><div class="footer-widgets-1 widget-area first ">',
+			'after' => '</div></div></div>',
+		)
+	);
+}
 genesis();

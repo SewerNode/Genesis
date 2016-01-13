@@ -54,6 +54,11 @@ function gs_theme_setup() {
 		remove_action('genesis_site_description', 'genesis_seo_site_description');
 	};
 
+	/*add_filter( 'genesis_pre_load_favicon', 'gs_favicon_filter' );
+	function gs_favicon_filter( $favicon_url ) {
+		return get_stylesheet_directory_uri().'/images/favicon.ico';
+	}*/
+
 	//Enable Post Navigation
 	add_action( 'genesis_after_entry_content', 'genesis_prev_next_post_nav', 5 );
 
@@ -115,7 +120,26 @@ function gs_theme_setup() {
 	 * Add support for 3-column footer widgets
 	 * Change 3 for support of up to 6 footer widgets (automatically styled for layout)
 	 */
-	add_theme_support( 'genesis-footer-widgets', 1 );
+	//add_theme_support( 'genesis-footer-widgets', 1 );
+
+
+	remove_action( 'genesis_footer', 'genesis_do_footer' );
+	function gs_custom_footer() {
+		?>
+		<div class="footer-top">
+			<h3>Odwiedź nas w mediach społecznościowych:</h3>
+			<a href="#" class="fb"></a>
+			<a href="#" class="in"></a>
+			<a href="#" class="gp"></a>
+			<a href="#" class="dojazd"></a>
+		</div>
+		<div class="footer-bottom">
+			<p>Copyright &copy; <?php echo date('Y'); ?> Kamea - Wszelkie prawa zastrzeżone. Kopiowanie zawartości serwisu lub jej części bez pisemnej zgody właścicieli serwisu jest zabronione.</p>
+			<p class="rewizja"><a href="https://rewizja.net">Kreacja: Rewizja.net</a></p>
+		</div>
+	<?php
+	}
+	add_action( 'genesis_footer', 'gs_custom_footer' );
 
 	/**
 	 * 08 Genesis Menus
@@ -176,25 +200,30 @@ function gs_register_sidebars() {
 		),
 		array(
 			'id'			=> 'home-middle-01',
-			'name'			=> __( 'Baner Lewy', CHILD_DOMAIN ),
+			'name'			=> __( 'Główna - Baner Lewy', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage left section.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-middle-02',
-			'name'			=> __( 'Baner Środkowy', CHILD_DOMAIN ),
+			'name'			=> __( 'Główna - Baner Środkowy', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage middle section.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-middle-03',
-			'name'			=> __( 'Baner Prawy', CHILD_DOMAIN ),
+			'name'			=> __( 'Główna - Baner Prawy', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
 		),
 		array(
 			'id'			=> 'home-bottom',
-			'name'			=> __( 'Home Bottom', CHILD_DOMAIN ),
+			'name'			=> __( 'Główna - Baner dolny', CHILD_DOMAIN ),
 			'description'	=> __( 'This is the homepage right section.', CHILD_DOMAIN ),
 		),
 		array(
+			'id'			=> 'prefooter',
+			'name'			=> __( 'Główna - Przed stopką', CHILD_DOMAIN ),
+			'description'	=> __( 'Use featured posts to showcase before footer.', CHILD_DOMAIN ),
+		),
+		/*array(
 			'id'			=> 'portfolio',
 			'name'			=> __( 'Portfolio', CHILD_DOMAIN ),
 			'description'	=> __( 'Use featured posts to showcase your portfolio.', CHILD_DOMAIN ),
@@ -203,7 +232,7 @@ function gs_register_sidebars() {
 			'id'			=> 'after-post',
 			'name'			=> __( 'After Post', CHILD_DOMAIN ),
 			'description'	=> __( 'This will show up after every post.', CHILD_DOMAIN ),
-		),
+		),*/
 	);
 	
 	foreach ( $sidebars as $sidebar )
