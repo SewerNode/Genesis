@@ -648,16 +648,27 @@ h6,
 .nav-primary .sub-menu a {
   background-color: #3b3d42;
 }
+
 .nav-primary .sub-menu a:hover {
   color: #FFFFFF;
 }
 
-.nav-primary.submenu {/*transition:all 1s ease 1s;*/}
-.nav-primary.submenu ul {padding:5px 5px 0 5px; background:#52C1E9;}
-.nav-primary.submenu ul li > a {color:#FFFFFF; background:#52C1E9;}
-.nav-primary.submenu ul li.current-menu-item > a,
-.nav-primary.submenu ul li:hover > a {color:#52C1E9; background:#FFFFFF;}
+.nav-primary.submenu {}
 
+.nav-primary.submenu ul {
+	padding:5px 5px 0 5px;
+	background:#52C1E9;
+}
+
+.nav-primary.submenu ul li > a {
+	color:#FFFFFF;
+}
+
+.nav-primary.submenu ul li.current-menu-item > a,
+.nav-primary.submenu ul li:hover > a {
+	color:#52C1E9;
+	background:#FFFFFF;
+}
 
 
 /* Secondary Navigation
