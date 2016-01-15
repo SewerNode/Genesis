@@ -360,6 +360,7 @@ h4,
 	font-size: 3.6rem;
 	font-weight:300;
 	color:#0D85B3;
+	text-transform:uppercase;
 }
 
 h4.widgettitle a {
@@ -933,18 +934,23 @@ h6,
 
 /* Blockquotes */
 blockquote {
-  padding: 24px 64px;
-  padding: 2.4rem 6.4rem;
+	padding: 24px 64px 24px 120px;
+	padding: 2.4rem 6.4rem 2.4rem 12rem;
+	background:#F2F4FB url('images/quo_bg.png') 0  0 no-repeat;
 }
 
-blockquote::before {
+blockquote img.alignleft {padding-left:20px; margin:-24px 24px 0 -120px; background:url('images/quo_img_left.jpg') 0 0 no-repeat;}
+blockquote img.alignright {padding-right:20px; margin:-24px -64px 0 24px; background:url('images/quo_img_left.jpg') 100% 0 no-repeat;}
+
+
+/*blockquote::before {
   content: "“";
   display: block;
   height: 0;
   left: -20px;
   position: relative;
   top: -10px;
-}
+}*/
 
 blockquote::before,
 blockquote p {
@@ -957,6 +963,17 @@ blockquote::before {
   line-height: 58px;
   line-height: 5.8rem;
 }
+
+.entry-content a[rel~="attachment"] > img {border-bottom:7px solid #52C1E9;}
+.entry-content h6 {
+	font-size:20px;
+	font-size:2rem;
+	font-weight:400;
+	color:#0D85B3;
+	text-align:center;
+	background:url('images/h6_bg.jpg') 0 50% repeat-x;
+}
+.entry-content h6 > span {padding-left:40px; padding-right:20px; color:#0D85B3; background:#FFFFFF url('images/ico_time.png') 10px 50% no-repeat;}
 
 /* Lists */
 .entry-content ol,
@@ -1261,7 +1278,7 @@ body.page .content .entry-content,
 body.single .content .entry-content,
 body.single-post .content .entry-content {
 	background:#FFFFFF;
-	padding:1em;
+	padding:5rem 9rem;
 }
 .adjacent-entry-pagination.pagination {display:none;}
 

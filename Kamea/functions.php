@@ -109,7 +109,7 @@ function gs_theme_setup() {
 		$args['display'] = true;
 		$args['labels']['prefix'] = '<span class="separator"><i class="fa fa-square"></i></span> ';
 		$args['labels']['author'] = 'Archiwum ';
-		$args['labels']['category'] = 'Kategoria '; // Genesis 1.6 and later
+		$args['labels']['category'] = ''; // Genesis 1.6 and later
 		$args['labels']['tag'] = 'Tag ';
 		$args['labels']['date'] = 'Data ';
 		$args['labels']['search'] = 'Wynik wyszukiwania dla ';
