@@ -237,6 +237,8 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
 	function dc_add_tricky_two () {
 		// this code is for retaining styling from the main menu, but giving you a class to re-style the menu if desired.
 		echo '<nav class="nav-primary submenu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" style="display:none;"><div class="wrap">';
+		echo '<noscript><style type="text/css">.nav-primary.submenu {display:block !important;}</style></noscript>';
+		echo '<script type="text/javascript"> jQuery(document).ready(function() {jQuery(".nav-primary.submenu").delay("200").slideDown("slow");}); </script>';
 		wp_nav_menu( array(
 			'theme_location' => 'primary',
 			'container' => 'false',
