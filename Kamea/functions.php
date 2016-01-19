@@ -43,6 +43,7 @@ function gs_theme_setup() {
 	 * Remove site description
 	 * Remove header_image in background
 	 */
+	/*add_theme_support( 'custom-header', array('height' => 100, 'width' => 290,) );*/
 	if(get_header_image()){
 		add_filter('genesis_seo_title', 'gs_genesis_header_background_to_img', 10, 2);
 		function gs_genesis_header_background_to_img($title, $inside)
