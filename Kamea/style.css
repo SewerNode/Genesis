@@ -941,7 +941,7 @@ blockquote {
 	padding: 24px 64px 24px 120px;
 	padding: 2.4rem 6.4rem 2.4rem 12rem;
 	margin-bottom: 2.6rem;
-	background:#F2F4FB url('images/quo_bg.png') 0  0 no-repeat;
+	background:#F2F4FB url('images/quo_bg.png') 2rem 0.2rem no-repeat;
 }
 
 .entry-content blockquote img.alignleft {padding-left:20px; margin:-24px 24px 0 -120px; background:url('images/quo_img_left.jpg') 0 0 no-repeat;}
@@ -969,6 +969,7 @@ blockquote::before {
   line-height: 5.8rem;
 }
 
+.entry-content img.alignleft {padding-left: 20px; margin:0 30px 0 0; background: url('images/quo_img_left.jpg') 0 0 no-repeat; }
 .entry-content a[rel~="attachment"] > img {border-bottom:7px solid #52C1E9; background:none; padding:0;}
 .entry-content a[rel~="attachment"] > img.alignleft {margin:0.8rem 2rem 0.8rem 0;}
 .entry-content a[rel~="attachment"] > img.alignright {margin:0.8rem 0 0.8rem 2rem;}
@@ -981,9 +982,6 @@ blockquote::before {
 	background:url('images/h6_bg.jpg') 0 50% repeat-x;
 }
 .entry-content h6 > span {padding-left:40px; padding-right:20px; color:#0D85B3; background:#FFFFFF url('images/ico_time.png') 10px 50% no-repeat;}
-
-.entry-content img.alignleft {padding-left: 20px; margin:26px 30px 0 0; background: url('images/quo_img_left.jpg') 0 0 no-repeat;
-}
 
 /* Lists */
 .entry-content ol,
@@ -1346,12 +1344,13 @@ body.category .content article.post .entry-content {
 	float:left;
 	display:inline-block;
 	width:300px;
-	padding:10px;
+	padding:10px 10px 0 10px;
 	text-align:left;
 	font-size:14px;
 	font-weight:400;
 	line-height:1.6;
 }
+body.category .content article.post .entry-content .more-link {white-space:nowrap;}
 body.category .content article.post .entry-footer {display:none;}
 
 

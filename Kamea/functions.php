@@ -3,12 +3,11 @@
 /**
  * Custom amendments for the theme.
  *
- * @category   Genesis_Sandbox
+ * @category   Kamea Theme
  * @package    Functions
  * @subpackage Functions
- * @author     Travis Smith and Jonathan Perez
- * @license    http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
- * @link       http://surefirewebservices.com/
+ * @author     rewizja.net
+ * @link       http://rewizja.net/
  * @since      1.1.0
  */
 
@@ -55,10 +54,10 @@ function gs_theme_setup() {
 		remove_action('genesis_site_description', 'genesis_seo_site_description');
 	};
 
-	/*add_filter( 'genesis_pre_load_favicon', 'gs_favicon_filter' );
+	add_filter( 'genesis_pre_load_favicon', 'gs_favicon_filter' );
 	function gs_favicon_filter( $favicon_url ) {
 		return get_stylesheet_directory_uri().'/images/favicon.ico';
-	}*/
+	}
 
 	//Enable Post Navigation
 	add_action( 'genesis_after_entry_content', 'genesis_prev_next_post_nav', 5 );
@@ -75,18 +74,12 @@ function gs_theme_setup() {
 	$content_width = apply_filters( 'content_width', 600, 430, 920, 1152 );
 	
 	// Custom Image Sizes
-	//add_image_size( 'featured-image', 348, 448, TRUE );
+	add_image_size( 'baner-image', 348, 448, TRUE );
 	add_image_size( 'featured-image', 211, 271, TRUE );
 
 	// Move image above post title in Genesis Framework 2.0
 	remove_action( 'genesis_entry_content', 'genesis_do_post_image', 8 );
 	add_action( 'genesis_entry_header', 'genesis_do_post_image', 8 );
-
-	// Enable Custom Background
-	//add_theme_support( 'custom-background' );
-
-	// Enable Custom Header
-	//add_theme_support('genesis-custom-header', array('width'=> 300, 'height'=> 100));
 
 	// Add support for structural wraps
 	add_theme_support( 'genesis-structural-wraps', array(
@@ -120,14 +113,11 @@ function gs_theme_setup() {
 		return $args;
 	}
 
-
 	/**
 	 * 07 Footer Widgets
 	 * Add support for 3-column footer widgets
 	 * Change 3 for support of up to 6 footer widgets (automatically styled for layout)
 	 */
-	//add_theme_support( 'genesis-footer-widgets', 1 );
-
 
 	remove_action( 'genesis_footer', 'genesis_do_footer' );
 	function gs_custom_footer() {
@@ -170,62 +160,59 @@ function gs_theme_setup() {
 	// Add Mobile Navigation
 	add_action( 'genesis_before', 'gs_mobile_navigation', 5 );
 
-
 	// add hook
-add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects_sub_menu', 10, 2 );
-// filter_hook function to react on sub_menu flag
-function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
-	if ( isset( $args->sub_menu ) ) {
-		$root_id = 0;
+	add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects_sub_menu', 10, 2 );
+	// filter_hook function to react on sub_menu flag
+	function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
+		if ( isset( $args->sub_menu ) ) {
+			$root_id = 0;
 
-		// find the current menu item
-		foreach ( $sorted_menu_items as $menu_item ) {
-			if ( $menu_item->current ) {
-				// set the root id based on whether the current menu item has a parent or not
-				$root_id = ( $menu_item->menu_item_parent ) ? $menu_item->menu_item_parent : $menu_item->ID;
-				break;
+			// find the current menu item
+			foreach ( $sorted_menu_items as $menu_item ) {
+				if ( $menu_item->current ) {
+					// set the root id based on whether the current menu item has a parent or not
+					$root_id = ( $menu_item->menu_item_parent ) ? $menu_item->menu_item_parent : $menu_item->ID;
+					break;
+				}
 			}
-		}
 
-		// find the top level parent
-		if ( ! isset( $args->direct_parent ) ) {
-			$prev_root_id = $root_id;
-			while ( $prev_root_id != 0 ) {
-				foreach ( $sorted_menu_items as $menu_item ) {
-					if ( $menu_item->ID == $prev_root_id ) {
-						$prev_root_id = $menu_item->menu_item_parent;
-						// don't set the root_id to 0 if we've reached the top of the menu
-						if ( $prev_root_id != 0 ) $root_id = $menu_item->menu_item_parent;
-						break;
+			// find the top level parent
+			if ( ! isset( $args->direct_parent ) ) {
+				$prev_root_id = $root_id;
+				while ( $prev_root_id != 0 ) {
+					foreach ( $sorted_menu_items as $menu_item ) {
+						if ( $menu_item->ID == $prev_root_id ) {
+							$prev_root_id = $menu_item->menu_item_parent;
+							// don't set the root_id to 0 if we've reached the top of the menu
+							if ( $prev_root_id != 0 ) $root_id = $menu_item->menu_item_parent;
+							break;
+						}
 					}
 				}
 			}
-		}
-		$menu_item_parents = array();
-		foreach ( $sorted_menu_items as $key => $item ) {
-			// init menu_item_parents
-			if ( $item->ID == $root_id ) $menu_item_parents[] = $item->ID;
-			if ( in_array( $item->menu_item_parent, $menu_item_parents ) ) {
-				// part of sub-tree: keep!
-				$menu_item_parents[] = $item->ID;
-			} else if ( ! ( isset( $args->show_parent ) && in_array( $item->ID, $menu_item_parents ) ) ) {
-				// not part of sub-tree: away with it!
-				unset( $sorted_menu_items[$key] );
+			$menu_item_parents = array();
+			foreach ( $sorted_menu_items as $key => $item ) {
+				// init menu_item_parents
+				if ( $item->ID == $root_id ) $menu_item_parents[] = $item->ID;
+				if ( in_array( $item->menu_item_parent, $menu_item_parents ) ) {
+					// part of sub-tree: keep!
+					$menu_item_parents[] = $item->ID;
+				} else if ( ! ( isset( $args->show_parent ) && in_array( $item->ID, $menu_item_parents ) ) ) {
+					// not part of sub-tree: away with it!
+					unset( $sorted_menu_items[$key] );
+				}
 			}
-		}
 
-		return $sorted_menu_items;
-	} else {
-		return $sorted_menu_items;
+			return $sorted_menu_items;
+		} else {
+			return $sorted_menu_items;
+		}
 	}
-}
 
 	/** dave's genesis code for making the submenu  **/
 	add_action( 'wp_head', 'dc_add_tricky_menu' );
 	function dc_add_tricky_menu () {
-		// make all menus one level, or else dropdowns will be redundant in your submenu.
 		add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
-		// stick submenu under main menu. Of course you can use other hooks to put menu & submenu elsewhere.
 		add_action( 'genesis_after_header', 'dc_add_tricky_two' );
 	}
 
@@ -235,7 +222,6 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
 	}
 
 	function dc_add_tricky_two () {
-		// this code is for retaining styling from the main menu, but giving you a class to re-style the menu if desired.
 		echo '<nav class="nav-primary submenu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" style="display:none;"><div class="wrap">';
 		echo '<noscript><style type="text/css">.nav-primary.submenu {display:block !important;}</style></noscript>';
 		echo '<script type="text/javascript"> jQuery(document).ready(function() {jQuery(".nav-primary.submenu").delay("200").slideDown("slow");}); </script>';
@@ -270,10 +256,7 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
 // Register Sidebars
 function unregister_genesis_widgets() {
 	unregister_widget( 'Genesis_eNews_Updates' );
-	//unregister_widget( 'Genesis_Featured_Page' );
-	//unregister_widget( 'Genesis_Featured_Post' );
 	unregister_widget( 'Genesis_Latest_Tweets_Widget' );
-	//unregister_widget( 'Genesis_Menu_Pages_Widget' );
 	unregister_widget( 'Genesis_User_Profile_Widget' );
 	unregister_widget( 'Genesis_Widget_Menu_Categories' );
 }
@@ -313,17 +296,7 @@ function gs_register_sidebars() {
 			'id'			=> 'prefooter',
 			'name'			=> __( 'Główna - Przed stopką', CHILD_DOMAIN ),
 			'description'	=> __( 'Use featured posts to showcase before footer.', CHILD_DOMAIN ),
-		),
-		/*array(
-			'id'			=> 'portfolio',
-			'name'			=> __( 'Portfolio', CHILD_DOMAIN ),
-			'description'	=> __( 'Use featured posts to showcase your portfolio.', CHILD_DOMAIN ),
-		),
-		array(
-			'id'			=> 'after-post',
-			'name'			=> __( 'After Post', CHILD_DOMAIN ),
-			'description'	=> __( 'This will show up after every post.', CHILD_DOMAIN ),
-		),*/
+		)
 	);
 	
 	foreach ( $sidebars as $sidebar )
@@ -344,11 +317,9 @@ require_once('lib/scripts.php');
 
 //Add Mobile Menu
 function gs_mobile_navigation() {
-	
 	$mobile_menu_args = array(
 		'echo' => true,
 	);
-	
 	gs_navigation( 'mobile', $mobile_menu_args );
 }
 
@@ -369,12 +340,12 @@ add_action('genesis_after_entry', 'gs_do_after_entry');
 function gs_do_after_entry() {
  	if ( is_single() ) {
  	genesis_widget_area( 
-                'after-post', 
-                array(
-                        'before' => '<aside id="after-post" class="after-post"><div class="home-widget widget-area">', 
-                        'after' => '</div></aside><!-- end #home-left -->',
-                ) 
+            'after-post',
+            array(
+                'before' => '<aside id="after-post" class="after-post"><div class="home-widget widget-area">',
+                'after' => '</div></aside>',
+            )
         );
- }
+    }
  }
 
