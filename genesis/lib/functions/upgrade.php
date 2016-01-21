@@ -134,19 +134,27 @@ function genesis_update_check() {
 }
 
 /**
- * Upgrade the database to version 2208.
+ * Upgrade the database to version 2209.
  *
- * @since 2.2.5
+ * @since 2.2.6
  *
  * @uses genesis_update_settings()  Merges new settings with old settings and pushes them into the database.
  * @uses genesis_get_option()       Get theme setting value.
  */
-function genesis_upgrade_2208() {
+function genesis_upgrade_2209() {
+
+	$term_meta = get_option( 'genesis-term-meta' );
+
+	foreach ( (array) $term_meta as $term_id => $meta ) {
+		foreach ( (array) $meta as $key => $value ) {
+			add_term_meta( $term_id, $key, $value );
+		}
+	}
 
 	//* Update Settings
 	genesis_update_settings( array(
-		'theme_version'        => '2.2.5',
-		'db_version'           => '2208',
+		'theme_version'        => '2.2.6',
+		'db_version'           => '2209',
 	) );
 
 }
@@ -551,11 +559,11 @@ function genesis_upgrade() {
 		genesis_upgrade_2207();
 
 	###########################
-	# UPDATE DB TO VERSION 2208
+	# UPDATE DB TO VERSION 2209
 	###########################
 
-	if ( genesis_get_option( 'db_version', null, false ) < '2208' )
-		genesis_upgrade_2208();
+	if ( genesis_get_option( 'db_version', null, false ) < '2209' )
+		genesis_upgrade_2209();
 
 	do_action( 'genesis_upgrade' );
 

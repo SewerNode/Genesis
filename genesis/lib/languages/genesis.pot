@@ -1,14 +1,14 @@
-# Copyright (C) 2015 StudioPress
+# Copyright (C) 2016 StudioPress
 # This file is distributed under the GPL-2.0+.
 msgid ""
 msgstr ""
-"Project-Id-Version: Genesis 2.2.4\n"
+"Project-Id-Version: Genesis 2.2.6\n"
 "Report-Msgid-Bugs-To: StudioPress <translations@studiopress.com>\n"
-"POT-Creation-Date: 2015-12-15 20:48:22+00:00\n"
+"POT-Creation-Date: 2016-01-06 01:42:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: StudioPress <translations@studiopress.com>\n"
 "Language-Team: English <translations@studiopress.com>\n"
 "X-Generator: grunt-wp-i18n 0.4.4\n"
@@ -57,7 +57,7 @@ msgstr ""
 #: lib/admin/cpt-archive-settings.php:46 lib/admin/cpt-archive-settings.php:47
 #: lib/admin/cpt-archive-settings.php:140
 #: lib/admin/cpt-archive-settings.php:309
-#: lib/admin/cpt-archive-settings.php:316 lib/admin/term-meta.php:45
+#: lib/admin/cpt-archive-settings.php:316 lib/admin/term-meta.php:71
 msgid "Archive Settings"
 msgstr ""
 
@@ -77,7 +77,7 @@ msgstr ""
 #: lib/admin/cpt-archive-settings.php:277
 #: lib/admin/cpt-archive-settings.php:338
 #: lib/admin/cpt-archive-settings.php:354 lib/admin/inpost-metaboxes.php:251
-#: lib/admin/inpost-metaboxes.php:278 lib/admin/term-meta.php:177
+#: lib/admin/inpost-metaboxes.php:278 lib/admin/term-meta.php:203
 #: lib/admin/user-meta.php:242
 msgid "Layout Settings"
 msgstr ""
@@ -86,38 +86,38 @@ msgstr ""
 msgid "View the <a href=\"%s\">%s archive</a>."
 msgstr ""
 
-#: lib/admin/cpt-archive-settings.php:171 lib/admin/term-meta.php:49
+#: lib/admin/cpt-archive-settings.php:171 lib/admin/term-meta.php:75
 msgid "Archive Headline"
 msgstr ""
 
-#: lib/admin/cpt-archive-settings.php:174 lib/admin/term-meta.php:52
+#: lib/admin/cpt-archive-settings.php:174 lib/admin/term-meta.php:78
 msgid "Leave empty if you do not want to display a headline."
 msgstr ""
 
-#: lib/admin/cpt-archive-settings.php:179 lib/admin/term-meta.php:56
+#: lib/admin/cpt-archive-settings.php:179 lib/admin/term-meta.php:82
 msgid "Archive Intro Text"
 msgstr ""
 
-#: lib/admin/cpt-archive-settings.php:182 lib/admin/term-meta.php:59
+#: lib/admin/cpt-archive-settings.php:182 lib/admin/term-meta.php:85
 msgid "Leave empty if you do not want to display any intro text."
 msgstr ""
 
-#: lib/admin/cpt-archive-settings.php:210 lib/admin/term-meta.php:102
+#: lib/admin/cpt-archive-settings.php:210 lib/admin/term-meta.php:128
 #: lib/admin/user-meta.php:176
 msgid "Custom Document Title"
 msgstr ""
 
 #: lib/admin/cpt-archive-settings.php:217 lib/admin/inpost-metaboxes.php:58
-#: lib/admin/term-meta.php:109 lib/admin/user-meta.php:183
+#: lib/admin/term-meta.php:135 lib/admin/user-meta.php:183
 msgid "Meta Description"
 msgstr ""
 
 #: lib/admin/cpt-archive-settings.php:224 lib/admin/inpost-metaboxes.php:66
-#: lib/admin/term-meta.php:116 lib/admin/user-meta.php:190
+#: lib/admin/term-meta.php:142 lib/admin/user-meta.php:190
 msgid "Meta Keywords"
 msgstr ""
 
-#: lib/admin/cpt-archive-settings.php:227 lib/admin/term-meta.php:119
+#: lib/admin/cpt-archive-settings.php:227 lib/admin/term-meta.php:145
 #: lib/admin/user-meta.php:193
 msgid "Comma separated list"
 msgstr ""
@@ -137,7 +137,7 @@ msgid "Select Layout"
 msgstr ""
 
 #: lib/admin/cpt-archive-settings.php:279 lib/admin/inpost-metaboxes.php:280
-#: lib/admin/term-meta.php:187 lib/admin/user-meta.php:252
+#: lib/admin/term-meta.php:213 lib/admin/user-meta.php:252
 msgid "Default Layout set in <a href=\"%s\">Theme Settings</a>"
 msgstr ""
 
@@ -544,7 +544,7 @@ msgstr ""
 msgid "No export options available."
 msgstr ""
 
-#: lib/admin/inpost-metaboxes.php:29 lib/admin/term-meta.php:98
+#: lib/admin/inpost-metaboxes.php:29 lib/admin/term-meta.php:124
 msgid "Theme SEO Settings"
 msgstr ""
 
@@ -950,17 +950,17 @@ msgstr ""
 msgid "Apply %s to your site?"
 msgstr ""
 
-#: lib/admin/term-meta.php:124 lib/admin/user-meta.php:198
+#: lib/admin/term-meta.php:150 lib/admin/user-meta.php:198
 msgid "Robots Meta"
 msgstr ""
 
-#: lib/admin/term-meta.php:127 lib/admin/term-meta.php:130
-#: lib/admin/term-meta.php:133 lib/admin/user-meta.php:201
+#: lib/admin/term-meta.php:153 lib/admin/term-meta.php:156
+#: lib/admin/term-meta.php:159 lib/admin/user-meta.php:201
 #: lib/admin/user-meta.php:204 lib/admin/user-meta.php:207
 msgid "Apply %s to this archive?"
 msgstr ""
 
-#: lib/admin/term-meta.php:182 lib/admin/term-meta.php:185
+#: lib/admin/term-meta.php:208 lib/admin/term-meta.php:211
 #: lib/admin/user-meta.php:247 lib/admin/user-meta.php:250
 msgid "Choose Layout"
 msgstr ""
@@ -1702,7 +1702,7 @@ msgid ""
 "separate subclasses for each menu."
 msgstr ""
 
-#: lib/classes/breadcrumb.php:44 lib/functions/deprecated.php:108
+#: lib/classes/breadcrumb.php:44 lib/functions/deprecated.php:109
 msgid "Home"
 msgstr ""
 
@@ -1734,17 +1734,17 @@ msgstr ""
 msgid "Genesis database upgraded."
 msgstr ""
 
-#: lib/functions/deprecated.php:79
+#: lib/functions/deprecated.php:80
 msgid ""
 "The argument, \"context\", has been replaced with \"theme_location\" in the "
 "$args array."
 msgstr ""
 
-#: lib/functions/deprecated.php:229
+#: lib/functions/deprecated.php:230
 msgid "data in style sheet files"
 msgstr ""
 
-#: lib/functions/deprecated.php:264
+#: lib/functions/deprecated.php:265
 msgid "decimal or hexidecimal entities"
 msgstr ""
 
@@ -1796,15 +1796,15 @@ msgstr ""
 msgid "No Label Selected"
 msgstr ""
 
-#: lib/functions/markup.php:1017 lib/functions/widgetize.php:167
+#: lib/functions/markup.php:998 lib/functions/widgetize.php:167
 msgid "Primary Sidebar"
 msgstr ""
 
-#: lib/functions/markup.php:1039 lib/functions/widgetize.php:178
+#: lib/functions/markup.php:1020 lib/functions/widgetize.php:178
 msgid "Secondary Sidebar"
 msgstr ""
 
-#: lib/functions/markup.php:1097 lib/structure/menu.php:92
+#: lib/functions/markup.php:1078 lib/structure/menu.php:92
 msgid "Main navigation"
 msgstr ""
 
@@ -1822,27 +1822,27 @@ msgstr ""
 msgid "Dismiss"
 msgstr ""
 
-#: lib/functions/upgrade.php:619
+#: lib/functions/upgrade.php:652
 msgid ""
 "Congratulations, you are now rocking Genesis %s! <a href=\"%s\">See what's "
 "new in %s</a>."
 msgstr ""
 
-#: lib/functions/upgrade.php:645
+#: lib/functions/upgrade.php:678
 msgid "Click here to complete the upgrade"
 msgstr ""
 
-#: lib/functions/upgrade.php:671
+#: lib/functions/upgrade.php:704
 msgid ""
 "Genesis %s is available. <a href=\"%s\" %s>Check out what's new</a> or <a "
 "href=\"%s\" %s>update now.</a>"
 msgstr ""
 
-#: lib/functions/upgrade.php:718
+#: lib/functions/upgrade.php:751
 msgid "Genesis %s is available for %s"
 msgstr ""
 
-#: lib/functions/upgrade.php:719
+#: lib/functions/upgrade.php:752
 msgid ""
 "Genesis %s is now available. We have provided 1-click updates for this "
 "theme, so please log into your dashboard and update at your earliest "
@@ -1900,21 +1900,21 @@ msgstr ""
 msgid "Secondary Navigation Menu"
 msgstr ""
 
-#: lib/js/load-scripts.php:150
+#: lib/js/load-scripts.php:157
 msgid "Select / Deselect All"
 msgstr ""
 
-#: lib/js/load-scripts.php:151
+#: lib/js/load-scripts.php:158
 msgid "The changes you made will be lost if you navigate away from this page."
 msgstr ""
 
-#: lib/js/load-scripts.php:152
+#: lib/js/load-scripts.php:159
 msgid ""
 "Updating Genesis will overwrite the current installed version of Genesis. "
 "Are you sure you want to update?. \"Cancel\" to stop, \"OK\" to update."
 msgstr ""
 
-#: lib/js/load-scripts.php:153
+#: lib/js/load-scripts.php:160
 msgid "Are you sure you want to reset?"
 msgstr ""
 
