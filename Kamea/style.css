@@ -990,10 +990,12 @@ blockquote::before {
 .ninja-forms-form-wrap label {font-weight:300; color:#0D85B3;}
 .ninja-forms-form-wrap .ninja-forms-response-msg,
 .ninja-forms-form-wrap .ninja-forms-required-items,
-.ninja-forms-form-wrap .ninja-forms-field-error {font-size:12px; font-style:italic;}
+.ninja-forms-form-wrap .ninja-forms-field-error,
+.wpcf7-not-valid-tip {font-size:12px; font-style:italic;}
 .ninja-forms-form-wrap .ninja-forms-response-msg.ninja-forms-error-msg,
-.ninja-forms-form-wrap .ninja-forms-field-error {color:red;}
-.ninja-forms-form-wrap input[type="submit"].ninja-forms-field {float:right; padding:1rem 2rem; color:#FFFFFF; background:#0D85B3;}
+.ninja-forms-form-wrap .ninja-forms-field-error,
+.wpcf7-not-valid-tip {color:red;}
+.ninja-forms-form-wrap input[type="submit"].ninja-forms-field, input[type="submit"].wpcf7-submit {float:right; padding:1rem 2rem; color:#FFFFFF; background:#0D85B3;}
 
                                            .entry-content .contact img.alignleft,
 .entry-content .contact img.alignright {padding:0; margin:1rem 0; background:none;}
