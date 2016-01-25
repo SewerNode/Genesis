@@ -987,7 +987,7 @@ blockquote::before {
 .ninja-forms-form-wrap {}
 .ninja-forms-form-wrap .text-wrap.label-above label,
 .ninja-forms-form-wrap .textarea-wrap.label-above label,
-.ninja-forms-form-wrap label {font-weight:300; color:#0D85B3;}
+.ninja-forms-form-wrap label, .wpcf7-form {font-weight:400; color:#0D85B3;}
 .ninja-forms-form-wrap .ninja-forms-response-msg,
 .ninja-forms-form-wrap .ninja-forms-required-items,
 .ninja-forms-form-wrap .ninja-forms-field-error,
@@ -999,6 +999,7 @@ blockquote::before {
 
                                            .entry-content .contact img.alignleft,
 .entry-content .contact img.alignright {padding:0; margin:1rem 0; background:none;}
+.entry-content .contact h3 {font-size:34px; font-weight:300; color:#0D85B3; margin:0;}
 .entry-content .contact h2 {font-size:20px; font-size:2rem; font-weight:400; color:#0D85B3; background:url('images/h6_bg.jpg') 0 50% repeat-x; text-align:center;}
 .entry-content .contact h2 > span {padding-left:20px; padding-right:20px; color:#0D85B3;}
 
