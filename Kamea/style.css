@@ -1206,16 +1206,30 @@ Site Footer
 
 /* Rotator */
 #rotator {text-align:center; border-bottom:10px solid #FFFFFF;}
+#rotator .cycloneslider-template-standard {margin-bottom:0;}
 #rotator .cycloneslider-template-default .cycloneslider-prev,
-#rotator .cycloneslider-template-default .cycloneslider-next {background-image:url('images/sprite-arrows.png');}
-#rotator .cycloneslider-template-default .cycloneslider-caption {display:inline-block; top:0; left:0; right:0; bottom:auto; margin:0 auto; background:none;}
-#rotator .cycloneslider-template-default .cycloneslider-caption .cycloneslider-caption-title {float:left; padding:0.1em 0 0.2em 0; font-size:50px; font-weight:300; color:#0D85B3; border-bottom:1px solid #BADAF3;}
-#rotator .cycloneslider-template-default .cycloneslider-caption .cycloneslider-caption-title small {font-size:22px; color:#1E1E1E;}
-#rotator .cycloneslider-template-default .cycloneslider-caption .cycloneslider-caption-description {float:left; padding:1em 0 0.5em 0; font-size:16px; font-weight:400; color:#1E1E1E;}
+#rotator .cycloneslider-template-standard .cycloneslider-prev {width:26px; height:44px; border:0; box-shadow:none; border-radius:0; background:transparent url('images/sprite-arrows.png') 0 0 no-repeat;}
+#rotator .cycloneslider-template-default .cycloneslider-next,
+#rotator .cycloneslider-template-standard .cycloneslider-next {width:26px; height:44px; border:0; box-shadow:none; border-radius:0; background:transparent url('images/sprite-arrows.png') -28px 0 no-repeat;}
+#rotator .cycloneslider-template-default .cycloneslider-prev span,
+#rotator .cycloneslider-template-standard .cycloneslider-prev span,
+#rotator .cycloneslider-template-default .cycloneslider-next span,
+#rotator .cycloneslider-template-standard .cycloneslider-next span {display:none;}
+#rotator .cycloneslider-template-default .cycloneslider-caption,
+#rotator .cycloneslider-template-standard .cycloneslider-caption {display:inline-block; top:0; left:0; right:0; bottom:auto; margin:0 auto; background:none;}
+#rotator .cycloneslider-template-default .cycloneslider-caption .cycloneslider-caption-title,
+#rotator .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-title {float:left; padding:0.1em 0 0.2em 0; font-size:50px; font-weight:300; color:#0D85B3; border-bottom:1px solid #BADAF3;}
+#rotator .cycloneslider-template-default .cycloneslider-caption .cycloneslider-caption-title small,
+#rotator .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-title small {font-size:22px; color:#1E1E1E;}
+#rotator .cycloneslider-template-default .cycloneslider-caption .cycloneslider-caption-description,
+#rotator .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-description {float:left; padding:1em 0 0.5em 0; font-size:16px; font-weight:400; color:#1E1E1E;}
 @media (min-width:1152px){
-	#rotator .cycloneslider-template-default .cycloneslider-caption {width:1150px; padding-top:6em;}
+	#rotator .cycloneslider-template-default .cycloneslider-caption,
+	#rotator .cycloneslider-template-standard .cycloneslider-caption {width:1150px; padding-top:6em;}
 	#rotator .cycloneslider-template-default .cycloneslider-caption .cycloneslider-caption-title,
-	#rotator .cycloneslider-template-default .cycloneslider-caption .cycloneslider-caption-description {max-width:55%;}
+	#rotator .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-title,
+	#rotator .cycloneslider-template-default .cycloneslider-caption .cycloneslider-caption-description,
+	#rotator .cycloneslider-template-standard .cycloneslider-caption .cycloneslider-caption-description {max-width:55%;}
 }
 
 /* Home Site */
@@ -1627,7 +1641,8 @@ div.gform_wrapper form li {
 }
 @media (max-width:1152px){
 	#rotator .cycloneslider-slides.cycle-slideshow {height:auto !important;}
-	#rotator .cycloneslider-template-default .cycloneslider-caption {float:left; padding:20px; background:rgba(255,255,255,0.6)}
+	#rotator .cycloneslider-template-default .cycloneslider-caption,
+	#rotator .cycloneslider-template-standard .cycloneslider-caption {float:left; padding:20px; background:rgba(255,255,255,0.6)}
 
 	.site-footer .footer-top {padding-left:20px; padding-right:20px; text-align:center;}
 	.site-footer .footer-top a.fb, .site-footer .footer-top a.in, .site-footer .footer-top a.gp, .site-footer .footer-top a.dojazd {float:none; margin:5px 10px;}
