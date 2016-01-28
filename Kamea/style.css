@@ -985,6 +985,7 @@ blockquote::before {
 }
 
 .ninja-forms-form-wrap {}
+.wpcf7-form > p {float:left; display:inline-block; clear:left; width:100%;}
 .ninja-forms-form-wrap .text-wrap.label-above label,
 .ninja-forms-form-wrap .textarea-wrap.label-above label,
 .ninja-forms-form-wrap label, .wpcf7-form {font-weight:400; color:#0D85B3;}
@@ -995,9 +996,12 @@ blockquote::before {
 .ninja-forms-form-wrap .ninja-forms-response-msg.ninja-forms-error-msg,
 .ninja-forms-form-wrap .ninja-forms-field-error,
 .wpcf7-not-valid-tip {color:red;}
-.ninja-forms-form-wrap input[type="submit"].ninja-forms-field, input[type="submit"].wpcf7-submit {float:right; padding:1rem 2rem; color:#FFFFFF; background:#0D85B3;}
+.wpcf7-list-item {float:left; clear:left;}
+.ninja-forms-form-wrap input[type="submit"].ninja-forms-field,
+input[type="submit"].wpcf7-submit {float:right; padding:1rem 2rem; color:#FFFFFF; background:#0D85B3;}
 
-                                           .entry-content .contact img.alignleft,
+
+.entry-content .contact img.alignleft,
 .entry-content .contact img.alignright {padding:0; margin:1rem 0; background:none;}
 .entry-content .contact h3 {font-size:34px; font-weight:300; color:#0D85B3; margin:0;}
 .entry-content .contact h2 {font-size:20px; font-size:2rem; font-weight:400; color:#0D85B3; background:url('images/h6_bg.jpg') 0 50% repeat-x; text-align:center;}
@@ -1399,7 +1403,10 @@ body.category .content article.post .entry-footer {display:none;}
 /*
 10 Forms and Buttons
 ---------------------------------------------------------------------------------------------------- */
-input,
+input[type="text"],
+input[type="file"],
+input[type="tel"],
+input[type="date"],
 select,
 textarea {
   background-color: white;
@@ -1637,7 +1644,7 @@ div.gform_wrapper form li {
 	#home-middle #widget_sp_image-3 .widget-wrap .widget-title {padding-top:20px;}
 	#home-middle #widget_sp_image-4 .widget-wrap .widget-title {padding-top:40px;}
 
-
+	.wpcf7-checkbox .wpcf7-list-item {float:left; display:inline-block; clear:none; width:45%;}
 }
 @media (max-width:1152px){
 	#rotator .cycloneslider-slides.cycle-slideshow {height:auto !important;}
