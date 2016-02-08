@@ -1347,6 +1347,7 @@ body.category .content article.post {
 	max-width:100%;
 	padding:0 0 0 20px;
 	background:#FFFFFF url('images/post_bg_left.jpg') 0 0 no-repeat;
+	vertical-align:top;
 }
 body.category .content article.post .entry-header {
 	text-align:left;
@@ -1391,7 +1392,7 @@ body.category .content article.post .entry-content {
 	/* ToDo: lista artykulow - strzalka 'czytaj wiecej' */
 	/*background:url('images/arrow-right.png') right bottom no-repeat;*/
 }
-body.category .content article.post .entry-content .more-link {white-space:nowrap;}
+body.category .content article.post .entry-content .more-link {white-space:nowrap; text-align:right; float:right;}
 body.category .content article.post .entry-footer {display:none;}
 
 
