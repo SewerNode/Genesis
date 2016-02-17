@@ -722,11 +722,13 @@ header.site-header .title-area .site-logo {display:inline-block; text-align:cent
   padding: 24px 20px;
   padding: cr(24) cr(20);
   position: relative;
-  color:#333333;
+  color:#FFFFFF;
   font-size: 14px;
 }
-.genesis-nav-menu.menu-mobile a:hover {
-  background-color:#DDF3FB; color:#0D85B3;
+.genesis-nav-menu.menu-mobile a:hover,
+.genesis-nav-menu.menu-mobile .current-menu-ancestor a,
+.genesis-nav-menu.menu-mobile .current-menu-item a {
+  background-color:#FFFFFF; color:#52C1E9;
 }
 .genesis-nav-menu.menu-mobile .sub-menu {
   left: 0;
@@ -1006,6 +1008,7 @@ input[type="submit"].wpcf7-submit {float:right; padding:1rem 2rem; color:#FFFFFF
 .entry-content .contact h3 {font-size:34px; font-weight:300; color:#0D85B3; margin:0;}
 .entry-content .contact h2 {font-size:20px; font-size:2rem; font-weight:400; color:#0D85B3; background:url('images/h6_bg.jpg') 0 50% repeat-x; text-align:center;}
 .entry-content .contact h2 > span {padding-left:20px; padding-right:20px; color:#0D85B3;}
+.entry-content .contact iframe {max-width:100%;}
 
 /* Lists */
 .entry-content ol,
@@ -1662,9 +1665,10 @@ div.gform_wrapper form li {
 	#home-bottom {padding:30px 5px; background:none;}
 }
 @media only screen and (max-width:768px){
-	.nav-primary.submenu ul {float:left; width:100%;}
+	.nav-primary.submenu ul {float:left; width:100%; padding:5px;}
 	.nav-primary.submenu ul li {float:left; width:100%;}
 	.nav-primary.submenu ul li > a {width:100%;}
+	.entry-content .contact .one-half {width:100%; margin:1em 0;}
 
 	body.page .content .entry-content,
 	body.single .content .entry-content,
