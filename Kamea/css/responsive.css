@@ -3,11 +3,11 @@
 ---------------------------------------------------------------------------------------------------- */
 .mobile-nav {
 	display:none;
-	background-color:#3b3d42;
+	background-color:#F2F4FB;
 }
 
 .toggle-switch span {
-	color: #ddd;
+	color:#333333;
 }
 
 .toggle-switch{
@@ -22,7 +22,7 @@
 
 .toggle-switch:after{
 	content: "";
-	background: url(../lib/images/mobile_button_white.png) no-repeat ;
+	background: url(../lib/images/mobile_button.png) no-repeat ;
 	position: absolute;
 	height: 30px;
 	width: 30px;
@@ -34,7 +34,7 @@
 .secondary .toggle-switch {
 	/*background: -webkit-linear-gradient(#4d4c4c 0%, #ffffff 100%);*/
 	/*background: -webkit-linear-gradient(rgba(22,22,22,1) 0%, rgba(78,78,78,1) 100%)*/
-	background-color:#3b3d42;
+	background-color:#F2F4FB;
 }	   
 
 

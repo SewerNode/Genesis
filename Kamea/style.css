@@ -722,11 +722,11 @@ header.site-header .title-area .site-logo {display:inline-block; text-align:cent
   padding: 24px 20px;
   padding: cr(24) cr(20);
   position: relative;
-  color: white;
+  color:#333333;
   font-size: 14px;
 }
 .genesis-nav-menu.menu-mobile a:hover {
-  background-color: #323232;
+  background-color:#DDF3FB; color:#0D85B3;
 }
 .genesis-nav-menu.menu-mobile .sub-menu {
   left: 0;
