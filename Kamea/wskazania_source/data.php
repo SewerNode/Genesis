@@ -51,7 +51,7 @@ $col1 = array(
     array(
         'name'=> 'Skóra twarzy',
         'id'=> 'skora_twarzy',
-        'point'=>  array('x'=> 160,'y'=> 230)
+        'point'=>  array('x'=> 130,'y'=> 270)
     )
 );
 
