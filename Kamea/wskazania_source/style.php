@@ -1,9 +1,9 @@
 <style type="text/css">
 	.table_container {float:left; width:100%; max-width:100%;}
 	#face_selector .face_image {
-        width: 395px;
-        height: 522px;
-        background-image: url("/wp-content/themes/Kamea/wskazania_source/img/face.png");
+        width: 390px;
+        height: 560px;
+        background-image: url("/wp-content/themes/Kamea/wskazania_source/img/face.jpg");
         float: left;
         position: relative;
     }

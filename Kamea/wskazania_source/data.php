@@ -4,54 +4,54 @@ $col1 = array(
     array(
         'name'=> 'Włosy',
         'id'=> 'wlosy',
-        'point'=> array('x'=> 200,'y'=> 50)
+        'point'=> array('x'=> 200,'y'=> 30)
 
     ),
     array(
         'name'=> 'Czoło',
         'id'=> 'czolo',
-        'point'=>  array('x'=> 200,'y'=> 100)
+        'point'=>  array('x'=> 230,'y'=> 100)
 
     ),
     array(
         'name'=> 'Okolice oczu',
         'id'=> 'okolice_oczu',
-        'point'=>  array('x'=> 200,'y'=> 150)
+        'point'=>  array('x'=> 200,'y'=> 160)
     ),
     array(
         'name'=> 'Skronie',
         'id'=> 'skronie',
-        'point'=>  array('x'=> 200,'y'=> 200)
+        'point'=>  array('x'=> 130,'y'=> 160)
     ),
     array(
         'name'=> 'Usta',
         'id'=> 'usta',
-        'point'=>  array('x'=> 200,'y'=> 250)
+        'point'=>  array('x'=> 200,'y'=> 270)
     ),
     array(
         'name'=> 'Nos',
         'id'=> 'nos',
-        'point'=>  array('x'=> 200,'y'=> 300)
+        'point'=>  array('x'=> 230,'y'=> 210)
     ),
     array(
         'name'=> 'Policzki / Owal',
         'id'=> 'policzki_owal',
-        'point'=>  array('x'=> 200,'y'=> 350)
+        'point'=>  array('x'=> 290,'y'=> 230)
     ),
     array(
         'name'=> 'Broda',
         'id'=> 'broda',
-        'point'=>  array('x'=> 220,'y'=> 280)
+        'point'=>  array('x'=> 220,'y'=> 330)
     ),
     array(
         'name'=> 'Szyja',
         'id'=> 'szyja',
-        'point'=>  array('x'=> 150,'y'=> 200)
+        'point'=>  array('x'=> 190,'y'=> 370)
     ),
     array(
         'name'=> 'Skóra twarzy',
         'id'=> 'skora_twarzy',
-        'point'=>  array('x'=> 300,'y'=> 300)
+        'point'=>  array('x'=> 160,'y'=> 230)
     )
 );
 

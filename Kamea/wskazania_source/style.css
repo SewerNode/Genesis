@@ -3,9 +3,9 @@ body {
 }
 
 .face_image {
-    width: 395px;
-    height: 522px;
-    background-image: url("img/face.png");
+    width: 390px;
+    height: 560px;
+    background-image: url("img/face.jpg");
     float: left;
 }
 
